@@ -11,7 +11,11 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.1"
+    "next": "15.3.1",
+    "react-player": "^2.14.1",
+    "swiper": "^11.0.5",
+    "@fancyapps/ui": "^5.0.33",
+    "locomotive-scroll": "^4.1.4"
   },
   "devDependencies": {
     "typescript": "^5",
