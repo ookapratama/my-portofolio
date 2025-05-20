@@ -1,9 +1,14 @@
 "use client";
 import { Fragment, useEffect, useState } from "react";
 import ReactPlayer from "react-player";
-import useClickOutside from "../utility/useClickOutside";
+import useClickOutside from "@/utility/useClickOutside";
 
-const VideoPopup_ = ({ close, videoID }) => {
+interface VideoPopupProps {
+  close : (val? : boolean) => void;
+  videoID?: string;
+}
+
+const VideoPopup_ = ({ close, videoID } : VideoPopupProps) => {
   let domNode = useClickOutside(() => {
     close(false);
   });
@@ -38,7 +43,7 @@ const VideoPopup_ = ({ close, videoID }) => {
 
 const VideoPopup = () => {
   const [video, setVideo] = useState(false);
-  const [videoValue, setVideoValue] = useState(null);
+  const [videoValue, setVideoValue] = useState<string>('');
   useEffect(() => {
     setTimeout(() => {
       const a = document.querySelectorAll("a");

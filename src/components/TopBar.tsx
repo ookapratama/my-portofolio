@@ -4,8 +4,11 @@ import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 
 const TopBar = ({ onePage }) => {
+  const ctx = useContext(context);
+  if (!ctx) throw new Error("Context not found");
+
   const [toggle, setToggle] = useState(false);
-  const { modeChange, mode } = useContext(context);
+  const { modeChange, mode } = ctx;
 
   useEffect(() => {
     modeChange(JSON.parse(localStorage.getItem("trueman")));
@@ -22,12 +25,10 @@ const TopBar = ({ onePage }) => {
       <div className="container">
         <div className="trm-left-side">
           {/* logo */}
-          <Link legacyBehavior href="/">
-            <a className="trm-logo-frame trm-anima-link">
-              <div className="trm-logo-text">
-                True<span>man</span>
-              </div>
-            </a>
+          <Link className="trm-logo-frame trm-anima-link" href="/">
+            <div className="trm-logo-text">
+              True<span>man</span>
+            </div>
           </Link>
           {/* logo end */}
         </div>
@@ -40,88 +41,56 @@ const TopBar = ({ onePage }) => {
               ) : (
                 <ul>
                   <li className="menu-item-has-children">
-                    <Link legacyBehavior href="/">
-                      Home
-                    </Link>
+                    <Link href="/">Home</Link>
                     <ul>
                       <li>
-                        <Link legacyBehavior href="/">
-                          Image
-                        </Link>
+                        <Link href="/">Image</Link>
                       </li>
                       <li>
-                        <Link legacyBehavior href="home-video">
-                          Video
-                        </Link>
+                        <Link href="home-video">Video</Link>
                       </li>
                       <li>
-                        <Link legacyBehavior href="home-slideshow">
-                          Slideshow
-                        </Link>
+                        <Link href="home-slideshow">Slideshow</Link>
                       </li>
                     </ul>
                   </li>
                   <li className="menu-item-has-children">
-                    <Link legacyBehavior href="portfolio">
-                      Portfolio
-                    </Link>
+                    <Link href="portfolio">Portfolio</Link>
                     <ul>
                       <li>
-                        <Link legacyBehavior href="portfolio">
-                          Portfolio 1
-                        </Link>
+                        <Link href="portfolio">Portfolio 1</Link>
                       </li>
                       <li>
-                        <Link legacyBehavior href="portfolio-2">
-                          Portfolio 2
-                        </Link>
+                        <Link href="portfolio-2">Portfolio 2</Link>
                       </li>
                       <li>
-                        <Link legacyBehavior href="portfolio-3">
-                          Portfolio 3
-                        </Link>
+                        <Link href="portfolio-3">Portfolio 3</Link>
                       </li>
                       <li>
-                        <Link legacyBehavior href="portfolio-4">
-                          Portfolio 4
-                        </Link>
+                        <Link href="portfolio-4">Portfolio 4</Link>
                       </li>
                       <li>
-                        <Link legacyBehavior href="portfolio-5">
-                          Portfolio 5
-                        </Link>
+                        <Link href="portfolio-5">Portfolio 5</Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <Link legacyBehavior href="resume">
-                      Resume
-                    </Link>
+                    <Link href="resume">Resume</Link>
                   </li>
                   <li>
-                    <Link legacyBehavior href="contact">
-                      Contact
-                    </Link>
+                    <Link href="contact">Contact</Link>
                   </li>
                   <li className="menu-item-has-children">
-                    <Link legacyBehavior href="blog">
-                      Blog
-                    </Link>
+                    <Link href="blog">Blog</Link>
                     <ul>
                       <li>
-                        <Link legacyBehavior href="blog">
-                          Blog 1
-                        </Link>
+                        <Link href="blog">Blog 1</Link>
                       </li>
                       <li>
-                        <Link legacyBehavior href="blog-2">
-                          Blog 2
-                        </Link>
+                        <Link href="blog-2">Blog 2</Link>
                       </li>
                       <li>
-                        <Link legacyBehavior href="publication">
-                          Publication
-                        </Link>
+                        <Link href="publication">Publication</Link>
                       </li>
                     </ul>
                   </li>

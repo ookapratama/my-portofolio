@@ -2,10 +2,12 @@
 import { context } from "@/context/context";
 import { useContext } from "react";
 
-const ctx = useContext(context);
-if (!ctx) throw new Error("Context not found");
 
 const TrueManModeCss = () => {
+  
+  const ctx = useContext(context);
+  if (!ctx) throw new Error("Context not found");
+
   const { mode } = ctx;
   return (
     <head>

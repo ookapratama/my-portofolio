@@ -8,7 +8,7 @@ import "@css/style-light.css";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import "./globals.css";
 // @ts-ignore
-import State from "/context/context";
+import State from "@/context/context";
 import React from "react";
 
 export const metadata = {

@@ -10,10 +10,11 @@ import { context } from "@/context/context";
 import TrueManLayout from "@/layout/TrueManLayout";
 import { useContext, useEffect } from "react";
 
-const ctx = useContext(context);
-if (!ctx) throw new Error("Context not found");
-
 const Index = () => {
+  
+  const ctx = useContext(context);
+  if (!ctx) throw new Error("Context not found");
+  
   const { banner_image_function, banner_type_function } = ctx;
   useEffect(() => {
     banner_image_function("/img/banner2.jpg");

@@ -11,10 +11,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 //     page_info: string;
 // }
 
-const ctx = useContext(context);
-if (!ctx) throw new Error("Context not found");
 
 const Banner = ({ centerTitle }: BannerProps) => {
+  
+  const ctx = useContext(context);
+  if (!ctx) throw new Error("Context not found");
+
   const { banner_type, banner_image, page_info } = ctx;
   const { pageTitle, subTitle, pageName, scroll_down } = page_info;
 

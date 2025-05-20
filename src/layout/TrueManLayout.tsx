@@ -5,10 +5,15 @@ import Footer from "@/components/Footer";
 import SideBar from "@/components/SideBar";
 import TopBar from "@/components/TopBar";
 import VideoPopup from "@/components/VideoPopup";
-import { TrueManLayoutProps } from "@/types/layout";
 import { trueManUtility } from "@/utility";
 import { Fancybox } from "@fancyapps/ui";
 import { Fragment, useEffect } from "react";
+interface TrueManLayoutProps {
+    children? : React.ReactNode;
+    noSidebar?: boolean;
+    onePage?: React.JSX.Element;
+}
+
 const TrueManLayout = ({ children, noSidebar, onePage } : TrueManLayoutProps) => {
   useEffect(() => {
     trueManUtility.scrollAnimation();
