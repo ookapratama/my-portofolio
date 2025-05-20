@@ -1,5 +1,5 @@
 export type BannerProps = {
-  centerTitle: string;
+  centerTitle?: boolean;
 };
 
 export type ImageProps = {
@@ -12,5 +12,5 @@ export type PageBannerProps = {
   pageName: string;
   banner_image: string;
   scroll_down: boolean;
-  centerTitle: string;
+  centerTitle?: boolean;
 };
