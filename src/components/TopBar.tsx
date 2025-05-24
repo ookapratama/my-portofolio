@@ -27,7 +27,7 @@ const TopBar = ({ onePage }) => {
           {/* logo */}
           <Link className="trm-logo-frame trm-anima-link" href="/">
             <div className="trm-logo-text">
-              True<span>man</span>
+              Personal<span>Portofolio</span>
             </div>
           </Link>
           {/* logo end */}
