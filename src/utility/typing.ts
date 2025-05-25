@@ -3,7 +3,7 @@ import { setTyper } from "./typer";
 export const typing = () => {
   const words = [
     "Fullstack Developer",
-    "Interest with Back-end Engineer",
+    "Backend Enthusiast",
   ];
 
   const text = document.querySelector(".trm-typed-text") as HTMLElement | null;

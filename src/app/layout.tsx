@@ -12,7 +12,8 @@ import State from "@/context/context";
 import React from "react";
 
 export const metadata = {
-  title: "Judhistira Ooka Pratama - Personal Portofolio",
+  title: "Ooka Pratama - Portofolio",
+  description: "Personal Portofolio - Judhistira Ooka Pratama"
 };
 
 interface RootProps {

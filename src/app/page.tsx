@@ -23,7 +23,7 @@ const Index = () => {
   return (
     <TrueManLayout>
       {/* stats */}
-      <Counter />
+      {/* <Counter /> */}
       {/* stats end */}
       {/* text */}
       <Story />

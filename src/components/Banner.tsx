@@ -77,19 +77,19 @@ const Image = ({ banner_image }: ImageProps) => {
             <div className="col-lg-8">
               {/* banner title */}
               <div className="trm-banner-text">
-                <div className="trm-label trm-mb-20">Hi my new friend!</div>
+                <div className="trm-label trm-mb-20">Hi, I'm Ooka </div>
                 <h1 className="trm-mb-30">
-                  Discover my
+                  Welcome to
                   <br />
-                  art space!
+                  my code space!
                 </h1>
-                <a
-                  data-fancybox=""
-                  href="https://www.youtube.com/watch?v=Mo_vRjtkgSI"
-                  className="trm-btn trm-btn-border"
-                >
-                  Video Resume <i className="fas fa-play" />
-                </a>
+                {/* <a */}
+                {/*   data-fancybox="" */}
+                {/*   href="https://www.youtube.com/watch?v=Mo_vRjtkgSI" */}
+                {/*   className="trm-btn trm-btn-border" */}
+                {/* > */}
+                {/*   Video Resume <i className="fas fa-play" /> */}
+                {/* </a> */}
               </div>
               {/* banner title end */}
               {/* scroll hint */}
@@ -237,19 +237,19 @@ const VideoBanner = ({}) => {
             <div className="col-lg-8">
               {/* banner title */}
               <div className="trm-banner-text">
-                <div className="trm-label trm-mb-20">Hi my new friend!</div>
+                <div className="trm-label trm-mb-20">Hi, I'm Ooka</div>
                 <h1 className="trm-mb-30">
-                  Discover my
+                  Welcome to
                   <br />
-                  art space!
+                  my code space!
                 </h1>
-                <a
-                  data-fancybox
-                  href="https://www.youtube.com/watch?v=Mo_vRjtkgSI"
-                  className="trm-btn trm-btn-border"
-                >
-                  Video Resume <i className="fas fa-play" />
-                </a>
+                {/* <a */}
+                {/*   data-fancybox */}
+                {/*   href="https://www.youtube.com/watch?v=Mo_vRjtkgSI" */}
+                {/*   className="trm-btn trm-btn-border" */}
+                {/* > */}
+                {/*   Video Resume <i className="fas fa-play" /> */}
+                {/* </a> */}
               </div>
               {/* banner title end */}
               {/* scroll hint */}
@@ -331,12 +331,12 @@ const SliderBanner = ({}) => {
             <div className="col-lg-8">
               {/* banner title */}
               <div className="trm-banner-text">
-                <div className="trm-label trm-mb-20">Hi my new friend!</div>
+                <div className="trm-label trm-mb-20">Hi, I'm Ooka</div>
                 <h1 className="trm-mb-30">
-                  Discover my
+                  Welcome to
                   <br />
-                  art space!
-                </h1>
+                  my code space!
+                 </h1>
                 <a
                   data-fancybox
                   href="https://www.youtube.com/watch?v=Mo_vRjtkgSI"
