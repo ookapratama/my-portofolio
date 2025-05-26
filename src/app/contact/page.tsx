@@ -118,10 +118,8 @@ const Index = () => {
               <div className="trm-text trm-mb-20">
                 Your message has been sent successfully
               </div>
-              <Link legacyBehavior href="/">
-                <a className="trm-btn">
-                  <i className="fas fa-arrow-left" /> Back to homepage
-                </a>
+              <Link className="trm-btn" href="/">
+                <i className="fas fa-arrow-left" /> Back to homepage
               </Link>
             </div>
           </div>

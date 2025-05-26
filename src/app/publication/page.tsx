@@ -145,20 +145,19 @@ const Index = () => {
             data-scroll
             data-scroll-offset={40}
           >
-            <Link legacyBehavior href="/publication">
-              <a className="trm-cover-frame trm-anima-link">
-                <img src="img/blog/b2.jpg" alt="cover" />
-              </a>
+            <Link
+              className="trm-cover-frame trm-anima-link"
+              href="/publication"
+            >
+              <img src="img/blog/b2.jpg" alt="cover" />
             </Link>
             <div className="trm-card-descr">
               <div className="trm-label trm-category trm-mb-20">
                 <a href="#.">Lifestyle</a>
               </div>
               <h5 className="trm-mb-20">
-                <Link legacyBehavior href="/publication">
-                  <a className="trm-anima-link">
-                    Create your own beauty blog with Trueman
-                  </a>
+                <Link className="trm-anima-link" href="/publication">
+                  Create your own beauty blog with Trueman
                 </Link>
               </h5>
               <div className="trm-divider trm-mb-20 trm-mt-20" />
@@ -178,20 +177,19 @@ const Index = () => {
             data-scroll
             data-scroll-offset={40}
           >
-            <Link legacyBehavior href="/publication">
-              <a className="trm-cover-frame trm-anima-link">
-                <img src="img/blog/b7.jpg" alt="cover" />
-              </a>
+            <Link
+              className="trm-cover-frame trm-anima-link"
+              href="/publication"
+            >
+              <img src="img/blog/b7.jpg" alt="cover" />
             </Link>
             <div className="trm-card-descr">
               <div className="trm-label trm-category trm-mb-20">
                 <a href="#.">Lifestyle</a>
               </div>
               <h5 className="trm-mb-20">
-                <Link legacyBehavior href="/publication">
-                  <a className="trm-anima-link">
-                    Create your own beauty blog with Trueman
-                  </a>
+                <Link className="trm-anima-link" href="/publication">
+                  Create your own beauty blog with Trueman
                 </Link>
               </h5>
               <div className="trm-divider trm-mb-20 trm-mt-20" />

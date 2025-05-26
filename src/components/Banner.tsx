@@ -11,9 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 //     page_info: string;
 // }
 
-
 const Banner = ({ centerTitle }: BannerProps) => {
-  
   const ctx = useContext(context);
   if (!ctx) throw new Error("Context not found");
 
@@ -163,8 +161,8 @@ const PageBanner = ({
                 ></h1>
                 <ul className="trm-breadcrumbs trm-label">
                   <li>
-                    <Link legacyBehavior href="/">
-                      <a className="trm-anima-link">Home</a>
+                    <Link className="trm-anima-link" href="/">
+                      Home
                     </Link>
                   </li>
                   <li>
@@ -336,14 +334,14 @@ const SliderBanner = ({}) => {
                   Welcome to
                   <br />
                   my code space!
-                 </h1>
-                <a
+                </h1>
+                {/* <a
                   data-fancybox
                   href="https://www.youtube.com/watch?v=Mo_vRjtkgSI"
                   className="trm-btn trm-btn-border"
                 >
                   Video Resume <i className="fas fa-play" />
-                </a>
+                </a> */}
               </div>
               {/* banner title end */}
               {/* scroll hint */}
