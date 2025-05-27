@@ -124,6 +124,21 @@ export default function IndexPage() {
                     size: "lg",
                   })
                 )}
+                aria-label="Dashboard Ooka Pratama"
+              >
+                <Icons.dashboard className="w-4 h-4 mr-2" /> Dashboard
+              </Link>
+            </AnimatedText>
+            <AnimatedText delay={1}>
+              <Link
+                href={"/contact"}
+                rel="noreferrer"
+                className={cn(
+                  buttonVariants({
+                    variant: "outline",
+                    size: "lg",
+                  })
+                )}
                 aria-label="Contact Naman Barkiya"
               >
                 <Icons.contact className="w-4 h-4 mr-2" /> Contact
@@ -135,6 +150,8 @@ export default function IndexPage() {
           </AnimatedText>
         </div>
       </section>
+
+      {/* SKills */}
       <AnimatedSection
         className="container space-y-6 bg-muted py-10"
         id="skills"
@@ -163,6 +180,8 @@ export default function IndexPage() {
           </Link>
         </AnimatedText>
       </AnimatedSection>
+
+      {/* Experience */}
       <AnimatedSection
         direction="right"
         className="container space-y-6 py-10 my-14"
@@ -207,6 +226,7 @@ export default function IndexPage() {
                     </p>
                 </div> */}
       </AnimatedSection>
+
       <AnimatedSection
         direction="left"
         className="container space-y-6 bg-muted py-10 my-14"

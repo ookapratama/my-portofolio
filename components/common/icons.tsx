@@ -31,7 +31,8 @@ import {
   User,
   X,
   Zap,
-  Instagram
+  Instagram,
+  LayoutDashboard,
 } from "lucide-react";
 import { AiFillStar } from "react-icons/ai";
 import { BiLaugh, BiSolidUser } from "react-icons/bi";
@@ -43,32 +44,42 @@ import {
 } from "react-icons/hi";
 import { IoIosGitBranch } from "react-icons/io";
 import {
-  SiAmazonaws,
-  SiAngular,
   SiBootstrap,
   SiCss3,
   SiExpress,
   SiGmail,
-  SiGraphql,
   SiHtml5,
   SiJavascript,
   SiLinkedin,
-  SiMongodb,
-  SiMui,
   SiMysql,
-  SiNestjs,
-  SiNetlify,
   SiNextdotjs,
   SiNodedotjs,
   SiReact,
-  SiRedux,
-  SiSocketdotio,
-  SiTailwindcss,
   SiTwitter,
   SiTypescript,
 } from "react-icons/si";
 
+export type stacksProps = {
+  [key: string]: JSX.Element;
+};
+
+const iconSize  = 50
+
+export const StackIcons: stacksProps = {
+  nextjs: <SiNextdotjs size={iconSize} />,
+  express: <SiExpress size={iconSize} />,
+  nodejs: <SiNodedotjs size={iconSize} className="text-green-600"  />,
+  typescript: <SiTypescript className="text-blue-600" size={iconSize} />,
+  javascript: <SiJavascript className="text-yellow-400" size={iconSize} />,
+  html5: <SiHtml5 size={iconSize} className="text-orange-600" />,
+  css3: <SiCss3 size={iconSize} className="text-blue-600" />,
+  react: <SiReact className="text-sky-500" size={iconSize} />,
+  bootstrap: <SiBootstrap className="text-purple-600" size={iconSize} />,
+  mysql: <SiMysql size={iconSize} />,
+};
+
 export const Icons = {
+  dashboard: LayoutDashboard,
   contact: Phone,
   gitRepoIcon: BookMarked,
   gitOrgBuilding: Building,
@@ -102,26 +113,6 @@ export const Icons = {
   link: HiOutlineLink,
   externalLink: HiOutlineExternalLink,
   star: AiFillStar,
-  amazonaws: SiAmazonaws,
-  angular: SiAngular,
-  bootstrap: SiBootstrap,
-  css3: SiCss3,
-  express: SiExpress,
-  graphql: SiGraphql,
-  html5: SiHtml5,
-  javascript: SiJavascript,
-  mongodb: SiMongodb,
-  mui: SiMui,
-  mysql: SiMysql,
-  nestjs: SiNestjs,
-  netlify: SiNetlify,
-  nextjs: SiNextdotjs,
-  nodejs: SiNodedotjs,
-  react: SiReact,
-  redux: SiRedux,
-  socketio: SiSocketdotio,
-  tailwindcss: SiTailwindcss,
-  typescript: SiTypescript,
   gmail: SiGmail,
   twitter: SiTwitter,
   linkedin: SiLinkedin,
@@ -174,5 +165,5 @@ export const Icons = {
   paper: Scroll,
   aurora: Sparkles,
   synthwave: Music,
-  instagram: Instagram
+  instagram: Instagram,
 };
