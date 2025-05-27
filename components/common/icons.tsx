@@ -31,6 +31,7 @@ import {
   User,
   X,
   Zap,
+  Instagram
 } from "lucide-react";
 import { AiFillStar } from "react-icons/ai";
 import { BiLaugh, BiSolidUser } from "react-icons/bi";
@@ -173,4 +174,5 @@ export const Icons = {
   paper: Scroll,
   aurora: Sparkles,
   synthwave: Music,
+  instagram: Instagram
 };

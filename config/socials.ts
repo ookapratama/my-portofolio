@@ -21,10 +21,10 @@ export const SocialLinks: SocialInterface[] = [
     link: "https://www.linkedin.com/in/ooka-pratama-9b9035223/",
   },
   {
-    name: "Twitter",
-    username: "@namanbarkiya",
-    icon: Icons.twitter,
-    link: "https://twitter.com/namanbarkiya",
+    name: "Instagram",
+    username: "@ookapratama_",
+    icon: Icons.instagram,
+    link: "https://instagram.com/ookapratama_",
   },
   {
     name: "Gmail",

@@ -6,10 +6,10 @@ export const siteConfig = {
     "Ooka Pratama's portfolio - A modern, responsive Next.js portfolio for developers. This open-source template can be customized to showcase your own skills, projects, and professional experience.",
   url: "https://ookpra.dev",
   links: {
-    twitter: "https://x.com/namanbarkiya",
+    instagram: "https://instagram.com/ookapratama_",
     github: "https://github.com/ookapratama",
   },
-  ogImage: "https://nbarkiya.xyz/naman-img.jpg",
+  ogImage: "https://nbarkiya.xyz/ooka1.jpg",
   iconIco:
     "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357384/assets/naman-favicon.ico",
   logoIcon:
