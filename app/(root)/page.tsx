@@ -19,6 +19,7 @@ import { featuredSkills } from "@/config/skills";
 import { cn } from "@/lib/utils";
 // import ookaImg from "@/public/ooka2.jpg";
 import ookaImg from "@/public/ooka1.jpg";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title} | Personal Portofolio`,
@@ -201,6 +202,15 @@ export default function IndexPage() {
           >
             {pagesConfig.experience.description}
           </AnimatedText>
+          <div className="d-flex justify-center">
+          <Tabs defaultValue="projects" className="w-full">
+            <TabsList className="conatiner grid max-w-[50rem] grid-cols-2">
+              <TabsTrigger className="px-5 tracking-widest " value="projects">Projects</TabsTrigger>
+              <TabsTrigger className="px-5 tracking-widest " value="contribution">Contribution</TabsTrigger>
+            </TabsList>
+          </Tabs>
+
+          </div>
         </div>
         <div className="mx-auto grid justify-center gap-4 md:w-full lg:grid-cols-3">
           {featuredExperiences.map((exp, index) => (

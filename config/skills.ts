@@ -16,6 +16,21 @@ export const skillsUnsorted: skillsInterface[] = [
     icon: StackIcons.nextjs,
   },
   {
+    name: "Hono",
+    description:
+      "Fast, lightweight, built on Web Standards. Support for any JavaScript runtime.",
+    rating: 5,
+    // icon: StackIcons.react,
+    icon: StackIcons.hono,
+  },
+  {
+    name: "Typescript",
+    description:
+      "Enhance JavaScript with static types, making code more understandable and reliable.",
+    rating: 5,
+    icon: StackIcons.typescript,
+  },
+  {
     name: "React",
     description:
       "Craft interactive user interfaces using components, state, props, and virtual DOM.",
@@ -36,13 +51,6 @@ export const skillsUnsorted: skillsInterface[] = [
       "Run JavaScript on the server side, enabling dynamic and responsive applications.",
     rating: 5,
     icon: StackIcons.nodejs,
-  },
-  {
-    name: "Typescript",
-    description:
-      "Enhance JavaScript with static types, making code more understandable and reliable.",
-    rating: 5,
-    icon: StackIcons.typescript,
   },
   {
     name: "Javascript",
@@ -92,4 +100,4 @@ export const skills = skillsUnsorted
   .slice()
   .sort((a, b) => b.rating - a.rating);
 
-export const featuredSkills = skills.slice(0, 6);
+export const featuredSkills = skills.slice(0, 3);

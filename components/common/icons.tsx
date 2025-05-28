@@ -55,8 +55,8 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiReact,
-  SiTwitter,
   SiTypescript,
+  SiHono
 } from "react-icons/si";
 
 export type stacksProps = {
@@ -75,6 +75,7 @@ export const StackIcons: stacksProps = {
   css3: <SiCss3 size={iconSize} className="text-blue-600" />,
   react: <SiReact className="text-sky-500" size={iconSize} />,
   bootstrap: <SiBootstrap className="text-purple-600" size={iconSize} />,
+  hono: <SiHono className="text-orange-600" size={iconSize} />,
   mysql: <SiMysql size={iconSize} />,
 };
 
@@ -114,7 +115,6 @@ export const Icons = {
   externalLink: HiOutlineExternalLink,
   star: AiFillStar,
   gmail: SiGmail,
-  twitter: SiTwitter,
   linkedin: SiLinkedin,
   userFill: BiSolidUser,
   work: HiBriefcase,
