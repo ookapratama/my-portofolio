@@ -1,4 +1,6 @@
+import { title } from "process";
 import { ValidPages } from "./constants";
+import { metadata } from "@/app/layout";
 
 type PagesConfig = {
   [key in ValidPages]: {
@@ -70,5 +72,13 @@ export const pagesConfig: PagesConfig = {
       title: "Career Timeline",
       description: "Ooka Pratama's professional journey and career timeline.",
     },
+  },
+  dashboard: {
+    title : "Dashboard",
+    description: "This dashboard highlights my journey as a developer through my GitHub contributions — where I build, share, and grow.",
+    metadata: {
+      title: "Dashboard",
+      description: 'This dashboard highlights my journey as a developer through my GitHub contributions — where I build, share, and grow.'
+    }
   },
 };
