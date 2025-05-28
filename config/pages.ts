@@ -23,7 +23,7 @@ export const pagesConfig: PagesConfig = {
   },
   skills: {
     title: "Skills",
-    description: "Key skills that define my professional identity.",
+    description: "My current focus in technology and development.",
     metadata: {
       title: "Skills",
       description:
@@ -32,10 +32,10 @@ export const pagesConfig: PagesConfig = {
   },
   experience: {
     title: "Experience",
-    description: "Highlighting career journey and impactful projects.",
+    description: "My development journey — from building ideas to making an impact.",
     metadata: {
       title: "Experience",
-      description: "Ooka Pratama's experience in building web applications.",
+      description: "Ooka Pratama's Development journey — from building ideas to making an impact.",
     },
   },
   contact: {

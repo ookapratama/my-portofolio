@@ -237,7 +237,7 @@ export default function IndexPage() {
                 </div> */}
       </AnimatedSection>
 
-      <AnimatedSection
+      {/* <AnimatedSection
         direction="left"
         className="container space-y-6 bg-muted py-10 my-14"
         id="contributions"
@@ -267,7 +267,7 @@ export default function IndexPage() {
             </Button>
           </Link>
         </AnimatedText>
-      </AnimatedSection>
+      </AnimatedSection> */}
     </ClientPageWrapper>
   );
 }
