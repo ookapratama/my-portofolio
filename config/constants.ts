@@ -105,30 +105,30 @@ export type Months = {
   firstDay: string;
   totalWeeks: number;
   contributionCounts: number;
-}
+};
 
 export type CalendarProps = {
   totalContributions?: number;
   weeks: {
     firstDat: string;
-    contributionDays: Contributions[]
+    contributionDays: Contributions[];
   }[];
-  months: Months[]
-  colors: string[]
-}
+  months: Months[];
+  colors: string[];
+};
 
 export type CalendarResponse = {
   contributionCollections: {
-    contributionCalendar: CalendarProps
-  }
-}
+    contributionCalendar: CalendarProps;
+  };
+};
 
 export const GITHUB_ACCOUNTS = [
   {
     username: process.env.GITHUB_READ_USERNAME,
     token: process.env.GITHUB_READ_USER_TOKEN_PERSONAL,
-    type: 'personal',
-    is_active: true
-  }
-]
-
+    endpoint: `/api/github?type=personal`,
+    type: "personal",
+    is_active: true,
+  },
+];
