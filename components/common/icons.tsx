@@ -56,7 +56,8 @@ import {
   SiNodedotjs,
   SiReact,
   SiTypescript,
-  SiHono
+  SiHono,
+  SiGithub
 } from "react-icons/si";
 
 export type stacksProps = {
@@ -77,6 +78,7 @@ export const StackIcons: stacksProps = {
   bootstrap: <SiBootstrap className="text-purple-600" size={iconSize} />,
   hono: <SiHono className="text-orange-600" size={iconSize} />,
   mysql: <SiMysql size={iconSize} />,
+  github: <SiGithub size={25} />,
 };
 
 export const Icons = {

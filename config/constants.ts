@@ -74,3 +74,61 @@ export type ValidPages =
   | "contributions"
   | "resume"
   | "dashboard";
+
+// initial github types
+export type GithubResponse = {
+  status: number;
+  data: { data: GithubContributions };
+};
+
+export type GithubContributions = {
+  user: {
+    contributionCollections: {
+      contributionCalendar: {
+        totalContributions: number;
+        colors: string[];
+        weeks: string[];
+        months: string[];
+      };
+    };
+  };
+};
+
+export type Contributions = {
+  date: string;
+  contributionCount: number;
+  color: string;
+};
+
+export type Months = {
+  name: string;
+  firstDay: string;
+  totalWeeks: number;
+  contributionCounts: number;
+}
+
+export type CalendarProps = {
+  totalContributions?: number;
+  weeks: {
+    firstDat: string;
+    contributionDays: Contributions[]
+  }[];
+  months: Months[]
+  colors: string[]
+}
+
+export type CalendarResponse = {
+  contributionCollections: {
+    contributionCalendar: CalendarProps
+  }
+}
+
+export const GITHUB_ACCOUNTS = [
+  {
+    username: process.env.GITHUB_READ_USERNAME,
+    token: process.env.GITHUB_READ_USER_TOKEN_PERSONAL,
+    type: 'personal',
+    is_active: true
+  }
+]
+

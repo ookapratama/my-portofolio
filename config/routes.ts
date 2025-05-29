@@ -24,9 +24,5 @@ export const routesConfig: any = {
       title: "Contact",
       href: "/contact",
     },
-    {
-      title: "Dashboard",
-      href: "/dashboard",
-    },
   ],
 };
