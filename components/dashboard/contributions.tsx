@@ -45,11 +45,7 @@ const Contributions = ({ endpoint }: ContributionsProps) => {
         </Link>
       </SectionSubHeading>
 
-      {data ? (
-        <div className="space-y-3">
-          <Overview data={contributionCalendar} />
-        </div>
-      ) : (
+      {!data ? (
         <>
           <div className="grid grid-cols-2 gap-3 py-2 sm:grid-cols-4">
             <SkeletonCard />
@@ -59,6 +55,10 @@ const Contributions = ({ endpoint }: ContributionsProps) => {
           </div>
           <SkeletonCalendar className="mt-5" />
         </>
+      ) : (
+        <div className="space-y-3">
+          <Overview data={contributionCalendar} />
+        </div>
       )}
     </div>
   );
