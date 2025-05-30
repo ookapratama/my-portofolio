@@ -86,7 +86,7 @@ const Calendar = ({ data }: CalendarProps) => {
     <div ref={containerRef} className="w-full">
       <div className="w-full">
         <ul
-          className="flex justify-between gap-[3px] overflow-hidden text-xs dark:text-neutral-400 md:justify-between"
+          className="flex justify-between gap-[3px] overflow-x-auto text-xs dark:text-neutral-400 md:justify-between"
           style={{ gap: `${dimensions.gap}px` }}
         >
           {months.map((month) => (
@@ -104,7 +104,7 @@ const Calendar = ({ data }: CalendarProps) => {
         </ul>
 
         <div
-          className="flex max-w-full mt-1 justify-between overflow-hidden"
+          className="flex max-w-full mt-1 justify-between overflow-x-auto"
           style={{ gap: `${dimensions.gap}px` }}
         >
           {weeks?.map((week) => (
