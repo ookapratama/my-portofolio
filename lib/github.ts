@@ -1,4 +1,4 @@
-import { GithubResponse } from "@/config/constants";
+import { GITHUB_ACCOUNTS, GithubResponse } from "@/config/constants";
 import axios from "axios";
 
 const GITHUB_USER_ENDPOINT = "https://api.github.com/graphql";
@@ -50,4 +50,15 @@ export const fetchGithubData = async (
   const dataJson = response.data?.data;
 
   return status > 400 ? { status, data: {} } : { status, data: dataJson.user };
+};
+
+export const getContribution = async (type: string) => {
+  const account = GITHUB_ACCOUNTS.find(
+    (account) => account?.type === type && account?.is_active
+  );
+
+  if (!account) throw new Error("Invalid user type");
+
+  const { username, token } = account;
+  return await fetchGithubData(username, token);
 };

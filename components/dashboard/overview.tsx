@@ -34,7 +34,7 @@ const Overview = ({ data }: OverviewProps) => {
       <OverviewItem label="Total" value={totalContributions} />
       <OverviewItem label="This Week" value={totalThisWeekContributions} />
       <OverviewItem label="Best Day" value={bestContribution} />
-      <OverviewItem label="Average" value={averageContribution} />
+      <OverviewItem label="Average" value={averageContribution} unit="/ day"/>
     </div>
   );
 };

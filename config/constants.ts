@@ -83,7 +83,7 @@ export type GithubResponse = {
 
 export type GithubContributions = {
   user: {
-    contributionCollections: {
+    contributionsCollection: {
       contributionCalendar: {
         totalContributions: number;
         colors: string[];
@@ -118,7 +118,7 @@ export type CalendarProps = {
 };
 
 export type CalendarResponse = {
-  contributionCollections: {
+  contributionsCollection: {
     contributionCalendar: CalendarProps;
   };
 };

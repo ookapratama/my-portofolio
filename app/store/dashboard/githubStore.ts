@@ -1,4 +1,4 @@
-import { fetchGithubData } from "@/app/api/dashboard/github";
+import { fetchGithubData } from "@/lib/github";
 import {
   GITHUB_ACCOUNTS,
   GithubContributions,

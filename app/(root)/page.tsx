@@ -81,7 +81,7 @@ export default function IndexPage() {
             width={100}
             sizes="100vw"
             className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary"
-            alt="Naman Barkiya - Full Stack Developer Portfolio"
+            alt="Ooka Pratama - Full Stack Developer Portfolio"
             priority
           />
           <AnimatedText
@@ -140,7 +140,7 @@ export default function IndexPage() {
                     size: "lg",
                   })
                 )}
-                aria-label="Contact Naman Barkiya"
+                aria-label="Contact Ooka Pratama"
               >
                 <Icons.contact className="w-4 h-4 mr-2" /> Contact
               </Link>
@@ -203,13 +203,19 @@ export default function IndexPage() {
             {pagesConfig.experience.description}
           </AnimatedText>
           <div className="d-flex justify-center">
-          <Tabs defaultValue="projects" className="w-full">
-            <TabsList className="conatiner grid max-w-[50rem] grid-cols-2">
-              <TabsTrigger className="px-5 tracking-widest " value="projects">Projects</TabsTrigger>
-              <TabsTrigger className="px-5 tracking-widest " value="contribution">Contribution</TabsTrigger>
-            </TabsList>
-          </Tabs>
-
+            <Tabs defaultValue="projects" className="w-full">
+              <TabsList className="conatiner grid max-w-[50rem] grid-cols-2">
+                <TabsTrigger className="px-5 tracking-widest " value="projects">
+                  Projects
+                </TabsTrigger>
+                <TabsTrigger
+                  className="px-5 tracking-widest "
+                  value="contribution"
+                >
+                  Contribution
+                </TabsTrigger>
+              </TabsList>
+            </Tabs>
           </div>
         </div>
         <div className="mx-auto grid justify-center gap-4 md:w-full lg:grid-cols-3">
