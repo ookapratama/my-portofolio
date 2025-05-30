@@ -110,7 +110,7 @@ export type Months = {
 export type CalendarProps = {
   totalContributions?: number;
   weeks: {
-    firstDat: string;
+    firstDay: string;
     contributionDays: Contributions[];
   }[];
   months: Months[];

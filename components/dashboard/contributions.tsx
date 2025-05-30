@@ -11,6 +11,7 @@ import { SocialLinks } from "@/config/socials";
 import Link from "next/link";
 import Overview from "./overview";
 import { SkeletonCalendar, SkeletonCard } from "./skeleton/skeleton-card";
+import Calendar from "./calendar";
 
 type ContributionsProps = {
   type: string;
@@ -51,11 +52,11 @@ const Contributions = ({ endpoint, username }: ContributionsProps) => {
       ) : (
         <div className="space-y-3">
           <Overview data={contributionCalendar} />
+          <Calendar data={contributionCalendar} />
         </div>
       )}
     </div>
   );
-  return <></>;
 };
 
 export default Contributions;

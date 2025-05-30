@@ -7,14 +7,16 @@ interface SkeletonProps {
 
 export const SkeletonCard = ({ className = "" }: SkeletonProps) => {
   return (
-    <Skeleton className={`rounded-xl  ${className}`}>
-      <Card className="h-[100px] content-center">
-        <div className="space-y-5 px-3">
-          <Skeleton className="h-4 max-w-[150px]" />
-          <Skeleton className="h-4 max-w-[100px]" />
-        </div>
-      </Card>
-    </Skeleton>
+    <>
+      <Skeleton className={`rounded-xl  ${className}`}>
+        <Card className="h-[100px] content-center">
+          <div className="space-y-5 px-3">
+            <Skeleton className="h-4 max-w-[150px]" />
+            <Skeleton className="h-4 max-w-[100px]" />
+          </div>
+        </Card>
+      </Skeleton>
+    </>
   );
 };
 
