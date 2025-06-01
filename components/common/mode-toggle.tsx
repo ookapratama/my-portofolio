@@ -39,7 +39,7 @@ export function ModeToggle() {
           <span>Dark</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={() => setTheme("retro")}>
+        {/* <DropdownMenuItem onClick={() => setTheme("retro")}>
           <Icons.retro className="mr-2 h-4 w-4" />
           <span>Retro</span>
         </DropdownMenuItem>
@@ -59,7 +59,7 @@ export function ModeToggle() {
           <Icons.synthwave className="mr-2 h-4 w-4" />
           <span>Synthwave</span>
         </DropdownMenuItem>
-        <DropdownMenuSeparator />
+        <DropdownMenuSeparator /> */}
         <DropdownMenuItem onClick={() => setTheme("system")}>
           <Icons.laptop className="mr-2 h-4 w-4" />
           <span>System</span>

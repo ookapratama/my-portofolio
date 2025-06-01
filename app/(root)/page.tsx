@@ -117,7 +117,7 @@ export default function IndexPage() {
             </AnimatedText>
             <AnimatedText delay={0.8}>
               <Link
-                href={"/contact"}
+                href={"/dashboard"}
                 rel="noreferrer"
                 className={cn(
                   buttonVariants({
