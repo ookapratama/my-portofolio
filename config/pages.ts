@@ -65,6 +65,14 @@ export const pagesConfig: PagesConfig = {
       description: "Ooka Pratama's resume.",
     },
   },
+  about: {
+    title: "About Me",
+    description: "My journey in code: projects, experience, skills, education, and contributions.",
+    metadata: {
+      title: "About Me",
+      description: "Ooka Pratama's journey in code: projects, experience, skills, education, and contributions.",
+    },
+  },
   career: {
     title: "Career Timeline",
     description: "Professional journey and experience timeline.",

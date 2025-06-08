@@ -16,11 +16,15 @@ export const routesConfig: any = {
       title: "Career",
       href: "/career",
     },
-    // will be commented soon
     {
-      title: "Contributions",
-      href: "/contributions",
+      title: "About Me",
+      href: "/about",
     },
+    // will be commented soon
+    // {
+    //   title: "Contributions",
+    //   href: "/contributions",
+    // },
     {
       title: "Contact",
       href: "/contact",

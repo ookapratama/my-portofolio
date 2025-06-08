@@ -73,6 +73,7 @@ export type ValidPages =
   | "contact"
   | "contributions"
   | "resume"
+  | "about"
   | "dashboard";
 
 
