@@ -1,3 +1,4 @@
+import { StackIcons } from "@/components/common/icons";
 import { ValidCategory, ValidExpType, ValidSkills } from "./constants";
 
 interface PagesInfoInterface {
@@ -20,6 +21,7 @@ export interface ExperienceInterface {
   websiteLink?: string;
   githubLink?: string;
   techStack: ValidSkills[];
+  stackIcons: string[];
   startDate: Date;
   endDate: Date;
   companyLogoImg: any;
@@ -31,7 +33,7 @@ export const Experiences: ExperienceInterface[] = [
   {
     id: "built-design",
     companyName: "Builtdesign",
-    type: "Professional",
+    type: "Contributions",
     category: ["Web Dev", "Full Stack", "UI/UX"],
     shortDescription:
       "Developed and optimized a high-performing website catering to over 4000 users, emphasizing efficiency and maintainability.",
@@ -42,8 +44,15 @@ export const Experiences: ExperienceInterface[] = [
       "Node.js",
       "MongoDB",
       "GraphQL",
-      "Nest.js",
       "Typescript",
+    ],
+    stackIcons: [
+      'nextjs',
+      'react',
+      'nodejs',
+      'mongo',
+      'typescript',
+      'graphql'
     ],
     startDate: new Date("2021-07-01"),
     endDate: new Date("2022-07-01"),
@@ -100,16 +109,18 @@ export const Experiences: ExperienceInterface[] = [
       ],
     },
   },
+
   {
     id: "the-super-quotes",
     companyName: "The Super Quotes",
-    type: "Professional",
+    type: "Contributions",
     category: ["Mobile Dev", "Full Stack", "UI/UX"],
     shortDescription:
       "Elevated The Super Quotes app with JavaScript, React Native, APIs, Redux magic, and Google Play Store debut.",
     websiteLink:
       "https://play.google.com/store/apps/details?id=com.thesuperlife",
     techStack: ["React Native", "Node.js", "MongoDB", "Javascript"],
+    stackIcons: ['react', 'nodejs', 'mongo', 'javascript'],
     startDate: new Date("2021-07-01"),
     endDate: new Date("2022-07-01"),
     companyLogoImg: "/experience/superquotes/logo.png",
@@ -166,15 +177,17 @@ export const Experiences: ExperienceInterface[] = [
       ],
     },
   },
+
   {
     id: "apex-shopping",
     companyName: "Apex Shopping App",
-    type: "Personal Project",
+    type: "Projects",
     category: ["Mobile Dev", "Full Stack", "UI/UX"],
     shortDescription:
       "Developed a feature-rich mobile shopping application with admin panel, user authentication, and seamless product management using React Native and Firebase.",
     githubLink: "https://github.com/namanbarkiya/apex-shopping-app",
     techStack: ["React Native", "Javascript", "Redux", "Node.js", "express.js"],
+    stackIcons: ['react', 'javascript', 'redux','nodejs', 'express'],
     startDate: new Date("2021-07-14"),
     endDate: new Date("2022-07-01"),
     companyLogoImg: "/experience/apex/logo.png",
@@ -230,15 +243,17 @@ export const Experiences: ExperienceInterface[] = [
       ],
     },
   },
+
   {
     id: "builtdesign-blogs",
     companyName: "Builtdesign Blogs",
-    type: "Professional",
+    type: "Contributions",
     category: ["Web Dev", "Full Stack", "UI/UX"],
     shortDescription:
       "Crafted Builtdesign's vibrant Blogs Website using Netlify CMS and React for engaging content experiences.",
     websiteLink: "https://blog.builtdesign.in",
     techStack: ["Next.js", "React", "Node.js", "MongoDB", "Typescript"],
+    stackIcons: ['nextjs', 'react', 'nodejs', 'mongo', 'typescript' ],
     startDate: new Date("2022-03-01"),
     endDate: new Date("2022-07-01"),
     companyLogoImg: "/experience/builtdesign-blogs/logo.png",
@@ -288,16 +303,18 @@ export const Experiences: ExperienceInterface[] = [
       ],
     },
   },
+  
   {
     id: "portfolio-card",
     companyName: "Portfolio Card",
-    type: "Personal Project",
+    type: "Projects",
     category: ["Web Dev", "Frontend", "3D Modeling"],
     shortDescription:
       "Forged an immersive 3D Portfolio Card utilizing the prowess of Three.js and Blender, where art and technology converge in an interactive masterpiece.",
     websiteLink: "https://card.namanbarkiya.xyz/",
     githubLink: "https://github.com/namanbarkiya/3d-portfolio-card",
     techStack: ["React", "Javascript", "HTML 5", "CSS 3"],
+    stackIcons: ['react', 'javascript', 'html5', 'css3'],
     startDate: new Date("2022-03-01"),
     endDate: new Date("2022-07-01"),
     companyLogoImg: "/experience/card/logo.png",
@@ -324,12 +341,12 @@ export const Experiences: ExperienceInterface[] = [
     ],
     descriptionDetails: {
       paragraphs: [
-        "In my personal project, I've ventured into the world of creativity, fashioning a distinctive portfolio card through the utilization of Three.js.",
+        "In my Projects, I've ventured into the world of creativity, fashioning a distinctive portfolio card through the utilization of Three.js.",
         "This portfolio card transcends convention; it emerges as a captivating 3D model, adorned with meticulous lighting arrangements that conjure a spellbinding visual journey.",
         "To materialize this concept, I've harnessed the combined potential of Three.js and Blender, orchestrating a meticulous crafting of the central 3D model that serves as the cornerstone of the card's allure.",
         "Yet, the allure extends beyond aesthetics. I've ingeniously interwoven custom links directly into the fabric of Three.js components. Through the creation and seamless integration of novel components, these additions elegantly rest upon the card's surface, mirroring its rotations and delivering an interactive dimension to my portfolio.",
         "The portfolio card itself is an opus of motion, perpetually swaying in an auto-rotational dance that unfurls its multifaceted essence. As an enhancement, I've introduced an instinctive user interaction element. A simple, intuitive drag of the card in specific directions grants viewers a comprehensive vantage, enabling exploration from every conceivable angle.",
-        "At its core, my personal project epitomizes technical finesse, artistic expression, and interactive design. The amalgamation of Three.js, Blender's prowess, and the innovation of component integration has birthed not only a portfolio card, but a dynamic encounter leaving an indelible imprint on all who partake.",
+        "At its core, my Projects epitomizes technical finesse, artistic expression, and interactive design. The amalgamation of Three.js, Blender's prowess, and the innovation of component integration has birthed not only a portfolio card, but a dynamic encounter leaving an indelible imprint on all who partake.",
       ],
       bullets: [
         "Conceptualized and realized a distinct portfolio card using Three.js, highlighting creative exploration.",
@@ -342,15 +359,17 @@ export const Experiences: ExperienceInterface[] = [
       ],
     },
   },
+
   {
     id: "cirql-dashboard",
     companyName: "Cirql Dashboard",
-    type: "Personal Project",
+    type: "Projects",
     category: ["Web Dev", "Frontend", "UI/UX"],
     shortDescription:
       "Created a dashboard project using React and Tailwind CSS, focusing on UI design and routing implementation.",
     websiteLink: "https://cirql-ui.namanbarkiya.xyz/",
     techStack: ["React", "Tailwind CSS", "Google Auth"],
+    stackIcons: ['react', 'tailwind', 'googleAuth'],
     startDate: new Date("2023-01-01"),
     endDate: new Date("2023-02-15"),
     companyLogoImg: "/experience/cirql/logo.png",
@@ -370,7 +389,7 @@ export const Experiences: ExperienceInterface[] = [
     ],
     descriptionDetails: {
       paragraphs: [
-        "For the 'Cirql Dashboard' personal project, I aimed to enhance my UI design skills and deepen my understanding of routing within a React application.",
+        "For the 'Cirql Dashboard' Projects, I aimed to enhance my UI design skills and deepen my understanding of routing within a React application.",
         "I utilized React and Tailwind CSS to craft an intuitive dashboard interface that provides users with an organized overview of data and functionalities. The UI components were thoughtfully designed to ensure a seamless user experience.",
         "Incorporating Google Sign-In Authentication further fortified the project by adding a layer of security and convenience. Users are required to authenticate before accessing certain routes, ensuring the safety of sensitive information.",
         "The routing system was meticulously implemented to enable smooth navigation between different sections of the dashboard, simulating real-world use cases.",
@@ -385,16 +404,18 @@ export const Experiences: ExperienceInterface[] = [
       ],
     },
   },
+
   {
     id: "inscript-hindi-typing",
     companyName: "Inscript Hindi Typing",
-    type: "Personal Project",
+    type: "Projects",
     category: ["Web Dev", "UI/UX"],
     shortDescription:
       "Developed a user-friendly website for Inscript Hindi typing, addressing the need for a simple tool for Hindi writers to convey data digitally.",
     websiteLink: "https://hindityping.namanbarkiya.xyz",
     githubLink: "https://github.com/namanbarkiya/inscript-hindi-keyboard",
     techStack: ["HTML 5", "CSS 3", "Javascript"],
+    stackIcons: ['html5', 'css3', 'javascript'],
     startDate: new Date("2022-05-01"),
     endDate: new Date("2022-06-15"),
     companyLogoImg: "/experience/hindi-keyboard/logo.png",
@@ -435,6 +456,7 @@ export const Experiences: ExperienceInterface[] = [
       ],
     },
   },
+
 ];
 
 export const featuredExperiences = Experiences.slice(0, 3);

@@ -63,7 +63,7 @@ export type ValidCategory =
   | "Mobile Dev"
   | "3D Modeling";
 
-export type ValidExpType = "Personal Project" | "Professional";
+export type ValidExpType = "Projects" | "Contributions";
 
 export type ValidPages =
   | "home"
@@ -74,6 +74,7 @@ export type ValidPages =
   | "contributions"
   | "resume"
   | "dashboard";
+
 
 // initial github types
 export type GithubResponse = {

@@ -5,6 +5,8 @@ import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import ChipContainer from "@/components/ui/chip-container";
 import { ExperienceInterface } from "@/config/experience";
+import SkillsCard from "../skills/skills-card";
+import SkillsIcon from "../common/skills-icon";
 
 interface ProjectCardProps {
   project: ExperienceInterface;
@@ -28,8 +30,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <p className="line-clamp-3 font-normal text-muted-foreground">
           {project.shortDescription}
         </p>
-        <div className="flex gap-2 flex-wrap">
-          <ChipContainer textArr={project.category} />
+        <div className="flex pb-3 gap-2 flex-wrap">
+          {/* <ChipContainer textArr={project.techStack} /> */}
+          {
+            project.stackIcons.map((item, index) => (
+              <SkillsIcon key={index} icons={item} size={30}  />
+            ))
+          }
         </div>
         <Link href={`/experience/${project.id}`}>
           <Button variant={"default"} className="mt-2">
@@ -39,7 +46,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </Link>
       </div>
       <div className="absolute bottom-4 right-4 p-3 rounded-full bg-background border border-border">
-        {project.type === "Personal Project" ? (
+        {project.type === "Projects" ? (
           <Icons.userFill className="h-4 w-4" />
         ) : (
           <Icons.work className="h-4 w-4" />

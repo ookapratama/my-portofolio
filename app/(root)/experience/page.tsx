@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 
 const renderContent = (tabVal: string) => {
   let expArr = Experiences;
-  if (tabVal === "personal") {
-    expArr = expArr.filter((val) => val.type === "Personal Project");
-  } else if (tabVal === "professional") {
-    expArr = expArr.filter((val) => val.type === "Professional");
+  if (tabVal === "projects") {
+    expArr = expArr.filter((val) => val.type === "Projects");
+  } else if (tabVal === "contributions") {
+    expArr = expArr.filter((val) => val.type === "Contributions");
   }
   
   return (
@@ -37,16 +37,16 @@ export default function ExperiencePage() {
       <Tabs defaultValue="all" className="w-full">
         <TabsList className="conatiner grid max-w-[30rem] grid-cols-3">
           <TabsTrigger value="all">All</TabsTrigger>
-          <TabsTrigger value="personal">Personal</TabsTrigger>
-          <TabsTrigger value="professional">Professional</TabsTrigger>
+          <TabsTrigger value="projects">Projects</TabsTrigger>
+          <TabsTrigger value="contributions">Contributions</TabsTrigger>
         </TabsList>
         <TabsContent value="all" className="w-full">
           {renderContent("all")}
         </TabsContent>
-        <TabsContent value="professional">
-          {renderContent("professional")}
+        <TabsContent value="contributions">
+          {renderContent("contributions")}
         </TabsContent>
-        <TabsContent value="personal">{renderContent("personal")}</TabsContent>
+        <TabsContent value="projects">{renderContent("projects")}</TabsContent>
       </Tabs>
     </PageContainer>
   );

@@ -212,7 +212,7 @@ export default function IndexPage() {
                   className="px-5 tracking-widest "
                   value="contribution"
                 >
-                  Contribution
+                  Contributions
                 </TabsTrigger>
               </TabsList>
             </Tabs>

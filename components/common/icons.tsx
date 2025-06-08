@@ -57,15 +57,73 @@ import {
   SiReact,
   SiTypescript,
   SiHono,
-  SiGithub
+  SiGithub,
+  SiMongodb,
+  SiGraphql,
+  SiRedux,
+  SiGoogleauthenticator,
+  SiTailwindcss,
 } from "react-icons/si";
+
+export type stackCardProps = {
+  [key: string]: (size?: number) => JSX.Element;
+};
+
+
+const defaultIconSize: number = 50;
+
+export const StackCardIcons: stackCardProps = {
+  nextjs: (size = defaultIconSize) => <SiNextdotjs size={size} />,
+  express: (size = defaultIconSize) => <SiExpress size={size} />,
+  nodejs: (size = defaultIconSize) => (
+    <SiNodedotjs size={size} className="text-green-600" />
+  ),
+  typescript: (size = defaultIconSize) => (
+    <SiTypescript className="text-blue-600" size={size} />
+  ),
+  javascript: (size = defaultIconSize) => (
+    <SiJavascript className="text-yellow-400" size={size} />
+  ),
+  html5: (size = defaultIconSize) => (
+    <SiHtml5 size={size} className="text-orange-600" />
+  ),
+  css3: (size = defaultIconSize) => (
+    <SiCss3 size={size} className="text-blue-600" />
+  ),
+  react: (size = defaultIconSize) => (
+    <SiReact className="text-sky-500" size={size} />
+  ),
+  bootstrap: (size = defaultIconSize) => (
+    <SiBootstrap className="text-purple-600" size={size} />
+  ),
+  hono: (size = defaultIconSize) => (
+    <SiHono className="text-orange-600" size={size} />
+  ),
+  mysql: (size = defaultIconSize) => <SiMysql size={size} />,
+  mongo: (size = defaultIconSize) => (
+    <SiMongodb size={size} className="text-green-600" />
+  ),
+  graphql: (size = defaultIconSize) => (
+    <SiGraphql size={size} className="text-pink-600" />
+  ),
+  redux: (size = defaultIconSize) => (
+    <SiRedux size={size} className="text-pink-600" />
+  ),
+  googleAuth: (size = defaultIconSize) => (
+    <SiGoogleauthenticator size={size} className="text-pink-600" />
+  ),
+  tailwind: (size = defaultIconSize) => (
+    <SiTailwindcss size={size} className="text-pink-600" />
+  ),
+  github: (size  = 25) => <SiGithub size={size} />,
+};
 
 export type stacksProps = {
   [key: string]: JSX.Element;
 };
 
-const iconSize  = 50
-
+//  untuk di skills
+const iconSize: number = 50;
 export const StackIcons: stacksProps = {
   nextjs: <SiNextdotjs size={iconSize} />,
   express: <SiExpress size={iconSize} />,
