@@ -5,7 +5,6 @@ interface SkillsCardProps {
   skills: skillsInterface[];
 }
 export default function SkillsCard({ skills }: SkillsCardProps) {
-  console.log(skills)
   return (
     <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {skills.map((skill, id) => (

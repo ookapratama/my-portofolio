@@ -32,15 +32,10 @@ const Calendar = ({ data }: CalendarProps) => {
       if (containerRef.current) {
         const containerWidth = containerRef.current.offsetWidth;
         const totalWeeks = data?.weeks?.length || 53;
-        console.log('data week length : ', data?.weeks?.length)
-        console.log('containerWidth : ', containerWidth)
-        console.log('totalWeeks : ', totalWeeks)
 
         const availableWidth = containerWidth - (totalWeeks - 1) * 3;
         const maxCellSize = Math.floor(availableWidth / totalWeeks);
-        console.log('maxCell : ', maxCellSize)
         const cellSize = Math.max(8, Math.min(20, maxCellSize));
-        console.log('cellSize : ', cellSize)
 
         setDimensions({
           cellSize,
