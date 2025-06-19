@@ -4,18 +4,18 @@ export const routesConfig: any = {
       title: "Dashboard",
       href: "/dashboard",
     },
-    {
-      title: "Skills",
-      href: "/skills",
-    },
+    // {
+    //   title: "Skills",
+    //   href: "/skills",
+    // },
     {
       title: "Experience",
       href: "/experience",
     },
-    {
-      title: "Career",
-      href: "/career",
-    },
+    // {
+    //   title: "Career",
+    //   href: "/career",
+    // },
     {
       title: "About Me",
       href: "/about",

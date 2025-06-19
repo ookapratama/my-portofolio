@@ -8,8 +8,10 @@ const About = () => {
     <>
       <Story />
       <Resume />
-      <Separator className="my-4" />
+      <Separator className="my-6" />
       <Skills />
+      <Separator className="my-8" />
+
     </>
   );
 };
