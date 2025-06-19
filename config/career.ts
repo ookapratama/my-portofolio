@@ -5,13 +5,16 @@ export interface CareerExperienceInterface {
   position: string;
   company: string;
   location: string;
-  startDate: Date;
-  endDate: Date | "Present";
+  startDate: string;
+  endDate?: string | null;
   description: string[];
   achievements: string[];
   skills: ValidSkills[];
   companyUrl?: string;
   logo?: string;
+  link?: string;
+  locationType: string;
+  type: string;
 }
 
 export const careerExperiences: CareerExperienceInterface[] = [
@@ -20,8 +23,8 @@ export const careerExperiences: CareerExperienceInterface[] = [
     position: "Software Development Engineer",
     company: "UBS",
     location: "Mumbai, India",
-    startDate: new Date("2024-08-01"),
-    endDate: "Present",
+    startDate: '2024-08-01',
+    endDate: "",
     description: [
       "Contributing to the P&L dashboard used by traders and senior stakeholders.",
       "Leading the migration of the UI from Kendo to UBS's internal design system.",
@@ -43,8 +46,8 @@ export const careerExperiences: CareerExperienceInterface[] = [
     position: "Software Development Intern",
     company: "Agentprod LLP",
     location: "Bengaluru, India",
-    startDate: new Date("2023-10-01"),
-    endDate: new Date("2024-03-01"),
+    startDate: '2023-10-01',
+    endDate: '2024-03-01',
     description: [
       "Built backend for AI-driven chatbots using LLMs (GPT-4, Llama-2).",
       "Developed APIs and integrated Slack, Google Workspace, and HubSpot automations.",
@@ -65,8 +68,8 @@ export const careerExperiences: CareerExperienceInterface[] = [
     position: "Web Developer Intern",
     company: "Builtdesign",
     location: "Nagpur, India",
-    startDate: new Date("2021-07-01"),
-    endDate: new Date("2022-07-01"),
+    startDate: '2021-07-01',
+    endDate: '2022-07-01',
     description: [
       "Developed websites using React, Angular, and GraphQL.",
       "Set up AWS servers and CI/CD pipelines.",
