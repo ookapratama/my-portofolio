@@ -4,6 +4,7 @@ import PageContainer from "@/components/common/page-container";
 import SkillsCard from "@/components/skills/skills-card";
 import { pagesConfig } from "@/config/pages";
 import { skills } from "@/config/skills";
+import About from "@/components/about/about";
 
 export const metadata: Metadata = {
   title: pagesConfig.about.metadata.title,
@@ -16,8 +17,9 @@ export default function SkillsPage() {
       title={pagesConfig.about.title}
       description={pagesConfig.about.description}
     >
+      <About />
       
-      <SkillsCard skills={skills} />
+      {/* <SkillsCard skills={skills} /> */}
     </PageContainer>
   );
 }

@@ -63,12 +63,22 @@ import {
   SiRedux,
   SiGoogleauthenticator,
   SiTailwindcss,
+  SiExpo,
+  SiCplusplus,
+  SiPhp,
+  SiLaravel,
+  SiJquery,
+  SiPython,
+  SiVercel,
+  SiJupyter,
+  SiWordpress,
+  SiPostgresql,
+  SiFlask,
 } from "react-icons/si";
 
 export type stackCardProps = {
   [key: string]: (size?: number) => JSX.Element;
 };
-
 
 const defaultIconSize: number = 50;
 
@@ -115,7 +125,7 @@ export const StackCardIcons: stackCardProps = {
   tailwind: (size = defaultIconSize) => (
     <SiTailwindcss size={size} className="text-pink-600" />
   ),
-  github: (size  = 25) => <SiGithub size={size} />,
+  github: (size = 25) => <SiGithub size={size} />,
 };
 
 export type stacksProps = {
@@ -123,20 +133,34 @@ export type stacksProps = {
 };
 
 //  untuk di skills
-const iconSize: number = 50;
+const iconSize: number = 30;
 export const StackIcons: stacksProps = {
-  nextjs: <SiNextdotjs size={iconSize} />,
-  express: <SiExpress size={iconSize} />,
-  nodejs: <SiNodedotjs size={iconSize} className="text-green-600"  />,
-  typescript: <SiTypescript className="text-blue-600" size={iconSize} />,
-  javascript: <SiJavascript className="text-yellow-400" size={iconSize} />,
-  html5: <SiHtml5 size={iconSize} className="text-orange-600" />,
-  css3: <SiCss3 size={iconSize} className="text-blue-600" />,
-  react: <SiReact className="text-sky-500" size={iconSize} />,
-  bootstrap: <SiBootstrap className="text-purple-600" size={iconSize} />,
-  hono: <SiHono className="text-orange-600" size={iconSize} />,
-  mysql: <SiMysql size={iconSize} />,
-  github: <SiGithub size={25} />,
+  "Next.js": <SiNextdotjs size={iconSize} />,
+  Express: <SiExpress size={iconSize} />,
+  "Node.js": <SiNodedotjs size={iconSize} className="text-green-600" />,
+  Typescript: <SiTypescript className="text-blue-600" size={iconSize} />,
+  Javascript: <SiJavascript className="text-yellow-400" size={iconSize} />,
+  HTML: <SiHtml5 size={iconSize} className="text-orange-600" />,
+  CSS: <SiCss3 size={iconSize} className="text-blue-600" />,
+  "React.js": <SiReact className="text-sky-500" size={iconSize} />,
+  "React Native": <SiReact size={iconSize} className="text-sky-500" />,
+  "C++": <SiCplusplus size={iconSize} className="text-blue-700" />,
+  Bootstrap: <SiBootstrap className="text-purple-600" size={iconSize} />,
+  Hono: <SiHono className="text-orange-600" size={iconSize} />,
+  PHP: <SiPhp size={iconSize} className="text-blue-500" />,
+  Laravel: <SiLaravel size={iconSize} className="text-red-600" />,
+  Jquery: <SiJquery size={iconSize} />,
+  Python: <SiPython size={iconSize} />,
+  MySQL: <SiMysql size={iconSize} />,
+  Github: <SiGithub size={iconSize} />,
+  Expo: <SiExpo size={iconSize} />,
+  Tailwind: <SiTailwindcss size={iconSize} className="text-blue-400" />,
+  Vercel: <SiVercel size={iconSize} />,
+  WordPress: <SiWordpress size={iconSize} />,
+  PostgreSQL: <SiPostgresql size={iconSize} className="text-blue-700" />,
+  Flask: <SiFlask size={iconSize} className="text-green-500" />,
+  Jupyter: <SiJupyter size={iconSize} className="text-orange-600" />,
+
 };
 
 export const Icons = {

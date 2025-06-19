@@ -134,3 +134,20 @@ export const GITHUB_ACCOUNTS = [
     is_active: true,
   },
 ];
+
+
+export const ABOUT = `
+<p>
+  Hello! My name is Judhistira Ooka Pratama, a versatile <b>Full-stack Developer with a strong backend focus</b> and a keen interest in <b>Artificial Intelligence</b>. I bring ${
+    new Date().getFullYear() - 2022
+  } years of professional experience, and a total of ${
+    new Date().getFullYear() - 2021
+  } years in software development since 2021. My core expertise lies in <b>TypeScript and PHP</b>, complemented by extensive knowledge in server-side technologies, database management, and exploring AI applications.
+</p>
+<p>
+  Throughout my career, I've consistently delivered robust and scalable solutions, adept at integrating complex databases and ensuring seamless data flow across systems. My focus on optimizing performance and security has led to significant improvements in application efficiency and reliability.
+</p>
+<p>
+  Keeping up with evolving technology trends, especially in the realm of AI, is a priority for me. I am dedicated to creating innovative solutions that not only align with but also propel the strategic goals of an organization forward. My analytical approach and meticulous attention to system architecture have been pivotal in solving intricate problems and fostering technological advancement in every project I partake in.
+</p>
+`;
