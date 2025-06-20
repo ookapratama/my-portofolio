@@ -1,5 +1,7 @@
 import { Separator } from "../ui/separator";
 import CareerList from "./careerList";
+import EducationList from "./educationList";
+import OrganizationList from "./organizationList";
 import Resume from "./resume";
 import Skills from "./skills";
 import Story from "./story";
@@ -13,6 +15,10 @@ const About = () => {
       <Skills />
       <Separator className="my-8" />
       <CareerList />
+      <Separator className="my-8" />
+      <EducationList />
+      <Separator className="my-8" />
+      <OrganizationList />
     </>
   );
 };

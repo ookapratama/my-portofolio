@@ -14,7 +14,7 @@ const CareerCard = ({
   location,
   startDate,
   endDate,
-  link,
+  companyUrl,
   type,
   locationType,
 }: CareerProps) => {
@@ -51,7 +51,7 @@ const CareerCard = ({
         <div className="text-sm text-neutral-600 dark:text-neutral-400 space-y-2">
           <div className="flex items-center gap-1 md:gap-2">
             <a
-              href={link || "#"}
+              href={companyUrl || "#"}
               target="_blank"
               data-umami-event={`Click Career Company Name: ${company}`}
             >
