@@ -171,13 +171,13 @@ export default function IndexPage() {
           </AnimatedText>
         </div>
         <SkillsCard skills={featuredSkills} />
-        <AnimatedText delay={0.4} className="flex justify-center">
+        {/* <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/skills">
             <Button variant={"outline"} className="rounded-xl">
               <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
             </Button>
           </Link>
-        </AnimatedText>
+        </AnimatedText> */}
       </AnimatedSection>
 
       {/* Experience */}

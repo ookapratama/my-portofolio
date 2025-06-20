@@ -156,10 +156,19 @@ export const StackIcons: stacksProps = {
   Expo: <SiExpo size={iconSize} />,
   Tailwind: <SiTailwindcss size={iconSize} className="text-blue-400" />,
   Vercel: <SiVercel size={iconSize} />,
-  WordPress: <SiWordpress size={iconSize} />,
+  // WordPress: <SiWordpress size={iconSize} />,
   PostgreSQL: <SiPostgresql size={iconSize} className="text-blue-700" />,
   Flask: <SiFlask size={iconSize} className="text-green-500" />,
   Jupyter: <SiJupyter size={iconSize} className="text-orange-600" />,
+
+};
+
+//  untuk di skills dashboard
+const iconSizeDashboard: number = 60;
+export const StackDashboardIcons: stacksProps = {
+  nextjs: <SiNextdotjs size={iconSizeDashboard} />,
+  typescript: <SiTypescript className="text-blue-600" size={iconSizeDashboard} />,
+  hono: <SiHono className="text-orange-600" size={iconSizeDashboard} />,
 
 };
 

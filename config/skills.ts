@@ -1,4 +1,4 @@
-import { Icons, StackIcons } from "@/components/common/icons";
+import { Icons, StackDashboardIcons, StackIcons } from "@/components/common/icons";
 
 export interface skillsInterface {
   name: string;
@@ -13,7 +13,7 @@ export const skillsUnsorted: skillsInterface[] = [
     description:
       "Effortlessly build dynamic apps with routing, layouts, loading UI, and API routes.",
     rating: 5,
-    icon: StackIcons.nextjs,
+    icon: StackDashboardIcons.nextjs,
   },
   {
     name: "Hono",
@@ -21,14 +21,14 @@ export const skillsUnsorted: skillsInterface[] = [
       "Fast, lightweight, built on Web Standards. Support for any JavaScript runtime.",
     rating: 5,
     // icon: StackIcons.react,
-    icon: StackIcons.hono,
+    icon: StackDashboardIcons.hono,
   },
   {
     name: "Typescript",
     description:
       "Enhance JavaScript with static types, making code more understandable and reliable.",
     rating: 5,
-    icon: StackIcons.typescript,
+    icon: StackDashboardIcons.typescript,
   },
   {
     name: "React",
