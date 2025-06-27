@@ -1,4 +1,3 @@
-import { StackIcons } from "@/components/common/icons";
 import { ValidCategory, ValidExpType, ValidSkills } from "./constants";
 
 interface PagesInfoInterface {
@@ -31,37 +30,129 @@ export interface ExperienceInterface {
 
 export const Experiences: ExperienceInterface[] = [
   {
-    id: "built-design",
-    companyName: "Builtdesign",
-    type: "Contributions",
-    category: ["Web Dev", "Full Stack", "UI/UX"],
+    id: "bkpp-mamuju",
+    companyName: "BKPP Mamuju",
+    type: "Projects",
+    category: ["Web Dev", "Full Stack"],
     shortDescription:
-      "Developed and optimized a high-performing website catering to over 4000 users, emphasizing efficiency and maintainability.",
-    websiteLink: "https://builtdesign.in",
-    techStack: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "MongoDB",
-      "GraphQL",
-      "Typescript",
-    ],
-    stackIcons: [
-      'nextjs',
-      'react',
-      'nodejs',
-      'mongo',
-      'typescript',
-      'graphql'
-    ],
-    startDate: new Date("2021-07-01"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/experience/builtdesign/logo.png",
+      "Official Website of BKPP Mamuju Regency – Regional Personnel and Human Resources Development Agency. Information on civil service recruitment, employee training, and regional government HR policies.",
+    websiteLink: "https://bkpp.mamujukab.go.id/",
+    githubLink: "https://github.com/ookapratama/Laravel_BkppMamuju.git",
+    techStack: ["Laravel", "PHP", "MySQL", "jQuery"],
+    stackIcons: ["laravel", "php", "mysql", "jquery"],
+    startDate: new Date("2022-06-01"),
+    endDate: new Date("2022-08-01"),
+    companyLogoImg: "/experience/bkppmamuju/bkpp-1.png",
     pagesInfoArr: [
       {
         title: "Landing Page",
         description:
           "Modern and responsive landing page showcasing company services and portfolio",
+        imgArr: [
+          "/experience/bkppmamuju/bkpp-1.png",
+          "/experience/bkppmamuju/landing_1.png",
+          "/experience/bkppmamuju/landing_2.png",
+          "/experience/bkppmamuju/landing_3.png",
+          "/experience/bkppmamuju/landing_4.png",
+        ],
+      },
+
+      {
+        title: "Admin Dashboard",
+        description:
+          "Powerful administrative interface for managing users, projects, and system settings",
+        imgArr: [
+          "/experience/bkppmamuju/dashboard-1.png",
+          "/experience/bkppmamuju/dashboard-2.png",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "During my first hands-on experience with Laravel, I worked on a dynamic web application project that allowed me to explore full-stack development within a modern PHP ecosystem. My role involved building and optimizing a functional platform from the ground up, focusing on clean architecture and user-friendly interfaces.",
+        "I leveraged Laravel’s MVC framework to develop robust backend logic, including authentication systems, database management, and API integrations. For the frontend, I used Blade templating alongside basic JavaScript to create responsive layouts. This project deepened my understanding of routing, middleware, and Eloquent ORM while emphasizing secure coding practices.",
+        "This project marked a significant milestone in my journey as a developer, introducing me to core web development concepts like CRUD operations, server-side validation, and session management. Though modest in scale, it solidified my confidence in working with Laravel and motivated me to explore more advanced features like Livewire or API-driven SPAs in future projects.",
+      ],
+      bullets: [
+        "Developed my first Laravel-based web application, implementing MVC architecture and RESTful routing.",
+        "Designed interactive frontend components with Blade templates, CSS (Bootstrap), and jQuery.",
+        "Integrated MySQL databases with Eloquent ORM for efficient data handling and relationships.",
+        "Collaborated with teammates to debug and optimize features, improving code quality.",
+        "Improved adaptability by incorporating feedback during iterative development.",
+      ],
+    },
+  },
+
+  {
+    id: "bbgtk-sulsel",
+    companyName: "BBGTK Sulsel",
+    type: "Projects",
+    category: ["Web Dev", "Full Stack"],
+    shortDescription:
+      "Official Website of BKPP Mamuju Regency – Regional Personnel and Human Resources Development Agency. Information on civil service recruitment, employee training, and regional government HR policies.",
+    websiteLink: "https://simbbgpsulsel.com/",
+    githubLink: "https://github.com/ookapratama/Laravel_bbgp.git",
+    techStack: ["Laravel", "PHP", "MySQL", "jQuery"],
+    stackIcons: ["laravel", "php", "mysql", "jquery"],
+    startDate: new Date("2024-06-28"),
+    endDate: new Date("2025-01-21"),
+    companyLogoImg: "/experience/bbgtk/bbgtk.png",
+    pagesInfoArr: [
+      {
+        title: "Landing Page",
+        description:
+          "Modern and responsive landing page showcasing company services and portfolio",
+        imgArr: [
+          "/experience/bbgtk/landing_1.png",
+          "/experience/bbgtk/landing_2.png",
+          "/experience/bbgtk/landing_3.png",
+          "/experience/bbgtk/landing_4.png",
+          "/experience/bbgtk/landing_5.png",
+          "/experience/bbgtk/landing_6.png",
+        ],
+      },
+
+      {
+        title: "Admin Dashboard",
+        description:
+          "Powerful administrative interface for managing users, employees, and system settings",
+        imgArr: [
+          "/experience/bbgtk/admin_1.png",
+          "/experience/bbgtk/admin_2.png",
+          "/experience/bbgtk/admin_3.png",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "As the lead developer of this internal management information system, I built an integrated platform to optimize daily operations for the South Sulawesi Education Office. The system covers employee management, and educator activity tracking, replacing manual processes that previously hindered productivity.",
+      ],
+      bullets: [
+        "Designed analytical dashboards for employee performance.",
+        "Designed interactive dashboards with real-time data visualization using Chart.js",
+        "Implemented automated report generation (PDF/Excel) for monthly performance reviews.",
+        "Optimized database performance handling 300+ daily transactions through query optimization.",
+      ],
+    },
+  },
+
+  {
+    id: "rs-antrian",
+    companyName: "Mobile Antrian Posyandu",
+    type: "Contributions",
+    category: ["Mobile Dev", "Frontend"],
+    shortDescription:
+      "A React Native-based solution streamlining patient queue management at community health clinics (Posyandu). Features real-time queue numbers, doctor schedules, and visit history to reduce wait times and improve service efficiency.",
+    websiteLink: "https://builtdesign.in",
+    techStack: ["React Native", "Typescript", "Axios"],
+    stackIcons: ["react", "typescript", "axios"],
+    startDate: new Date("2024-05-14"),
+    endDate: new Date("2024-65-13"),
+    companyLogoImg: "/experience/builtdesign/logo.png",
+    pagesInfoArr: [
+      {
+        title: "Auth Screen",
+        description: "Modern screen for Login and Register",
         imgArr: [
           "/experience/builtdesign/landing_1.webp",
           "/experience/builtdesign/landing_3.webp",
@@ -72,26 +163,10 @@ export const Experiences: ExperienceInterface[] = [
         ],
       },
       {
-        title: "Custom PDF Reader and optimizer",
+        title: "Home Screen",
         description:
           "Specialized PDF viewer with optimization features for improved performance and user experience",
         imgArr: ["/experience/builtdesign/pdf_opt.webp"],
-      },
-      {
-        title: "Clients Dashboard",
-        description:
-          "Comprehensive client portal with project tracking, document management, and communication tools",
-        imgArr: [
-          "/experience/builtdesign/cli_dashboard_1.webp",
-          "/experience/builtdesign/cli_dashboard_2.webp",
-          "/experience/builtdesign/cli_dashboard_3.webp",
-        ],
-      },
-      {
-        title: "Admin Dashboard",
-        description:
-          "Powerful administrative interface for managing users, projects, and system settings",
-        imgArr: ["/experience/builtdesign/logo.png"],
       },
     ],
     descriptionDetails: {
@@ -120,7 +195,7 @@ export const Experiences: ExperienceInterface[] = [
     websiteLink:
       "https://play.google.com/store/apps/details?id=com.thesuperlife",
     techStack: ["React Native", "Node.js", "MongoDB", "Javascript"],
-    stackIcons: ['react', 'nodejs', 'mongo', 'javascript'],
+    stackIcons: ["react", "nodejs", "mongo", "javascript"],
     startDate: new Date("2021-07-01"),
     endDate: new Date("2022-07-01"),
     companyLogoImg: "/experience/superquotes/logo.png",
@@ -187,7 +262,7 @@ export const Experiences: ExperienceInterface[] = [
       "Developed a feature-rich mobile shopping application with admin panel, user authentication, and seamless product management using React Native and Firebase.",
     githubLink: "https://github.com/namanbarkiya/apex-shopping-app",
     techStack: ["React Native", "Javascript", "Redux", "Node.js", "express.js"],
-    stackIcons: ['react', 'javascript', 'redux','nodejs', 'express'],
+    stackIcons: ["react", "javascript", "redux", "nodejs", "express"],
     startDate: new Date("2021-07-14"),
     endDate: new Date("2022-07-01"),
     companyLogoImg: "/experience/apex/logo.png",
@@ -253,7 +328,7 @@ export const Experiences: ExperienceInterface[] = [
       "Crafted Builtdesign's vibrant Blogs Website using Netlify CMS and React for engaging content experiences.",
     websiteLink: "https://blog.builtdesign.in",
     techStack: ["Next.js", "React", "Node.js", "MongoDB", "Typescript"],
-    stackIcons: ['nextjs', 'react', 'nodejs', 'mongo', 'typescript' ],
+    stackIcons: ["nextjs", "react", "nodejs", "mongo", "typescript"],
     startDate: new Date("2022-03-01"),
     endDate: new Date("2022-07-01"),
     companyLogoImg: "/experience/builtdesign-blogs/logo.png",
@@ -303,7 +378,7 @@ export const Experiences: ExperienceInterface[] = [
       ],
     },
   },
-  
+
   {
     id: "portfolio-card",
     companyName: "Portfolio Card",
@@ -314,7 +389,7 @@ export const Experiences: ExperienceInterface[] = [
     websiteLink: "https://card.namanbarkiya.xyz/",
     githubLink: "https://github.com/namanbarkiya/3d-portfolio-card",
     techStack: ["React", "Javascript", "HTML 5", "CSS 3"],
-    stackIcons: ['react', 'javascript', 'html5', 'css3'],
+    stackIcons: ["react", "javascript", "html5", "css3"],
     startDate: new Date("2022-03-01"),
     endDate: new Date("2022-07-01"),
     companyLogoImg: "/experience/card/logo.png",
@@ -369,7 +444,7 @@ export const Experiences: ExperienceInterface[] = [
       "Created a dashboard project using React and Tailwind CSS, focusing on UI design and routing implementation.",
     websiteLink: "https://cirql-ui.namanbarkiya.xyz/",
     techStack: ["React", "Tailwind CSS", "Google Auth"],
-    stackIcons: ['react', 'tailwind', 'googleAuth'],
+    stackIcons: ["react", "tailwind", "googleAuth"],
     startDate: new Date("2023-01-01"),
     endDate: new Date("2023-02-15"),
     companyLogoImg: "/experience/cirql/logo.png",
@@ -415,7 +490,7 @@ export const Experiences: ExperienceInterface[] = [
     websiteLink: "https://hindityping.namanbarkiya.xyz",
     githubLink: "https://github.com/namanbarkiya/inscript-hindi-keyboard",
     techStack: ["HTML 5", "CSS 3", "Javascript"],
-    stackIcons: ['html5', 'css3', 'javascript'],
+    stackIcons: ["html5", "css3", "javascript"],
     startDate: new Date("2022-05-01"),
     endDate: new Date("2022-06-15"),
     companyLogoImg: "/experience/hindi-keyboard/logo.png",
@@ -456,7 +531,6 @@ export const Experiences: ExperienceInterface[] = [
       ],
     },
   },
-
 ];
 
 export const featuredExperiences = Experiences.slice(0, 3);

@@ -74,6 +74,7 @@ import {
   SiWordpress,
   SiPostgresql,
   SiFlask,
+  SiAxios,
 } from "react-icons/si";
 
 export type stackCardProps = {
@@ -126,6 +127,10 @@ export const StackCardIcons: stackCardProps = {
     <SiTailwindcss size={size} className="text-pink-600" />
   ),
   github: (size = 25) => <SiGithub size={size} />,
+  laravel: (size = defaultIconSize) => <SiLaravel size={size} className="text-red-500" />,
+  php: (size = defaultIconSize) => <SiPhp size={size} className="text-purple-500" />,
+  jquery: (size = defaultIconSize) => <SiJquery size={size} />,
+  axios: (size = defaultIconSize) => <SiAxios size={size} />,
 };
 
 export type stacksProps = {
@@ -168,7 +173,8 @@ const iconSizeDashboard: number = 60;
 export const StackDashboardIcons: stacksProps = {
   nextjs: <SiNextdotjs size={iconSizeDashboard} />,
   typescript: <SiTypescript className="text-blue-600" size={iconSizeDashboard} />,
-  hono: <SiHono className="text-orange-600" size={iconSizeDashboard} />,
+  // hono: <SiHono className="text-orange-600" size={iconSizeDashboard} />,
+  express: <SiExpress size={iconSizeDashboard} />,
 
 };
 

@@ -12,6 +12,8 @@ import { siteConfig } from "@/config/site";
 import { cn, formatDateFromObj } from "@/lib/utils";
 // import ookaImg from "@/public/ooka2.jpg";
 import ookaImg from "@/public/ooka1.jpg";
+import SkillsCard from "@/components/skills/skills-card";
+import SkillsIcon from "@/components/common/skills-icon";
 
 interface ExperiencePageProps {
   params: {
@@ -19,7 +21,7 @@ interface ExperiencePageProps {
   };
 }
 
-const githubUsername = "namanbarkiya";
+const githubUsername = "ookapratama";
 
 export default function Experience({ params }: ExperiencePageProps) {
   let exp = Experiences.find((val) => val.id === params.expId);
@@ -67,25 +69,28 @@ export default function Experience({ params }: ExperiencePageProps) {
         </h1>
         <ChipContainer textArr={exp.category} />
         <div className="mt-4 flex space-x-4">
-          <Link
-            href={siteConfig.links.github}
-            className="flex items-center space-x-2 text-sm"
-          >
-            <Image
-              src={ookaImg}
-              alt={"naman"}
-              width={42}
-              height={42}
-              className="rounded-full bg-background"
-            />
+          <div className="github">
+            <Link
+              href={siteConfig.links.github}
+              className="flex items-center space-x-2 text-sm"
+            >
+              <Image
+                src={ookaImg}
+                alt={"ooka"}
+                width={42}
+                height={42}
+                className="rounded-full bg-background"
+              />
 
-            <div className="flex-1 text-left leading-tight">
-              <p className="font-medium">{"Naman Barkiya"}</p>
-              <p className="text-[12px] text-muted-foreground">
-                @{siteConfig.username}
-              </p>
-            </div>
-          </Link>
+              <div className="flex-1 text-left leading-tight">
+                <p className="font-medium">{"Ooka Pratama"}</p>
+                <p className="text-[12px] text-muted-foreground">
+                  @{siteConfig.username}
+                </p>
+              </div>
+            </Link>
+          </div>
+          <div className="demo"></div>
         </div>
       </div>
 
@@ -102,7 +107,12 @@ export default function Experience({ params }: ExperiencePageProps) {
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
           Tech Stack
         </h2>
-        <ChipContainer textArr={exp.techStack} />
+        <div className="flex pb-3 gap-3 flex-wrap">
+          <ChipContainer textArr={exp.techStack} />
+          {/* {exp.stackIcons.map((item, index) => (
+            <SkillsIcon key={index} icons={item} size={35} />
+          ))} */}
+        </div>
       </div>
 
       <div className="mb-7 ">

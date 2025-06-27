@@ -52,7 +52,9 @@ export type ValidSkills =
   | "PyTorch"
   | "Spring Boot"
   | "Laravel"
-  | "PHP";
+  | "PHP"
+  | "Axios"
+  | "jQuery";
 
 export type ValidCategory =
   | "Full Stack"
@@ -62,7 +64,6 @@ export type ValidCategory =
   | "Web Dev"
   | "Mobile Dev"
   | "3D Modeling";
-
 export type ValidExpType = "Projects" | "Contributions";
 
 export type ValidPages =

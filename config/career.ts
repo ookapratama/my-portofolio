@@ -15,6 +15,18 @@ export interface CareerExperienceInterface {
 
 export const careerExperiences: CareerExperienceInterface[] = [
   {
+    id: "freelance",
+    position: "Freelance Software Engineer",
+    company: "Freelance",
+    location: "Makassar, Sulawesi Selatan",
+    startDate: '2021-12',
+    endDate: "",
+    companyUrl: "/experience",
+    logo: "/career/freelance.png",
+    locationType:'Remote',
+    type: 'Freelance'
+  },
+  {
     id: "siddiSolution",
     position: "Fullstack Developer and Lecturer",
     company: "CV. Siddi Solution Technology",

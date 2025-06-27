@@ -7,7 +7,7 @@ const ExperienceDescription: React.FC<{
   return (
     <div>
       {paragraphs.map((paragraph, index) => (
-        <p className="mb-4" key={index}>
+        <p className="mb-4 indent-4 text-justify" key={index}>
           {paragraph}
         </p>
       ))}

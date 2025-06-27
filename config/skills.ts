@@ -15,13 +15,21 @@ export const skillsUnsorted: skillsInterface[] = [
     rating: 5,
     icon: StackDashboardIcons.nextjs,
   },
+  // {
+  //   name: "Hono",
+  //   description:
+  //     "Fast, lightweight, built on Web Standards. Support for any JavaScript runtime.",
+  //   rating: 5,
+  //   // icon: StackIcons.react,
+  //   icon: StackDashboardIcons.hono,
+  // },
   {
-    name: "Hono",
+    name: "Express",
     description:
-      "Fast, lightweight, built on Web Standards. Support for any JavaScript runtime.",
+      "Fast, unopinionated, minimalist web framework for Node.js",
     rating: 5,
     // icon: StackIcons.react,
-    icon: StackDashboardIcons.hono,
+    icon: StackDashboardIcons.express,
   },
   {
     name: "Typescript",
