@@ -75,6 +75,7 @@ import {
   SiPostgresql,
   SiFlask,
   SiAxios,
+  SiShadcnui,
 } from "react-icons/si";
 
 export type stackCardProps = {
@@ -131,6 +132,7 @@ export const StackCardIcons: stackCardProps = {
   php: (size = defaultIconSize) => <SiPhp size={size} className="text-purple-500" />,
   jquery: (size = defaultIconSize) => <SiJquery size={size} />,
   axios: (size = defaultIconSize) => <SiAxios size={size} />,
+  shadcn: (size = defaultIconSize) => <SiShadcnui size={size} />,
 };
 
 export type stacksProps = {

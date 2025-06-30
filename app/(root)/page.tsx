@@ -200,7 +200,7 @@ export default function IndexPage() {
           >
             {pagesConfig.experience.description}
           </AnimatedText>
-          <div className="d-flex justify-center">
+          {/* <div className="d-flex justify-center">
             <Tabs defaultValue="projects" className="w-full">
               <TabsList className="conatiner grid max-w-[50rem] grid-cols-2">
                 <TabsTrigger className="px-5 tracking-widest " value="projects">
@@ -214,7 +214,7 @@ export default function IndexPage() {
                 </TabsTrigger>
               </TabsList>
             </Tabs>
-          </div>
+          </div> */}
         </div>
         <div className="mx-auto grid justify-center gap-4 md:w-full lg:grid-cols-3">
           {featuredExperiences.map((exp, index) => (

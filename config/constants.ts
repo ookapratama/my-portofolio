@@ -54,6 +54,7 @@ export type ValidSkills =
   | "Laravel"
   | "PHP"
   | "Axios"
+  | "Shadcn"
   | "jQuery";
 
 export type ValidCategory =
@@ -63,7 +64,13 @@ export type ValidCategory =
   | "UI/UX"
   | "Web Dev"
   | "Mobile Dev"
-  | "3D Modeling";
+  | "User Management"
+  | "3D Modeling" 
+  | "Problem-Solving"
+  | "Debugging"
+  | "System Administration"
+  | "Technical Documentation"
+  ;
 export type ValidExpType = "Projects" | "Contributions";
 
 export type ValidPages =

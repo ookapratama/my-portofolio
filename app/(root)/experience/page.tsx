@@ -35,18 +35,18 @@ export default function ExperiencePage() {
       description={pagesConfig.experience.description}
     >
       <Tabs defaultValue="all" className="w-full">
-        <TabsList className="conatiner grid max-w-[30rem] grid-cols-3">
+        {/* <TabsList className="conatiner grid max-w-[30rem] grid-cols-3">
           <TabsTrigger value="all">All</TabsTrigger>
           <TabsTrigger value="projects">Projects</TabsTrigger>
           <TabsTrigger value="contributions">Contributions</TabsTrigger>
-        </TabsList>
+        </TabsList> */}
         <TabsContent value="all" className="w-full">
           {renderContent("all")}
         </TabsContent>
-        <TabsContent value="contributions">
+        {/* <TabsContent value="contributions">
           {renderContent("contributions")}
         </TabsContent>
-        <TabsContent value="projects">{renderContent("projects")}</TabsContent>
+        <TabsContent value="projects">{renderContent("projects")}</TabsContent> */}
       </Tabs>
     </PageContainer>
   );
