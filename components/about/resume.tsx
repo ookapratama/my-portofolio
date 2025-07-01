@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { LuDownload as DownloadIcon } from 'react-icons/lu';
 
 const Resume = () => {
-  const RESUME_URL = 'https://google.com';
+  const RESUME_URL = 'https://bit.ly/ooka-cv';
 
   return (
     <Link
