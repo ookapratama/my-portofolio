@@ -60,6 +60,7 @@ export default function IndexPage() {
 
   return (
     <ClientPageWrapper>
+      
       <Script
         id="schema-person"
         type="application/ld+json"
