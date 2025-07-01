@@ -55,6 +55,7 @@ export type ValidSkills =
   | "PHP"
   | "Axios"
   | "Shadcn"
+  | "RESTfull API"
   | "jQuery";
 
 export type ValidCategory =

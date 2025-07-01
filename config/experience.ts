@@ -29,14 +29,13 @@ export interface ExperienceInterface {
 }
 
 export const Experiences: ExperienceInterface[] = [
-
   {
     id: "my-porofolio",
     companyName: "Personal Portofolio",
     type: "Projects",
     category: ["Web Dev", "Frontend"],
     shortDescription:
-      "A React Native-based solution streamlining patient queue management at community health clinics (Posyandu). Features real-time queue numbers, doctor schedules, and visit history to reduce wait times and improve service efficiency.",
+      "Personal Portfolio Website for experienced Web Developer.",
     websiteLink: "https://builtdesign.in",
     techStack: ["React", "Typescript", "Tailwind CSS", "Shadcn"],
     stackIcons: ["react", "typescript", "tailwind", "shadcn"],
@@ -46,8 +45,7 @@ export const Experiences: ExperienceInterface[] = [
     pagesInfoArr: [
       {
         title: "Home Screen",
-        description:
-          "",
+        description: "",
         imgArr: [
           "/experience/portofolio/landing_1.png",
           "/experience/portofolio/landing_2.png",
@@ -220,54 +218,50 @@ export const Experiences: ExperienceInterface[] = [
   },
 
   {
-    id: "rs-antrian",
-    companyName: "Mobile Antrian Posyandu",
-    type: "Contributions",
-    category: ["Mobile Dev", "Frontend"],
+    id: "mobile-dcc-v1",
+    companyName: "Mobile DCC",
+    type: "Projects",
+    category: ["Mobile Dev", "Full Stack"],
     shortDescription:
-      "A React Native-based solution streamlining patient queue management at community health clinics (Posyandu). Features real-time queue numbers, doctor schedules, and visit history to reduce wait times and improve service efficiency.",
-    websiteLink: "https://builtdesign.in",
-    techStack: ["React Native", "Typescript", "Axios"],
-    stackIcons: ["react", "typescript", "axios"],
-    startDate: new Date("2024-05-14"),
-    endDate: new Date("2024-65-13"),
-    companyLogoImg: "/experience/builtdesign/logo.png",
+      "A React Native mobile app for Dipanegara Computer Club (DCC) featuring articles, tutorials, and event management. Designed to enhance member engagement with educational content and real-time updates.",
+    websiteLink: "https://dcc-dp.com/",
+    techStack: [
+      "React Native",
+      "Typescript",
+      "Axios",
+      "Laravel",
+      "RESTfull API",
+    ],
+    stackIcons: ["react", "typescript", "axios", "laravel"],
+    startDate: new Date("2024-09-12"),
+    endDate: new Date("2024-11-09"),
+    companyLogoImg: "/experience/mobile-dccv1/logo.png",
     pagesInfoArr: [
       {
-        title: "Auth Screen",
-        description: "Modern screen for Login and Register",
-        imgArr: [
-          "/experience/builtdesign/landing_1.webp",
-          "/experience/builtdesign/landing_3.webp",
-          "/experience/builtdesign/landing_5.webp",
-          "/experience/builtdesign/landing_6.webp",
-          "/experience/builtdesign/landing_2.webp",
-          "/experience/builtdesign/landing_4.webp",
-        ],
+        title: "Screen",
+        description: "",
+        imgArr: ["/experience/mobile-dccv1/screen.png"],
       },
       {
-        title: "Home Screen",
-        description:
-          "Specialized PDF viewer with optimization features for improved performance and user experience",
-        imgArr: ["/experience/builtdesign/pdf_opt.webp"],
+        title: "Admin Dashboard",
+        description: "",
+        imgArr: ["/experience/mobile-dccv1/admin.png"],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "During my time at Builtdesign, I had the opportunity to work on a dynamic and user-focused project that involved designing and optimizing a website catering to a user base of over 4000 individuals. My role as a full-stack web developer was to ensure a seamless experience for users by creating an efficient and maintainable platform.",
-        "I collaborated closely with the product team to integrate cutting-edge features, employing technologies like Next.js and React with TypeScript for captivating front-end experiences. Additionally, I contributed significantly to the backend by utilizing Node.js, MongoDB, and GraphQL to design robust APIs and ensure smooth system functionality.",
-        "This experience allowed me to enhance my skills in various areas of web development and deliver a high-quality product. I gained proficiency in front-end technologies such as Material UI and Tailwind CSS, as well as backend technologies including Nest.js and MySQL. The project's success in catering to a large user base and providing an intuitive user interface has further motivated me to pursue excellence in web development.",
+        "Developed the official DCC mobile app to centralize club resources using React Native and Laravel. The app serves 200+ members with educational content and event coordination.",
+        "optimized API responses for slow network conditions common in campus and general environments.",
+        "Designed a video streaming system with offline caching for tutorials, reducing data usage for students by 40% compared to web platforms.",
       ],
       bullets: [
-        "Developed and optimized a high-performing website catering to over 4000 users.",
-        "Collaborated closely with the product team to implement cutting-edge features.",
-        "Created an intuitive admin dashboard to efficiently manage and announce contest winners.",
-        "Leveraged Next.js, React with TypeScript for captivating front-end experiences.",
-        "Utilized Node.js, MongoDB, and GraphQL to design and manage databases.",
+        "Built with React Native (JavaScript) for cross-platform performance",
+        "Laravel backend with API endpoints for articles, videos, and events",
+        "Admin portal for content management",
+        "Reduced app launch time by 35% through image optimization",
       ],
     },
   },
-
 ];
 
 export const featuredExperiences = Experiences.slice(0, 3);
