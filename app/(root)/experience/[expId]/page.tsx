@@ -11,7 +11,7 @@ import { Experiences } from "@/config/experience";
 import { siteConfig } from "@/config/site";
 import { cn, formatDateFromObj } from "@/lib/utils";
 // import ookaImg from "@/public/ooka2.jpg";
-import ookaImg from "@/public/ooka1.jpg";
+import ookaImg from "@/public/ooka1.webp";
 import SkillsCard from "@/components/skills/skills-card";
 import SkillsIcon from "@/components/common/skills-icon";
 

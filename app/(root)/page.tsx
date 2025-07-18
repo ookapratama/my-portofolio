@@ -16,7 +16,7 @@ import { siteConfig } from "@/config/site";
 import { featuredSkills } from "@/config/skills";
 import { cn } from "@/lib/utils";
 // import ookaImg from "@/public/ooka2.jpg";
-import ookaImg from "@/public/ooka1.jpg";
+import ookaImg from "@/public/ooka1.webp";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const metadata: Metadata = {

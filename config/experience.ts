@@ -41,15 +41,15 @@ export const Experiences: ExperienceInterface[] = [
     stackIcons: ["react", "typescript", "tailwind", "shadcn"],
     startDate: new Date("2025-05-14"),
     endDate: new Date("now"),
-    companyLogoImg: "/experience/portofolio/logo.png",
+    companyLogoImg: "/experience/portofolio/logo.webp",
     pagesInfoArr: [
       {
         title: "Home Screen",
         description: "",
         imgArr: [
-          "/experience/portofolio/landing_1.png",
-          "/experience/portofolio/landing_2.png",
-          "/experience/portofolio/landing_3.png",
+          "/experience/portofolio/landing_1.webp",
+          "/experience/portofolio/landing_2.webp",
+          "/experience/portofolio/landing_3.webp",
         ],
       },
     ],
@@ -80,18 +80,18 @@ export const Experiences: ExperienceInterface[] = [
     stackIcons: ["laravel", "php", "mysql", "jquery"],
     startDate: new Date("2022-06-01"),
     endDate: new Date("2022-08-01"),
-    companyLogoImg: "/experience/bkppmamuju/bkpp-1.png",
+    companyLogoImg: "/experience/bkppmamuju/bkpp-1.webp",
     pagesInfoArr: [
       {
         title: "Landing Page",
         description:
           "Modern and responsive landing page showcasing company services and portfolio",
         imgArr: [
-          "/experience/bkppmamuju/bkpp-1.png",
-          "/experience/bkppmamuju/landing_1.png",
-          "/experience/bkppmamuju/landing_2.png",
-          "/experience/bkppmamuju/landing_3.png",
-          "/experience/bkppmamuju/landing_4.png",
+          "/experience/bkppmamuju/bkpp-1.webp",
+          "/experience/bkppmamuju/landing_1.webp",
+          "/experience/bkppmamuju/landing_2.webp",
+          "/experience/bkppmamuju/landing_3.webp",
+          "/experience/bkppmamuju/landing_4.webp",
         ],
       },
 
@@ -100,8 +100,8 @@ export const Experiences: ExperienceInterface[] = [
         description:
           "Powerful administrative interface for managing users, projects, and system settings",
         imgArr: [
-          "/experience/bkppmamuju/dashboard-1.png",
-          "/experience/bkppmamuju/dashboard-2.png",
+          "/experience/bkppmamuju/dashboard-1.webp",
+          "/experience/bkppmamuju/dashboard-2.webp",
         ],
       },
     ],
@@ -134,19 +134,19 @@ export const Experiences: ExperienceInterface[] = [
     stackIcons: ["laravel", "php", "mysql", "jquery"],
     startDate: new Date("2024-06-28"),
     endDate: new Date("2025-01-21"),
-    companyLogoImg: "/experience/bbgtk/bbgtk.png",
+    companyLogoImg: "/experience/bbgtk/bbgtk.webp",
     pagesInfoArr: [
       {
         title: "Landing Page",
         description:
           "Modern and responsive landing page showcasing company services and portfolio",
         imgArr: [
-          "/experience/bbgtk/landing_1.png",
-          "/experience/bbgtk/landing_2.png",
-          "/experience/bbgtk/landing_3.png",
-          "/experience/bbgtk/landing_4.png",
-          "/experience/bbgtk/landing_5.png",
-          "/experience/bbgtk/landing_6.png",
+          "/experience/bbgtk/landing_1.webp",
+          "/experience/bbgtk/landing_2.webp",
+          "/experience/bbgtk/landing_3.webp",
+          "/experience/bbgtk/landing_4.webp",
+          "/experience/bbgtk/landing_5.webp",
+          "/experience/bbgtk/landing_6.webp",
         ],
       },
 
@@ -155,9 +155,9 @@ export const Experiences: ExperienceInterface[] = [
         description:
           "Powerful administrative interface for managing users, employees, and system settings",
         imgArr: [
-          "/experience/bbgtk/admin_1.png",
-          "/experience/bbgtk/admin_2.png",
-          "/experience/bbgtk/admin_3.png",
+          "/experience/bbgtk/admin_1.webp",
+          "/experience/bbgtk/admin_2.webp",
+          "/experience/bbgtk/admin_3.webp",
         ],
       },
     ],
@@ -187,16 +187,16 @@ export const Experiences: ExperienceInterface[] = [
     stackIcons: ["laravel", "php", "mysql", "jquery"],
     startDate: new Date("2024-10-19"),
     endDate: new Date("2025-01-14"),
-    companyLogoImg: "/experience/arsip-iainpare/login.png",
+    companyLogoImg: "/experience/arsip-iainpare/login.webp",
     pagesInfoArr: [
       {
         title: "Admin Dashboard",
         description:
           "Powerful administrative interface for managing users, employees, and system settings",
         imgArr: [
-          "/experience/arsip-iainpare/dashboard_1.png",
-          "/experience/arsip-iainpare/dashboard_2.png",
-          "/experience/arsip-iainpare/dashboard_3.png",
+          "/experience/arsip-iainpare/dashboard_1.webp",
+          "/experience/arsip-iainpare/dashboard_2.webp",
+          "/experience/arsip-iainpare/dashboard_3.webp",
         ],
       },
     ],
@@ -235,17 +235,17 @@ export const Experiences: ExperienceInterface[] = [
     stackIcons: ["react", "typescript", "axios", "laravel"],
     startDate: new Date("2024-09-12"),
     endDate: new Date("2024-11-09"),
-    companyLogoImg: "/experience/mobile-dccv1/logo.png",
+    companyLogoImg: "/experience/mobile-dccv1/logo.webp",
     pagesInfoArr: [
       {
         title: "Screen",
         description: "",
-        imgArr: ["/experience/mobile-dccv1/screen.png"],
+        imgArr: ["/experience/mobile-dccv1/screen.webp"],
       },
       {
         title: "Admin Dashboard",
         description: "",
-        imgArr: ["/experience/mobile-dccv1/admin.png"],
+        imgArr: ["/experience/mobile-dccv1/admin.webp"],
       },
     ],
     descriptionDetails: {
