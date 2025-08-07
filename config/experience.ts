@@ -128,7 +128,7 @@ export const Experiences: ExperienceInterface[] = [
     category: ["Web Dev", "Full Stack", "User Management"],
     shortDescription:
       "Official Website of BBGTK Sulsel - South Sulawesi's Regional Center for Educator Development. Providing teacher training programs, certification information, and educational technology resources.",
-    websiteLink: "https://simbbgpsulsel.com/",
+    websiteLink: "https://simbbgtksulsel.com/",
     githubLink: "https://github.com/ookapratama/Laravel_bbgp.git",
     techStack: ["Laravel", "PHP", "MySQL", "jQuery"],
     stackIcons: ["laravel", "php", "mysql", "jquery"],
