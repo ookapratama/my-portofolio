@@ -76,6 +76,10 @@ import {
   SiFlask,
   SiAxios,
   SiShadcnui,
+  SiN8N,
+  SiMlflow,
+  SiTensorflow,
+  SiPytorch,
 } from "react-icons/si";
 
 export type stackCardProps = {
@@ -167,16 +171,22 @@ export const StackIcons: stacksProps = {
   PostgreSQL: <SiPostgresql size={iconSize} className="text-blue-700" />,
   Flask: <SiFlask size={iconSize} className="text-green-500" />,
   Jupyter: <SiJupyter size={iconSize} className="text-orange-600" />,
+  n8n: <SiN8N size={iconSize} className="text-red-400" />,
+  TensorFlow: <SiTensorflow size={iconSize} className="text-orange-500" />,
+  PyTorch: <SiPytorch size={iconSize} className="text-red-400" />,
 
 };
 
 //  untuk di skills dashboard
 const iconSizeDashboard: number = 60;
 export const StackDashboardIcons: stacksProps = {
-  nextjs: <SiNextdotjs size={iconSizeDashboard} />,
-  typescript: <SiTypescript className="text-blue-600" size={iconSizeDashboard} />,
+  python: <SiPython size={iconSizeDashboard} />,
+  n8n: <SiN8N size={iconSizeDashboard} className="text-red-400" />,
+  tensor: <SiTensorflow size={iconSizeDashboard} className="text-orange-500" />,
+  // nextjs: <SiNextdotjs size={iconSizeDashboard} />,
+  // typescript: <SiTypescript className="text-blue-600" size={iconSizeDashboard} />,
   // hono: <SiHono className="text-orange-600" size={iconSizeDashboard} />,
-  express: <SiExpress size={iconSizeDashboard} />,
+  // express: <SiExpress size={iconSizeDashboard} />,
 
 };
 

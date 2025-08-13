@@ -9,11 +9,11 @@ export interface skillsInterface {
 
 export const skillsUnsorted: skillsInterface[] = [
   {
-    name: "Next.js",
+    name: "Python",
     description:
-      "Effortlessly build dynamic apps with routing, layouts, loading UI, and API routes.",
+      "Python is powerful... and fast; plays well with others; runs everywhere; is friendly & easy to learn; is Open.",
     rating: 5,
-    icon: StackDashboardIcons.nextjs,
+    icon: StackDashboardIcons.python,
   },
   // {
   //   name: "Hono",
@@ -24,19 +24,19 @@ export const skillsUnsorted: skillsInterface[] = [
   //   icon: StackDashboardIcons.hono,
   // },
   {
-    name: "Express",
+    name: "n8n",
     description:
-      "Fast, unopinionated, minimalist web framework for Node.js",
+      "The potential of AI with the power of automation, The practical way to make a business impact with AI",
     rating: 5,
     // icon: StackIcons.react,
-    icon: StackDashboardIcons.express,
+    icon: StackDashboardIcons.n8n,
   },
   {
-    name: "Typescript",
+    name: "TensorFlow",
     description:
-      "Enhance JavaScript with static types, making code more understandable and reliable.",
+      "An end-to-end platform for machine learning, TensorFlow makes it easy to create ML models that can run in any environment. ",
     rating: 5,
-    icon: StackDashboardIcons.typescript,
+    icon: StackDashboardIcons.tensor,
   },
   {
     name: "React",
