@@ -66,12 +66,11 @@ export type ValidCategory =
   | "Web Dev"
   | "Mobile Dev"
   | "User Management"
-  | "3D Modeling" 
+  | "3D Modeling"
   | "Problem-Solving"
   | "Debugging"
   | "System Administration"
-  | "Technical Documentation"
-  ;
+  | "Technical Documentation";
 export type ValidExpType = "Projects" | "Contributions";
 
 export type ValidPages =
@@ -84,7 +83,6 @@ export type ValidPages =
   | "resume"
   | "about"
   | "dashboard";
-
 
 // initial github types
 export type GithubResponse = {
@@ -144,19 +142,18 @@ export const GITHUB_ACCOUNTS = [
   },
 ];
 
-
 export const ABOUT = `
 <p>
-  Hello! My name is Judhistira Ooka Pratama, a versatile <b>Full-stack Developer with a strong backend focus</b> and a keen interest in <b>Artificial Intelligence</b>. I bring ${
+  Hello! My name is Judhistira Ooka Pratama, a <b>Backend Developer</b> with a strong foundation in full-stack principles and a keen focus on <b>integrating Artificial Intelligence and Machine Learning</b>. I bring ${
     new Date().getFullYear() - 2022
   } years of professional experience, and a total of ${
     new Date().getFullYear() - 2021
-  } years in software development since 2021. My core expertise lies in <b>TypeScript and PHP</b>, complemented by extensive knowledge in server-side technologies, database management, and exploring AI applications.
+  } years in software development since 2021. My core expertise lies in <b>TypeScript and PHP</b>, complemented by extensive knowledge in server-side solutions, database management, and exploring AI applications.
 </p>
 <p>
-  Throughout my career, I've consistently delivered robust and scalable solutions, adept at integrating complex databases and ensuring seamless data flow across systems. My focus on optimizing performance and security has led to significant improvements in application efficiency and reliability.
+  My career has been dedicated to delivering robust and scalable applications, with a consistent focus on optimizing performance and security. I excel at architecting server-side solutions, managing complex databases, and ensuring seamless data flow across systems.
 </p>
 <p>
-  Keeping up with evolving technology trends, especially in the realm of AI, is a priority for me. I am dedicated to creating innovative solutions that not only align with but also propel the strategic goals of an organization forward. My analytical approach and meticulous attention to system architecture have been pivotal in solving intricate problems and fostering technological advancement in every project I partake in.
+  Currently, I am actively expanding my knowledge in Machine Learning and exploring automation tools to innovate how applications are built and function. I am driven by a passion for solving intricate problems and fostering technological advancement by combining my backend expertise with the power of AI to build the next generation of intelligent applications.
 </p>
 `;
