@@ -20,7 +20,8 @@ import ookaImg from "@/public/ooka1.webp";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const metadata: Metadata = {
-  title: `${pagesConfig.home.metadata.title} | Personal Portofolio`,
+  // title: `Backend Developer Portofolio - ${pagesConfig.home.metadata.title}`,
+  title: `Backend Developer Portofolio`,
   description: `${pagesConfig.home.metadata.description} This my personal portofolio to showcase my skills and projects.`,
   alternates: {
     canonical: siteConfig.url,
@@ -35,7 +36,7 @@ export default function IndexPage() {
     name: siteConfig.authorName,
     url: siteConfig.url,
     image: siteConfig.ogImage,
-    jobTitle: "Full Stack Developer",
+    jobTitle: "Backend Developer",
     sameAs: [siteConfig.links.github, siteConfig.links.instagram],
   };
 
@@ -80,7 +81,7 @@ export default function IndexPage() {
             width={100}
             sizes="100vw"
             className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary"
-            alt="Ooka Pratama - Full Stack Developer Portfolio"
+            alt="Ooka Pratama - Backend Developer Portfolio"
             priority
           />
           <AnimatedText
