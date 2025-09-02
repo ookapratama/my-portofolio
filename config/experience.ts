@@ -29,6 +29,47 @@ export interface ExperienceInterface {
 }
 
 export const Experiences: ExperienceInterface[] = [
+  // {
+  //   id: "crm-automation-n8n",
+  //   companyName: "CRM Automation n8n",
+  //   type: "Projects",
+  //   category: ["Automation", "Workflow", "Backend"],
+  //   shortDescription:
+  //     "Automated CRM system built with n8n untuk lead scoring, assignment, dan follow-up processes.",
+  //   websiteLink: "https://github.com/ookapratama/crm-automation-n8n",
+  //   techStack: ["n8n", "PostgreSQL", "Docker", "Webhooks", "Google Sheets"],
+  //   stackIcons: ["n8n", "postgresql", "docker", "webhook", "googlesheets"],
+  //   startDate: new Date("2025-05-14"),
+  //   endDate: new Date(),
+  //   companyLogoImg: "/experience/portofolio/logo.webp",
+  //   pagesInfoArr: [
+  //     {
+  //       title: "Home Screen",
+  //       description: "",
+  //       imgArr: [
+  //         "/experience/portofolio/landing_1.webp",
+  //         "/experience/portofolio/landing_2.webp",
+  //         "/experience/portofolio/landing_3.webp",
+  //       ],
+  //     },
+  //   ],
+  //   descriptionDetails: {
+  //     paragraphs: [
+  //       "CRM Pipeline Automation dengan n8n untuk mengelola lead scoring, smart assignment, follow-up, dan pipeline reporting.",
+  //       "Proyek ini dibangun untuk mengurangi pekerjaan manual tim sales/marketing sekaligus meningkatkan respon time dan conversion rate.",
+  //     ],
+  //     bullets: [
+  //       "Automated lead scoring engine dengan rules-based calculation.",
+  //       "Smart lead assignment berdasarkan territory/expertise.",
+  //       "Scheduled follow-up automation untuk memastikan 100% compliance.",
+  //       "Pipeline reporting real-time menggunakan Google Sheets & dashboard.",
+  //       "Reduce lead response time dari 4 jam → 15 menit.",
+  //       "Increase conversion rate sebesar 25%.",
+  //       "Save ±10 jam per minggu dari pekerjaan manual.",
+  //     ],
+  //   },
+  // },
+
   {
     id: "my-porofolio",
     companyName: "Personal Portofolio",

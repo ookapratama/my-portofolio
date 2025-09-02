@@ -56,7 +56,10 @@ export type ValidSkills =
   | "Axios"
   | "Shadcn"
   | "RESTfull API"
-  | "jQuery";
+  | "jQuery"
+  | "n8n"
+  | "Webhooks"
+  | "Google Sheets";
 
 export type ValidCategory =
   | "Full Stack"
@@ -70,7 +73,9 @@ export type ValidCategory =
   | "Problem-Solving"
   | "Debugging"
   | "System Administration"
-  | "Technical Documentation";
+  | "Technical Documentation"
+  | "Automation"
+  | "Workflow" ;
 export type ValidExpType = "Projects" | "Contributions";
 
 export type ValidPages =

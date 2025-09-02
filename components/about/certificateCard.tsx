@@ -1,0 +1,62 @@
+import { BsBuildings as CompanyIcon } from 'react-icons/bs';
+
+import { Card } from '../ui/card';
+import Image from 'next/image';
+import type { CertificateProps } from '@/config/certificate';
+
+const CertificateCard = ({
+  name,
+  type,
+  focus,
+  logo,
+  start_year,
+  end_year,
+  location,
+  link,
+}: CertificateProps) => {
+  return (
+    <Card className="flex items-center gap-5 py-4 px-6 border border-neutral-300 dark:border-neutral-900">
+      {logo ? (
+        <Image
+          src={logo}
+          width={55}
+          height={55}
+          alt={name}
+          className="h-14 w-14 rounded bg-neutral-50 p-1 hover:scale-110 hover:bg-transparent"
+        />
+      ) : (
+        <CompanyIcon size={50} />
+      )}
+
+      <div className="space-y-1">
+        <a
+          href={link || '#'}
+          target="_blank"
+          data-umami-event={`Click Certificate: ${name}`}
+        >
+          <h6>{name}</h6>
+        </a>
+        <div className="text-sm text-neutral-600 dark:text-neutral-400 space-y-2">
+          <div className="flex flex-col md:flex-row gap-1 md:gap-2">
+            <span>{type}</span>
+            <span className="hidden md:flex text-neutral-300 dark:text-neutral-700">
+              •
+            </span>
+            <span>{focus}</span>
+            
+          </div>
+          <div>
+            <span>Location : {location}</span>
+          </div>
+          {/* <div className="flex flex-col md:text-[13px]">
+            <div className="flex gap-1">
+              <span>{start_year}</span> - <span>{end_year || 'Present'}</span>
+            </div>
+          </div> */}
+        </div>
+      </div>
+    </Card>
+  );
+};
+
+export default CertificateCard;
