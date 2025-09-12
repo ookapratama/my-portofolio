@@ -71,13 +71,57 @@ export const Experiences: ExperienceInterface[] = [
   // },
 
   {
+    id: "sair-jaya-mandiri",
+    companyName: "Sair Jaya Mandiri",
+    type: "Projects",
+    category: ["Web Dev", "Full Stack"],
+    shortDescription:
+    "A corporate website built from scratch for Sair Jaya Mandiri, a port services company, to showcase their profile, services, and fleet.",
+    websiteLink: "https://sairjayamandiri.com",
+    githubLink: "https://github.com/ookapratama/Laravel_sjm.git",
+    techStack: ["Laravel", "PHP", "MySQL", "Bootstrap", "jQuery"],
+    stackIcons: ["laravel", "php", "mysql", "bootstrap", "jquery"],
+    startDate: new Date("2025-08-10"),
+    endDate: new Date("now"),
+    companyLogoImg: "/experience/sjm/thumbnail.webp",
+    pagesInfoArr: [
+      {
+        title: "Admin",
+        description:
+          "A comprehensive backend dashboard for administrators to monitor sales, manage user accounts, track commissions, and oversee the entire MLM network.",
+        imgArr: [
+          "/experience/sjm/1.webp",
+          "/experience/sjm/2.webp",
+          "/experience/sjm/3.webp",
+          "/experience/sjm/4.webp",
+          "/experience/sjm/5.webp",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "A custom-built multi-level marketing (MLM) website for a perfume product, developed as a full-stack solution to manage user networks, product sales, and commission systems.",
+      ],
+      bullets: [
+        "Developed a responsive and dynamic user interface using Bootstrap and jQuery.",
+        "Engineered a robust backend system with the Laravel framework to handle complex MLM logic, including user hierarchies and commission tracking.",
+        "Implemented secure user authentication and registration processes.",
+        "Managed database operations to track sales, inventory, and member network growth.",
+        "Designed and built a comprehensive dashboard for members to monitor their sales performance and network activity.",
+        "Ensured high-level security for transactions and user data.",
+      ],
+    },
+  },
+
+  {
     id: "my-porofolio",
     companyName: "Personal Portofolio",
     type: "Projects",
     category: ["Web Dev", "Frontend"],
     shortDescription:
       "Personal Portfolio Website for experienced Web Developer.",
-    websiteLink: "https://builtdesign.in",
+    websiteLink: "https://ooka.my.id",
+    githubLink: "https://github.com/ookapratama/my-portofolio.git",
     techStack: ["React", "Typescript", "Tailwind CSS", "Shadcn"],
     stackIcons: ["react", "typescript", "tailwind", "shadcn"],
     startDate: new Date("2025-05-14"),
