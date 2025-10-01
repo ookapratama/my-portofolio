@@ -70,13 +70,60 @@ export const Experiences: ExperienceInterface[] = [
   //   },
   // },
 
+  // {
+  //   id: "ml-experiments",
+  //   companyName: "Personal Portfolio",
+  //   type: "Projects",
+  //   category: ["Machine Learning", "Data Science", "Artificial Intelligence"],
+  //   shortDescription:
+  //     "A centralized repository of personal Machine Learning projects, showcasing skills in building, evaluating, and deploying data-driven models.",
+  //   // websiteLink: "https://github.com/ookapratama/ML-Experiments", // Replace with GitHub Pages link if available
+  //   githubLink: "https://github.com/ookapratama/ML-Experiments",
+  //   techStack: ["Python", "Pandas", "Scikit-learn", "NumPy", "Plotly"],
+  //   stackIcons: ["python", "pandas", "scikitlearn", "numpy", "plotly"],
+  //   startDate: new Date("2025-08-10"),
+  //   endDate: new Date("now"),
+  //   companyLogoImg: "/experience/ml-experiments/thumbnail.webp",
+  //   pagesInfoArr: [
+  //     {
+  //       title: "Waiter Tips Prediction",
+  //       description:
+  //         "A case study project to predict tips using Linear Regression model. This project emphasizes the importance of data quality.",
+  //       imgArr: [
+  //         "/experience/ml-experiments/tips-prediction/1.webp",
+  //         "/experience/ml-experiments/tips-prediction/2.webp",
+  //       ],
+  //     },
+  //     {
+  //       title: "Future Sales Prediction",
+  //       description:
+  //         "Predicting future sales based on advertising cost data. This project demonstrates the application of Linear Regression to business problems.",
+  //       imgArr: [
+  //         "/experience/ml-experiments/sales-prediction/1.webp",
+  //         "/experience/ml-experiments/sales-prediction/2.webp",
+  //       ],
+  //     },
+  //   ],
+  //   descriptionDetails: {
+  //     paragraphs: [
+  //       "This repository serves as a centralized portfolio of all Machine Learning and Data Science projects I have worked on. Its purpose is to demonstrate my understanding of ML concepts, from data preprocessing to model evaluation, as well as my ability to apply algorithms to solve practical problems.",
+  //     ],
+  //     bullets: [
+  //       "Implementing various Machine Learning algorithms such as Linear Regression, Classification, and Clustering.",
+  //       "Performing Exploratory Data Analysis (EDA) to gain insights from datasets.",
+  //       "Using industry-standard Python libraries such as Pandas, Scikit-learn, and NumPy.",
+  //       "Visualizing model results and data using Plotly for clear presentation.",
+  //       "Documenting each project in detail to explain methodology and findings.",
+  //     ],
+  //   },
+  // },
   {
     id: "sair-jaya-mandiri",
     companyName: "Sair Jaya Mandiri",
     type: "Projects",
     category: ["Web Dev", "Full Stack"],
     shortDescription:
-    "A corporate website built from scratch for Sair Jaya Mandiri, a port services company, to showcase their profile, services, and fleet.",
+      "A corporate website built from scratch for Sair Jaya Mandiri, a port services company, to showcase their profile, services, and fleet.",
     websiteLink: "https://sairjayamandiri.com",
     githubLink: "https://github.com/ookapratama/Laravel_sjm.git",
     techStack: ["Laravel", "PHP", "MySQL", "Bootstrap", "jQuery"],
@@ -325,7 +372,10 @@ export const Experiences: ExperienceInterface[] = [
       {
         title: "Screen",
         description: "",
-        imgArr: ["/experience/mobile-dccv1/screen.webp"],
+        imgArr: [
+          "/experience/mobile-dccv1/screen.webp",
+          "/experience/mobile-dccv1/screen1.webp",
+        ],
       },
       {
         title: "Admin Dashboard",

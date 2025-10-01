@@ -59,6 +59,10 @@ export type ValidSkills =
   | "jQuery"
   | "n8n"
   | "Webhooks"
+  | "Pandas"
+  | "Scikit-learn"
+  | "NumPy"
+  | "Plotly"
   | "Google Sheets";
 
 export type ValidCategory =
@@ -75,6 +79,9 @@ export type ValidCategory =
   | "System Administration"
   | "Technical Documentation"
   | "Automation"
+  | "Machine Learning"
+  | "Data Science"
+  | "Artificial Intelligence"
   | "Workflow" ;
 export type ValidExpType = "Projects" | "Contributions";
 

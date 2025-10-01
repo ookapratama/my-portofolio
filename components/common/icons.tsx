@@ -80,6 +80,10 @@ import {
   SiMlflow,
   SiTensorflow,
   SiPytorch,
+  SiPandas,
+  SiScikitlearn,
+  SiNumpy,
+  SiPlotly,
 } from "react-icons/si";
 
 export type stackCardProps = {
@@ -137,6 +141,11 @@ export const StackCardIcons: stackCardProps = {
   jquery: (size = defaultIconSize) => <SiJquery size={size} />,
   axios: (size = defaultIconSize) => <SiAxios size={size} />,
   shadcn: (size = defaultIconSize) => <SiShadcnui size={size} />,
+  pandas: (size = defaultIconSize) => <SiPandas size={size} className="text-gray-700" />,
+  scikitlearn: (size = defaultIconSize) => <SiScikitlearn size={size} className="text-orange-400" />,
+  numpy: (size = defaultIconSize) => <SiNumpy size={size} className="text-blue-500" />,
+  plotly: (size = defaultIconSize) => <SiPlotly size={size} className="text-gray-800" />,
+  python: (size = defaultIconSize) => <SiPython size={size} />,
 };
 
 export type stacksProps = {
@@ -174,6 +183,8 @@ export const StackIcons: stacksProps = {
   n8n: <SiN8N size={iconSize} className="text-red-400" />,
   TensorFlow: <SiTensorflow size={iconSize} className="text-orange-500" />,
   PyTorch: <SiPytorch size={iconSize} className="text-red-400" />,
+  Pandas: <SiPandas size={iconSize} />,
+  "Scikit-learn": <SiScikitlearn size={iconSize} />,
 
 };
 
