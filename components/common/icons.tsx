@@ -85,6 +85,7 @@ import {
   SiNumpy,
   SiPlotly,
 } from "react-icons/si";
+import { TbHexagonLetterSFilled } from "react-icons/tb";
 
 export type stackCardProps = {
   [key: string]: (size?: number) => JSX.Element;
@@ -240,6 +241,7 @@ export const Icons = {
   linkedin: SiLinkedin,
   userFill: BiSolidUser,
   work: HiBriefcase,
+  superprof: TbHexagonLetterSFilled,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

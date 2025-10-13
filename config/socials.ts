@@ -16,7 +16,7 @@ export const SocialLinks: SocialInterface[] = [
   },
   {
     name: "LinkedIn",
-    username: "Naman Barkiya",
+    username: "Ooka Pratama",
     icon: Icons.linkedin,
     link: "https://www.linkedin.com/in/ooka-pratama-9b9035223/",
   },
@@ -25,6 +25,12 @@ export const SocialLinks: SocialInterface[] = [
     username: "@ookapratama_",
     icon: Icons.instagram,
     link: "https://instagram.com/ookapratama_",
+  },
+  {
+    name: "SuperProf",
+    username: "ooka",
+    icon: Icons.superprof,
+    link: "https://www.superprof.co.id/saya-mengajar-pemgrogrman-tingkat-dasar-hingga-menengah-mari-privat-coding-kuasai-pemrograman-dasar-web-dan-mobile-secara.html",
   },
   {
     name: "Gmail",
