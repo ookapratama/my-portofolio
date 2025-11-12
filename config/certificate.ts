@@ -18,6 +18,6 @@ export const CERTIFICATION: CertificateProps[] = [
     location: 'Universitas Dipa Makassar',
     start_year: 2023,
     end_year: 2023,
-    link: 'https://drive.google.com/file/d/1X45tLScIaP2oUOT3YzHNf4MoOR8SyDcS/view?usp=sharing',
+    link: 'https://drive.google.com/drive/folders/1YEjlkpNjtDTbHXabBdRL4hJoE9UfqM2v?usp=sharing',
   },
 ];
