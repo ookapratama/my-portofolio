@@ -86,7 +86,9 @@ import {
   SiPlotly,
   SiStreamlit,
 } from "react-icons/si";
-import { TbHexagonLetterSFilled } from "react-icons/tb";
+import { TbHexagonLetterSFilled, TbSql } from "react-icons/tb";
+import { FaDatabase } from 'react-icons/fa'
+import { LuBrainCircuit } from "react-icons/lu";
 
 export type stackCardProps = {
   [key: string]: (size?: number) => JSX.Element;
@@ -197,7 +199,10 @@ const iconSizeDashboard: number = 60;
 export const StackDashboardIcons: stacksProps = {
   python: <SiPython size={iconSizeDashboard} />,
   n8n: <SiN8N size={iconSizeDashboard} className="text-red-400" />,
-  tensor: <SiTensorflow size={iconSizeDashboard} className="text-orange-500" />,
+  data: <LuBrainCircuit size={iconSizeDashboard} />,
+  // database: <FaDatabase size={iconSizeDashboard} />,
+  // sql: <TbSql size={iconSizeDashboard} />,
+  // tensor: <SiTensorflow size={iconSizeDashboard} className="text-orange-500" />,
   // nextjs: <SiNextdotjs size={iconSizeDashboard} />,
   // typescript: <SiTypescript className="text-blue-600" size={iconSizeDashboard} />,
   // hono: <SiHono className="text-orange-600" size={iconSizeDashboard} />,
