@@ -15,7 +15,7 @@ export const skillsUnsorted: skillsInterface[] = [
   {
     name: "Python",
     description:
-      "Python is powerful... and fast; plays well with others; runs everywhere; is friendly & easy to learn; is Open.",
+      "Proficient in Python for backend development (Flask), scripting, and utilizing core libraries (Pandas, NumPy, Scikit-learn) to support data processing and ML initiatives.",
     rating: 5,
     icon: StackDashboardIcons.python,
   },
@@ -30,7 +30,7 @@ export const skillsUnsorted: skillsInterface[] = [
   {
     name: "n8n",
     description:
-      "The potential of AI with the power of automation, The practical way to make a business impact with AI",
+      "Experienced with n8n for building custom workflows and integrations. Capable of automating complex data movement and connecting various APIs/services without extensive coding.",
     rating: 5,
     // icon: StackIcons.react,
     icon: StackDashboardIcons.n8n,

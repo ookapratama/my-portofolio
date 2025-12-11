@@ -87,7 +87,7 @@ import {
   SiStreamlit,
 } from "react-icons/si";
 import { TbHexagonLetterSFilled, TbSql } from "react-icons/tb";
-import { FaDatabase } from 'react-icons/fa'
+import { FaDatabase, FaFileExcel } from 'react-icons/fa'
 import { LuBrainCircuit } from "react-icons/lu";
 
 export type stackCardProps = {
@@ -190,7 +190,8 @@ export const StackIcons: stacksProps = {
   PyTorch: <SiPytorch size={iconSize} className="text-red-400" />,
   Pandas: <SiPandas size={iconSize} />,
   "Scikit-learn": <SiScikitlearn size={iconSize} />,
-  Streanlit: <SiStreamlit size={iconSize} />,
+  Streamlit: <SiStreamlit size={iconSize} className="text-red-500" />,
+  "Excel": <FaFileExcel size={iconSize} className="text-green-500" />,
 
 };
 

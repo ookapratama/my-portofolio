@@ -164,7 +164,7 @@ export const ABOUT = `
     new Date().getFullYear() - 2022
   } years of professional experience, and a total of ${
     new Date().getFullYear() - 2021
-  } years in software development since 2021. My core expertise lies in <b>TypeScript and PHP</b>, complemented by extensive knowledge in server-side solutions, database management, and exploring AI applications.
+  } years in software development since 2021. My core expertise lies in <b>Python, TypeScript and PHP</b>, complemented by extensive knowledge in server-side solutions, database management, and exploring AI applications.
 </p>
 <p>
   My career has been dedicated to delivering robust and scalable applications, with a consistent focus on optimizing performance and security. I excel at architecting server-side solutions, managing complex databases, and ensuring seamless data flow across systems.
