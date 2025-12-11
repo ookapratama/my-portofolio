@@ -63,6 +63,10 @@ export type ValidSkills =
   | "Scikit-learn"
   | "NumPy"
   | "Plotly"
+  | "XGBoost"
+  | "Matplotlib"
+  | "Seaborn"
+  | "Streamlit"
   | "Google Sheets";
 
 export type ValidCategory =

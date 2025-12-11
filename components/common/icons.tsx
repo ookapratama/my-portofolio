@@ -84,6 +84,7 @@ import {
   SiScikitlearn,
   SiNumpy,
   SiPlotly,
+  SiStreamlit,
 } from "react-icons/si";
 import { TbHexagonLetterSFilled } from "react-icons/tb";
 
@@ -147,6 +148,7 @@ export const StackCardIcons: stackCardProps = {
   numpy: (size = defaultIconSize) => <SiNumpy size={size} className="text-blue-500" />,
   plotly: (size = defaultIconSize) => <SiPlotly size={size} className="text-gray-800" />,
   python: (size = defaultIconSize) => <SiPython size={size} />,
+  streamlit: (size = defaultIconSize) => <SiStreamlit size={size} className="text-red-500" />,
 };
 
 export type stacksProps = {
@@ -186,6 +188,7 @@ export const StackIcons: stacksProps = {
   PyTorch: <SiPytorch size={iconSize} className="text-red-400" />,
   Pandas: <SiPandas size={iconSize} />,
   "Scikit-learn": <SiScikitlearn size={iconSize} />,
+  Streanlit: <SiStreamlit size={iconSize} />,
 
 };
 

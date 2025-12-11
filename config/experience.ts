@@ -118,6 +118,77 @@ export const Experiences: ExperienceInterface[] = [
   //   },
   // },
   {
+    id: "laptop-price-prediction-v1",
+    companyName: "Laptop Price Prediction",
+    type: "Projects",
+    category: ["Machine Learning", "Data Science", "Full Stack"],
+    shortDescription:
+      "Laptop price prediction system using an XGBoost-based regression model, featuring data scraping from Tokopedia, cleaning, EDA, feature engineering, hyperparameter tuning, and deployment via Streamlit Cloud.",
+    websiteLink:
+      "https://ookapratama-ml-experiments-laptop-price-predictionappapp-f33pbo.streamlit.app/",
+    githubLink:
+      "https://github.com/ookapratama/ML-Experiments/tree/main/laptop_price_prediction",
+    techStack: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "XGBoost",
+      "Matplotlib",
+      "Streamlit",
+    ],
+    stackIcons: ["python", "scikitlearn", "xgboost", "pandas", "streamlit"],
+    startDate: new Date("2025-12-08"),
+    endDate: new Date("2025-12-11"),
+
+    companyLogoImg: "/experience/laptop-predict/cover.webp",
+
+    pagesInfoArr: [
+      {
+        title: "Dashboard & Prediction UI",
+        description:
+          "The main Streamlit page for inputting laptop specifications and receiving price predictions.",
+        imgArr: [
+          "/experience/laptop-predict/ui.webp",
+        ],
+      },
+      {
+        title: "EDA",
+        description:
+          "EDA diagrams and correlation heatmaps, and model training visuals.",
+        imgArr: [
+          "/experience/laptop-predict/eda-1.webp",
+          "/experience/laptop-predict/eda-2.webp",
+        ],
+      },
+      {
+        title: "Model Development",
+        description:
+          "Model training visuals.",
+        imgArr: [
+          "/experience/laptop-predict/model.webp",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "A Machine Learning project focused on predicting laptop prices based on specifications such as CPU series, RAM, storage, and brand. Data was collected via scraping the Tokopedia e-commerce platform using the GraphQL API.",
+        "The process included comprehensive data cleaning, feature engineering, Exploratory Data Analysis (EDA), building multiple regression models (Linear Regression, Random Forest, XGBoost), and selecting the best model through hyperparameter tuning.",
+        "The XGBoost model yielded the best performance and was subsequently deployed via Streamlit Cloud with custom preprocessing and CPU series encoding.",
+      ],
+      bullets: [
+        "Scraped data from Tokopedia using the GraphQL API.",
+        "Cleaned dataset (RAM/storage parsing, CPU parsing, brand normalization).",
+        "Conducted extensive EDA (heatmap, price distribution, CPU vs Price, RAM vs Price, etc.).",
+        "Performed feature engineering and hyperparameter tuning.",
+        "Achieved optimal performance with the XGBoost model (MAE < IDR 2.5 million).",
+        "Deployed the model using Streamlit Cloud with an interactive user interface (UI).",
+        "Ensured complete documentation via a detailed README and Mermaid flow diagrams.",
+      ],
+    },
+  },
+  {
     id: "sair-jaya-mandiri",
     companyName: "Sair Jaya Mandiri",
     type: "Projects",
