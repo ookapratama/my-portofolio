@@ -86,7 +86,7 @@ import {
   SiPlotly,
   SiStreamlit,
 } from "react-icons/si";
-import { TbHexagonLetterSFilled, TbSql } from "react-icons/tb";
+import { TbAugmentedReality2, TbHexagonLetterSFilled, TbSql } from "react-icons/tb";
 import { FaDatabase, FaFileExcel } from 'react-icons/fa'
 import { LuBrainCircuit } from "react-icons/lu";
 
@@ -151,6 +151,8 @@ export const StackCardIcons: stackCardProps = {
   plotly: (size = defaultIconSize) => <SiPlotly size={size} className="text-gray-800" />,
   python: (size = defaultIconSize) => <SiPython size={size} />,
   streamlit: (size = defaultIconSize) => <SiStreamlit size={size} className="text-red-500" />,
+  expo: (size = defaultIconSize) => <SiExpo size={size}  />,
+  mobileAR: (size = defaultIconSize) => <TbAugmentedReality2 size={size}  />,
 };
 
 export type stacksProps = {

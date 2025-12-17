@@ -67,6 +67,9 @@ export type ValidSkills =
   | "Matplotlib"
   | "Seaborn"
   | "Streamlit"
+  | "React Native Expo"
+  | "Expo Tracking (AR)"
+  | "AR.js"
   | "Google Sheets";
 
 export type ValidCategory =
@@ -86,6 +89,8 @@ export type ValidCategory =
   | "Machine Learning"
   | "Data Science"
   | "Artificial Intelligence"
+  | "Augmented Reality"
+  | "Education"
   | "Workflow" ;
 export type ValidExpType = "Projects" | "Contributions";
 

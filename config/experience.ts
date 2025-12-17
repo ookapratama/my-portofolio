@@ -148,9 +148,7 @@ export const Experiences: ExperienceInterface[] = [
         title: "Dashboard & Prediction UI",
         description:
           "The main Streamlit page for inputting laptop specifications and receiving price predictions.",
-        imgArr: [
-          "/experience/laptop-predict/ui.webp",
-        ],
+        imgArr: ["/experience/laptop-predict/ui.webp"],
       },
       {
         title: "EDA",
@@ -163,11 +161,8 @@ export const Experiences: ExperienceInterface[] = [
       },
       {
         title: "Model Development",
-        description:
-          "Model training visuals.",
-        imgArr: [
-          "/experience/laptop-predict/model.webp",
-        ],
+        description: "Model training visuals.",
+        imgArr: ["/experience/laptop-predict/model.webp"],
       },
     ],
 
@@ -197,10 +192,10 @@ export const Experiences: ExperienceInterface[] = [
       "A corporate website built from scratch for Sair Jaya Mandiri, a port services company, to showcase their profile, services, and fleet.",
     websiteLink: "https://sairjayamandiri.com",
     githubLink: "https://github.com/ookapratama/Laravel_sjm.git",
-    techStack: ["Laravel", "PHP", "MySQL", "Bootstrap", "jQuery"],
-    stackIcons: ["laravel", "php", "mysql", "bootstrap", "jquery"],
+    techStack: ["Laravel", "PHP", "MySQL", "jQuery"],
+    stackIcons: ["laravel", "php", "mysql", "jquery"],
     startDate: new Date("2025-08-10"),
-    endDate: new Date("now"),
+    endDate: new Date("2025-09-20"),
     companyLogoImg: "/experience/sjm/thumbnail.webp",
     pagesInfoArr: [
       {
@@ -465,6 +460,50 @@ export const Experiences: ExperienceInterface[] = [
         "Laravel backend with API endpoints for articles, videos, and events",
         "Admin portal for content management",
         "Reduced app launch time by 35% through image optimization",
+      ],
+    },
+  },
+  {
+    id: "hewan-ar-skripsi",
+    companyName: "Animal AR (Bachelor Thesis)", // Sesuaikan dengan kampus Anda
+    type: "Projects",
+    category: ["Mobile Dev", "Augmented Reality", "Education"],
+    shortDescription:
+      "A mobile-based Augmented Reality (AR) application for animal education. Built with React Native Expo and ViroReact/Expo-AR to provide an interactive learning experience with 3D models of animals.",
+    githubLink: "https://github.com/ookapratama/expo_AR",
+    techStack: [
+      "React Native Expo",
+      "Expo Tracking (AR)",
+      "AR.js",
+      "Typescript",
+      "Node.js",
+    ],
+    stackIcons: ["react", "typescript", "nodejs", "expo", "mobileAR"],
+    startDate: new Date("2025-01-01"), // Sesuaikan tanggal mulai skripsi
+    endDate: new Date("2025-02-27"), // Sesuaikan tanggal selesai skripsi
+    companyLogoImg: "/experience/expo-ar/cover.webp",
+    pagesInfoArr: [
+      {
+        title: "AR View",
+        description:
+          "Main AR interface showing 3D animal models in real-world environments.",
+        imgArr: [
+          "/experience/expo-ar/layout-2.webp",
+          "/experience/expo-ar/layout-1.webp",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "Developed an Augmented Reality (AR) application as a thesis project to visualize animal species in 3D, aiming to increase engagement in digital learning for students.",
+        "Implemented plane detection and world tracking to allow users to place and interact with lifelike 3D animal models on any flat surface.",
+        "Optimized 3D asset rendering within the Expo environment to ensure smooth performance (60 FPS) on mid-range mobile devices.",
+      ],
+      bullets: [
+        "Integrated ARCore (Android) through the Expo/React Native ecosystem.",
+        "Designed an interactive UI for educational content including species classification, habitat, and sound features.",
+        "Utilized efficient asset loading strategies to manage high-quality 3D models without compromising app stability.",
+        "Conducted UI/UX testing with target users to achieve high accessibility and intuitive AR interaction.",
       ],
     },
   },
