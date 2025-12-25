@@ -32,7 +32,7 @@ export const careerExperiences: CareerExperienceInterface[] = [
     company: "CV. Siddi Solution Technology",
     location: "Makassar, Sulawesi Selatan",
     startDate: '2024-04',
-    endDate: "",
+    endDate: "2025-07",
     companyUrl: "https://www.instagram.com/cv.siddisolutiontechno/",
     logo: "/career/siddi.png",
     locationType:'Hybrid Remote',
