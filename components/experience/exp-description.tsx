@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const ExperienceDescription: React.FC<{
   paragraphs: string[];
@@ -7,13 +10,29 @@ const ExperienceDescription: React.FC<{
   return (
     <div>
       {paragraphs.map((paragraph, index) => (
-        <p className="mb-4 indent-4 text-justify" key={index}>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.1 }}
+          className="mb-4 indent-4 text-justify text-muted-foreground/90"
+          key={index}
+        >
           {paragraph}
-        </p>
+        </motion.p>
       ))}
-      <ul className="list-disc pl-6 mt-4">
+      <ul className="list-disc pl-6 mt-4 space-y-2">
         {bullets.map((bullet, index) => (
-          <li key={index}>{bullet}</li>
+          <motion.li
+            initial={{ opacity: 0, x: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: paragraphs.length * 0.1 + index * 0.05 }}
+            key={index}
+            className="text-muted-foreground/90"
+          >
+            {bullet}
+          </motion.li>
         ))}
       </ul>
     </div>

@@ -17,76 +17,85 @@ type PagesConfig = {
 export const pagesConfig: PagesConfig = {
   home: {
     title: "Home",
-    description: "Welcome to my portfolio website.",
+    description:
+      "Selamat datang di ruang kode saya. Mari membangun sesuatu yang luar biasa.",
     metadata: {
-      title: "Home",
-      description: "Ooka Pratama's portfolio website.",
+      title: "Backend Developer Portfolio",
+      description:
+        "Portofolio Profesional Ooka Pratama - Backend Developer berpengalaman dalam Laravel dan Machine Learning.",
     },
   },
   skills: {
-    title: "Skills",
-    description: "My current focus in technology and development.",
+    title: "Skills & Expertise",
+    description: "Fokus teknologi dan keahlian pengembangan saat ini.",
     metadata: {
-      title: "Skills",
+      title: "Keahlian & Teknologi",
       description:
-        "Ooka Pratama's key skills that define his professional identity.",
+        "Daftar skill dan teknologi yang dikuasai oleh Ooka Pratama.",
     },
   },
   experience: {
-    title: "Experience",
-    description: "My development journey — from building ideas to making an impact.",
+    title: "Project Experience",
+    description:
+      "Perjalanan pengembangan — dari ide hingga memberikan dampak nyata.",
     metadata: {
-      title: "Experience",
-      description: "Ooka Pratama's Development journey — from building ideas to making an impact.",
+      title: "Pengalaman Proyek",
+      description:
+        "Daftar proyek dan pengalaman profesional Ooka Pratama sebagai pengembang.",
     },
   },
   contact: {
-    title: "Contact",
-    description: "Let's connect and explore collaborations.",
+    title: "Get in Touch",
+    description: "Mari terhubung dan jelajahi peluang kolaborasi.",
     metadata: {
-      title: "Contact",
-      description: "Contact Ooka Pratama.",
+      title: "Kontak Ooka Pratama",
+      description:
+        "Hubungi Ooka Pratama untuk kolaborasi atau pertanyaan proyek.",
     },
   },
   contributions: {
     title: "Contributions",
-    description: "Open-source contributions and community involvement.",
+    description: "Kontribusi open-source dan keterlibatan dalam komunitas.",
     metadata: {
-      title: "Contributions",
-      description:
-        "Ooka Pratama's open-source contributions and community involvement.",
+      title: "Kontribusi",
+      description: "Daftar kontribusi open-source Ooka Pratama di GitHub.",
     },
   },
   resume: {
     title: "Resume",
-    description: "Ooka Pratama's resume.",
+    description: "Ringkasan profesional dan kualifikasi.",
     metadata: {
-      title: "Resume",
-      description: "Ooka Pratama's resume.",
+      title: "Resume & CV",
+      description:
+        "Unduh resume dan lihat kualifikasi profesional Ooka Pratama.",
     },
   },
   about: {
     title: "About Me",
-    description: "My journey in code: projects, experience, skills, education, and contributions.",
+    description:
+      "Perjalanan saya dalam kode: proyek, pengalaman, skill, dan pendidikan.",
     metadata: {
-      title: "About Me",
-      description: "Ooka Pratama's journey in code: projects, experience, skills, education, and contributions.",
+      title: "Tentang Ooka Pratama",
+      description:
+        "Pelajari lebih lanjut tentang latar belakang dan motivasi Ooka Pratama sebagai developer.",
     },
   },
   career: {
-    title: "Career Timeline",
-    description: "Professional journey and experience timeline.",
+    title: "Career Journey",
+    description: "Timeline perjalanan profesional dan pendidikan.",
     metadata: {
-      title: "Career Timeline",
-      description: "Ooka Pratama's professional journey and career timeline.",
+      title: "Timeline Karier",
+      description: "Riwayat karier dan perjalanan profesional Ooka Pratama.",
     },
   },
   dashboard: {
-    title : "Dashboard",
-    description: "This dashboard highlights my journey as a developer through my GitHub contributions — where I build, share, and grow.",
+    title: "Developer Dashboard",
+    description:
+      "Statistik aktivitas GitHub dan kontribusi kode secara real-time.",
     metadata: {
-      title: "Dashboard",
-      description: 'This dashboard highlights my journey as a developer through my GitHub contributions — where I build, share, and grow.'
-    }
+      title: "Statistik Developer",
+      description:
+        "Melihat aktivitas koding dan kontribusi GitHub Ooka Pratama secara transparan.",
+    },
   },
 };

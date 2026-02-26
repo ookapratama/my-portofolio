@@ -11,8 +11,7 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { ModalProvider } from "@/providers/modal-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics as AnalyticsVercel } from '@vercel/analytics/next';
-
+import { Analytics as AnalyticsVercel } from "@vercel/analytics/next";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -46,7 +45,7 @@ export const metadata = {
   creator: siteConfig.username,
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "id_ID",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
@@ -75,9 +74,9 @@ export const metadata = {
     creator: `@${siteConfig.username}`,
   },
   icons: {
-    icon: siteConfig.iconIco,
-    shortcut: siteConfig.logoIcon,
-    apple: siteConfig.logoIcon,
+    icon: "/favicon.ico",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
   alternates: {
@@ -91,6 +90,7 @@ export const metadata = {
       follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
+      notranslate: true,
     },
   },
   verification: {
@@ -105,13 +105,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
   }
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="id" suppressHydrationWarning>
       <head />
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
-          fontHeading.variable
+          fontHeading.variable,
         )}
       >
         <ThemeProvider
