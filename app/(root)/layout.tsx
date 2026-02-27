@@ -1,4 +1,5 @@
 import { MainNav } from "@/components/common/main-nav";
+import { LanguageSwitcher } from "@/components/common/language-switcher";
 import { ModeToggle } from "@/components/common/mode-toggle";
 import { SiteFooter } from "@/components/common/site-footer";
 import { routesConfig } from "@/config/routes";
@@ -14,6 +15,7 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
         <div className="flex h-20 items-center justify-between py-6">
           <MainNav items={routesConfig.mainNav} />
           <nav className="flex items-center gap-5">
+            <LanguageSwitcher />
             <ModeToggle />
           </nav>
         </div>

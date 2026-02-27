@@ -3,7 +3,7 @@ export const siteConfig = {
   authorName: "Ooka Pratama",
   username: "ookapratama",
   description:
-    "Portofolio Profesional Ooka Pratama - Backend Developer berpengalaman dalam membangun sistem berbasis Laravel, aplikasi mobile React Native (AR), dan solusi Machine Learning. Berfokus pada arsitektur kode yang bersih, efisien, dan performa tinggi.",
+    "Ooka Pratama's Professional Portfolio - Backend Developer experienced in building Laravel systems, React Native (AR) mobile apps, and Machine Learning solutions. Focused on clean, efficient, and high-performance code architecture.",
   url: "https://ooka.my.id",
   links: {
     instagram: "https://instagram.com/ookapratama_",
@@ -22,9 +22,9 @@ export const siteConfig = {
     "Python Developer",
     "Full Stack Developer Laravel & React",
     "Augmented Reality Developer",
-    "Sistem Informasi Kearsipan SISKA",
+    "SISKA Archiving System",
     "Laptop Price Prediction ML",
-    "Portofolio Developer Indonesia",
+    "Indonesia Developer Portfolio",
     "Modern Web Development",
     "Clean Code Specialist",
     "AI Automation",

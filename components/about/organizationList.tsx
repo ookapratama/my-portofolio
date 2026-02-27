@@ -1,23 +1,29 @@
-'use client';
+"use client";
 
-import { GiOrganigram as OrganizationIcon } from 'react-icons/gi';
+import { GiOrganigram as OrganizationIcon } from "react-icons/gi";
 
-import SectionHeading from '../common/section-header';
-import SectionSubHeading from '../common/section-sub-header';
-import { ORGANIZATION } from '@/config/organization';
+import SectionHeading from "../common/section-header";
+import SectionSubHeading from "../common/section-sub-header";
+import { ORGANIZATION } from "@/config/organization";
 
-import OrganizationCard from './organizationCard';
+import OrganizationCard from "./organizationCard";
+
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
 
 const OrganizationList = () => {
+  const { language } = useLanguageStore();
+  const t = translations[language].about;
+
   return (
     <section className="space-y-6 font-sora">
       <div className="space-y-2">
         <SectionHeading
-          title="Organization"
+          title={t.organization}
           icon={<OrganizationIcon size={22} className="mr-1" />}
         />
         <SectionSubHeading>
-          <p className="dark:text-neutral-400">My organization journey.</p>
+          <p className="dark:text-neutral-400">{t.orgDesc}</p>
         </SectionSubHeading>
       </div>
 

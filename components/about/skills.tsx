@@ -10,6 +10,9 @@ import SectionHeading from "../common/section-header";
 import SectionSubHeading from "../common/section-sub-header";
 import { StackIcons } from "../common/icons";
 
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
+
 const Tag = ({ icon, title }: { icon: ReactNode; title: string }) => (
   <div className="flex items-center gap-2 mr-3 rounded-full py-4 px-7 w-max dark:text-neutral-50 shadow-sm border">
     {icon}
@@ -18,6 +21,8 @@ const Tag = ({ icon, title }: { icon: ReactNode; title: string }) => (
 );
 
 const Skills = () => {
+  const { language } = useLanguageStore();
+  const t = translations[language].about;
   const [shuffledSkills, setShuffledSkills] = useState<
     Array<[string, ReactNode]>
   >([]);
@@ -43,11 +48,11 @@ const Skills = () => {
     <div className="space-y-8 ">
       <div className="space-y-2">
         <SectionHeading
-          title="Skills"
+          title={t.skills}
           icon={<SkillsIcon size={24} className="mr-1" />}
         />
         <SectionSubHeading>
-          <p>My professional skills.</p>
+          <p>{t.skills}</p>
         </SectionSubHeading>
       </div>
 

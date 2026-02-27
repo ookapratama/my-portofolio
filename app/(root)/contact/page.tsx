@@ -1,21 +1,17 @@
-import { Metadata } from "next";
+"use client";
 
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
 import PageContainer from "@/components/common/page-container";
 import GithubRedirectCard from "@/components/contact/github-redirect-card";
 import { ContactForm } from "@/components/forms/contact-form";
-import { pagesConfig } from "@/config/pages";
-
-export const metadata: Metadata = {
-  title: pagesConfig.contact.metadata.title,
-  description: pagesConfig.contact.metadata.description,
-};
 
 export default function ContactPage() {
+  const { language } = useLanguageStore();
+  const t = translations[language].pages.contact;
+
   return (
-    <PageContainer
-      title={pagesConfig.contact.title}
-      description={pagesConfig.contact.description}
-    >
+    <PageContainer title={t.title} description={t.description}>
       <div className="flex flex-col lg:flex-row">
         <div className="flex-1">
           <ContactForm />

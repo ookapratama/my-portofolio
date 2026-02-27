@@ -7,7 +7,12 @@ import { ExternalLink, Github, Heart } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
+
 export default function GithubRedirectCard() {
+  const { language } = useLanguageStore();
+  const t = translations[language].contact.githubCard;
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -25,10 +30,10 @@ export default function GithubRedirectCard() {
           />
         </div>
         <h2 className="font-heading text-xl tracking-tight lg:text-3xl duration-300">
-          Tertarik dengan kodenya?
+          {t.title}
         </h2>
         <p className="mt-2 mb-10 font-heading text-lg text-muted-foreground">
-          Proyek ini bersifat open source. Jelajahi kodenya di GitHub.
+          {t.desc}
         </p>
         <Github className="w-10 h-10 text-muted-foreground mb-5" />
       </CardContent>
@@ -41,7 +46,7 @@ export default function GithubRedirectCard() {
             "w-full bg-transparent border-2 transition-all duration-300 py-6",
           )}
         >
-          <span className="mr-2">Source Code</span>
+          <span className="mr-2">{t.button}</span>
           <ExternalLink className="w-5 h-5" />
         </Link>
       </CardFooter>

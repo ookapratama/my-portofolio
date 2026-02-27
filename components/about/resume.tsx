@@ -1,8 +1,12 @@
-import Link from 'next/link';
-import { LuDownload as DownloadIcon } from 'react-icons/lu';
+import Link from "next/link";
+import { LuDownload as DownloadIcon } from "react-icons/lu";
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
 
 const Resume = () => {
-  const RESUME_URL = 'https://bit.ly/ooka-cv';
+  const { language } = useLanguageStore();
+  const t = translations[language].about;
+  const RESUME_URL = "https://bit.ly/ooka-cv";
 
   return (
     <Link
@@ -13,7 +17,7 @@ const Resume = () => {
       data-umami-event="Download Resume"
     >
       <DownloadIcon />
-      <span>Download Resume</span>
+      <span>{t.resume}</span>
     </Link>
   );
 };

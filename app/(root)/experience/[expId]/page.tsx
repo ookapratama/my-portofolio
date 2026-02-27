@@ -16,6 +16,8 @@ import { cn, formatDateFromObj } from "@/lib/utils";
 import ookaImg from "@/public/ooka1.webp";
 import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
 
 interface ExperiencePageProps {
   params: {
@@ -24,6 +26,10 @@ interface ExperiencePageProps {
 }
 
 export default function Experience({ params }: ExperiencePageProps) {
+  const { language } = useLanguageStore();
+  const t = translations[language].experience;
+  const navT = translations[language].nav;
+
   const exp = Experiences.find((val) => val.id === params.expId);
   if (!exp) {
     redirect("/experience");
@@ -39,7 +45,7 @@ export default function Experience({ params }: ExperiencePageProps) {
         )}
       >
         <Icons.chevronLeft className="mr-2 h-4 w-4" />
-        All Experience
+        {navT.experience}
       </Link>
 
       <AnimatedSection direction="up">
@@ -47,10 +53,10 @@ export default function Experience({ params }: ExperiencePageProps) {
           dateTime={exp.startDate.toISOString()}
           className="block text-sm text-muted-foreground"
         >
-          {formatDateFromObj(exp.startDate)} —{" "}
+          {formatDateFromObj(exp.startDate, language)} —{" "}
           {exp.endDate instanceof Date
-            ? formatDateFromObj(exp.endDate)
-            : "Present"}
+            ? formatDateFromObj(exp.endDate, language)
+            : t.present}
         </time>
         <div className="flex items-center justify-between mt-2">
           <h1 className="font-heading text-4xl leading-tight lg:text-5xl">
@@ -124,7 +130,7 @@ export default function Experience({ params }: ExperiencePageProps) {
         <AnimatedSection delay={0.3}>
           <h2 className="font-heading text-2xl lg:text-3xl mb-4 flex items-center gap-2">
             <div className="w-1 h-8 bg-primary rounded-full" />
-            Description
+            {language === "en" ? "Description" : "Deskripsi"}
           </h2>
           <ExperienceDescription
             paragraphs={exp.descriptionDetails.paragraphs}
@@ -135,7 +141,7 @@ export default function Experience({ params }: ExperiencePageProps) {
         <AnimatedSection delay={0.4}>
           <h2 className="font-heading text-2xl lg:text-3xl mb-4 flex items-center gap-2">
             <div className="w-1 h-8 bg-primary rounded-full" />
-            Tech Stack
+            {t.techStack}
           </h2>
           <div className="flex flex-wrap gap-3">
             {exp.techStack.map((tech, i) => (
@@ -153,7 +159,7 @@ export default function Experience({ params }: ExperiencePageProps) {
           <AnimatedSection delay={0.5}>
             <h2 className="font-heading text-2xl lg:text-3xl mb-6 flex items-center gap-2">
               <div className="w-1 h-8 bg-primary rounded-full" />
-              Project Showcase
+              {t.projectShowcase}
             </h2>
             <div className="space-y-16">
               {exp.pagesInfoArr.map((page, ind) => (
@@ -199,7 +205,7 @@ export default function Experience({ params }: ExperiencePageProps) {
           )}
         >
           <Icons.chevronLeft className="mr-2 h-4 w-4" />
-          Back to Portfolio
+          {t.backToPortfolio}
         </Link>
       </div>
     </article>

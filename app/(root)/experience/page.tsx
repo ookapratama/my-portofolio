@@ -1,15 +1,11 @@
-import { Metadata } from "next";
+"use client";
 
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
 import PageContainer from "@/components/common/page-container";
 import ProjectCard from "@/components/experience/project-card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Experiences } from "@/config/experience";
-import { pagesConfig } from "@/config/pages";
-
-export const metadata: Metadata = {
-  title: pagesConfig.experience.metadata.title,
-  description: pagesConfig.experience.metadata.description,
-};
 
 const renderContent = (tabVal: string) => {
   let expArr = Experiences;
@@ -18,7 +14,7 @@ const renderContent = (tabVal: string) => {
   } else if (tabVal === "contributions") {
     expArr = expArr.filter((val) => val.type === "Contributions");
   }
-  
+
   return (
     <div className="mx-auto my-4 grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3 static">
       {expArr.map((exp) => (
@@ -29,24 +25,15 @@ const renderContent = (tabVal: string) => {
 };
 
 export default function ExperiencePage() {
+  const { language } = useLanguageStore();
+  const t = translations[language].pages.experience;
+
   return (
-    <PageContainer
-      title={pagesConfig.experience.title}
-      description={pagesConfig.experience.description}
-    >
+    <PageContainer title={t.title} description={t.description}>
       <Tabs defaultValue="all" className="w-full">
-        {/* <TabsList className="conatiner grid max-w-[30rem] grid-cols-3">
-          <TabsTrigger value="all">All</TabsTrigger>
-          <TabsTrigger value="projects">Projects</TabsTrigger>
-          <TabsTrigger value="contributions">Contributions</TabsTrigger>
-        </TabsList> */}
         <TabsContent value="all" className="w-full">
           {renderContent("all")}
         </TabsContent>
-        {/* <TabsContent value="contributions">
-          {renderContent("contributions")}
-        </TabsContent>
-        <TabsContent value="projects">{renderContent("projects")}</TabsContent> */}
       </Tabs>
     </PageContainer>
   );

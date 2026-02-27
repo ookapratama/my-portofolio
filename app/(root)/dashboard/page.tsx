@@ -1,30 +1,25 @@
+"use client";
+
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
 import { StackIcons } from "@/components/common/icons";
 import PageContainer from "@/components/common/page-container";
 import SectionHeading from "@/components/common/section-header";
 import SectionSubHeading from "@/components/common/section-sub-header";
 import Contributions from "@/components/dashboard/contributions";
 import { GITHUB_ACCOUNTS } from "@/config/constants";
-import { pagesConfig } from "@/config/pages";
 import { SocialLinks } from "@/config/socials";
-import { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: pagesConfig.dashboard.metadata.title,
-  description: pagesConfig.dashboard.metadata.description,
-};
-
 const DashboardPage = () => {
+  const { language } = useLanguageStore();
+  const t = translations[language].pages.dashboard;
+
   return (
-    <PageContainer
-      title={pagesConfig.dashboard.title}
-      description={pagesConfig.dashboard.description}
-    >
-      <SectionHeading title={"My Contributions"} icon={StackIcons.github} />
+    <PageContainer title={t.title} description={t.description}>
+      <SectionHeading title={t.contributions} icon={StackIcons.github} />
       <SectionSubHeading className="mt-2">
-        <p className="dark:text-neutral-400">
-          My contributions from last year on github.
-        </p>
+        <p className="dark:text-neutral-400">{t.contributionsDesc}</p>
         <Link
           href={SocialLinks[0].link}
           target="_blank"
@@ -42,7 +37,7 @@ const DashboardPage = () => {
             type={account?.type}
             endpoint={account?.endpoint}
           />
-        )
+        ),
       )}
     </PageContainer>
   );

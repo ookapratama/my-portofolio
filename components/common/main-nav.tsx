@@ -37,10 +37,28 @@ const navItemVariants: Variants = {
   }),
 };
 
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
+
 export function MainNav({ items, children }: MainNavProps) {
+  const { language } = useLanguageStore();
   const segment = useSelectedLayoutSegment();
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   const pathname = usePathname();
+
+  const t = translations[language].nav;
+
+  // Map route titles to translations
+  const translatedItems = items?.map((item) => {
+    let title = item.title;
+    if (item.href === "/") title = t.home;
+    else if (item.href === "/dashboard") title = t.dashboard;
+    else if (item.href === "/experience") title = t.experience;
+    else if (item.href === "/about") title = t.about;
+    else if (item.href === "/contact") title = t.contact;
+    else if (item.href === "/skills") title = t.skills;
+    return { ...item, title };
+  });
 
   React.useEffect(() => {
     setShowMobileMenu(false);
@@ -59,9 +77,9 @@ export function MainNav({ items, children }: MainNavProps) {
           </span>
         </Link>
       </motion.div>
-      {items?.length ? (
+      {translatedItems?.length ? (
         <nav className="hidden gap-6 md:flex items-center">
-          {items?.map((item, index) => (
+          {translatedItems?.map((item, index) => (
             <motion.div
               key={index}
               custom={index}
@@ -78,7 +96,7 @@ export function MainNav({ items, children }: MainNavProps) {
                   item.href.startsWith(`/${segment}`)
                     ? "text-foreground"
                     : "text-foreground/60",
-                  item.disabled && "cursor-not-allowed opacity-80"
+                  item.disabled && "cursor-not-allowed opacity-80",
                 )}
               >
                 {item.title}

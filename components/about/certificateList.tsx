@@ -1,24 +1,29 @@
-'use client';
+"use client";
 
 import { GrCertificate as CertificateIcon } from "react-icons/gr";
 
-
-import SectionHeading from '../common/section-header';
-import SectionSubHeading from '../common/section-sub-header';
+import SectionHeading from "../common/section-header";
+import SectionSubHeading from "../common/section-sub-header";
 import { CERTIFICATION } from "@/config/certificate";
 
-import CertificateCard from './certificateCard';
+import CertificateCard from "./certificateCard";
+
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
 
 const CertificateList = () => {
+  const { language } = useLanguageStore();
+  const t = translations[language].about;
+
   return (
     <section className="space-y-6 font-sora">
       <div className="space-y-2">
         <SectionHeading
-          title="Training & Certifications"
+          title={t.certificate}
           icon={<CertificateIcon size={22} className="mr-1" />}
         />
         <SectionSubHeading>
-          <p className="dark:text-neutral-400">Training experiences and certifications as proof of my professional development.</p>
+          <p className="dark:text-neutral-400">{t.certDesc}</p>
         </SectionSubHeading>
       </div>
 

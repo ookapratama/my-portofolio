@@ -13,7 +13,12 @@ interface ProjectCardProps {
   project: ExperienceInterface;
 }
 
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
+
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const { language } = useLanguageStore();
+  const t = translations[language].experience;
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -96,7 +101,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <Link href={`/experience/${project.id}`}>
           <Button variant={"default"} className="mt-2 w-full sm:w-auto">
-            Read more
+            {t.readMore}
             <Icons.chevronRight className="w-4 ml-1" />
           </Button>
         </Link>
