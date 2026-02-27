@@ -19,6 +19,7 @@ const GITHUB_USER_QUERY = `query($username: String!) {
             contributionCount
             date
             color
+            contributionLevel
           }
           firstDay
         }
@@ -29,7 +30,7 @@ const GITHUB_USER_QUERY = `query($username: String!) {
 
 export const fetchGithubData = async (
   username: string | undefined,
-  token: string | undefined
+  token: string | undefined,
 ) => {
   const response: GithubResponse = await axios.post(
     GITHUB_USER_ENDPOINT,
@@ -43,7 +44,7 @@ export const fetchGithubData = async (
       headers: {
         Authorization: `bearer ${token}`,
       },
-    }
+    },
   );
 
   const status: number = response.status;
@@ -54,7 +55,7 @@ export const fetchGithubData = async (
 
 export const getContribution = async (type: string) => {
   const account = GITHUB_ACCOUNTS.find(
-    (account) => account?.type === type && account?.is_active
+    (account) => account?.type === type && account?.is_active,
   );
 
   if (!account) throw new Error("Invalid user type");

@@ -55,14 +55,14 @@ const Calendar = ({ data }: CalendarProps) => {
     data?.months?.map((month) => {
       const filterContributionDay = weeks
         .filter(
-          (week) => week.firstDay.slice(0, 7) === month.firstDay.slice(0, 7)
+          (week) => week.firstDay.slice(0, 7) === month.firstDay.slice(0, 7),
         )
         .map((item) => item.contributionDays)
         .flat(1);
       const getContributionsByMonth = filterContributionDay.reduce(
         (previousValue, currentValue) =>
           previousValue + currentValue.contributionCount,
-        0
+        0,
       );
 
       return {
@@ -71,7 +71,7 @@ const Calendar = ({ data }: CalendarProps) => {
       };
     }) ?? [];
 
-  const contributionColors = data?.colors ?? [];
+  const contributionColors = ["#0e4429", "#006d32", "#26a641", "#39d353"];
 
   const getMonthWidth = (totalWeeks: number) => {
     return (dimensions.cellSize + dimensions.gap) * totalWeeks - dimensions.gap;
@@ -105,8 +105,22 @@ const Calendar = ({ data }: CalendarProps) => {
           {weeks?.map((week) => (
             <div key={week.firstDay}>
               {week.contributionDays.map((contribution) => {
-                const bgColor =
-                  contribution.contributionCount > 0 && contribution.color;
+                const getBgColor = (level: string) => {
+                  switch (level) {
+                    case "FIRST_QUARTILE":
+                      return "#0e4429";
+                    case "SECOND_QUARTILE":
+                      return "#006d32";
+                    case "THIRD_QUARTILE":
+                      return "#26a641";
+                    case "FOURTH_QUARTILE":
+                      return "#39d353";
+                    default:
+                      return "";
+                  }
+                };
+
+                const bgColor = getBgColor(contribution.contributionLevel);
 
                 const getRandomDelayAnimate =
                   Math.random() * week.contributionDays.length * 0.15;
@@ -188,10 +202,10 @@ const Calendar = ({ data }: CalendarProps) => {
         <div
           className={clsx(
             `${selectContribution?.date ? "opacity-100" : "opacity-0"}`,
-            "rounded bg-neutral-200 px-2 py-1 text-xs dark:bg-neutral-700 transition-opacity duration-200"
+            "rounded bg-neutral-200 px-2 py-1 text-xs dark:bg-neutral-700 transition-opacity duration-200",
           )}
         >
-          {selectContribution?.count} contirbutions on{" "}
+          {selectContribution?.count} contributions on{" "}
           {selectContribution?.date}
         </div>
       </div>

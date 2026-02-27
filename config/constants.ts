@@ -91,7 +91,7 @@ export type ValidCategory =
   | "Artificial Intelligence"
   | "Augmented Reality"
   | "Education"
-  | "Workflow" ;
+  | "Workflow";
 export type ValidExpType = "Projects" | "Contributions";
 
 export type ValidPages =
@@ -128,6 +128,12 @@ export type Contributions = {
   date: string;
   contributionCount: number;
   color: string;
+  contributionLevel:
+    | "NONE"
+    | "FIRST_QUARTILE"
+    | "SECOND_QUARTILE"
+    | "THIRD_QUARTILE"
+    | "FOURTH_QUARTILE";
 };
 
 export type Months = {
