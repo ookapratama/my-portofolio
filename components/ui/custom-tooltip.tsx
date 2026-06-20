@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Icons } from "@/components/common/icons";
+import { Icons, type IconType } from "@/components/common/icons";
 import {
   Tooltip,
   TooltipContent,
@@ -11,7 +11,7 @@ import {
 interface CustomTooltipProps {
   children: React.ReactNode;
   text: string;
-  icon?: any;
+  icon?: IconType;
 }
 
 export default function CustomTooltip({

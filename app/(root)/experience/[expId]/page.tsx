@@ -1,5 +1,6 @@
 "use client";
 
+import { use } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -20,17 +21,16 @@ import { useLanguageStore } from "@/app/store/use-language";
 import { translations } from "@/config/translations";
 
 interface ExperiencePageProps {
-  params: {
-    expId: string;
-  };
+  params: Promise<{ expId: string }>;
 }
 
 export default function Experience({ params }: ExperiencePageProps) {
+  const { expId } = use(params);
   const { language } = useLanguageStore();
   const t = translations[language].experience;
   const navT = translations[language].nav;
 
-  const exp = Experiences.find((val) => val.id === params.expId);
+  const exp = Experiences.find((val) => val.id === expId);
   if (!exp) {
     redirect("/experience");
   }

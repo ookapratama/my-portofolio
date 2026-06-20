@@ -34,6 +34,7 @@ import {
   Instagram,
   LayoutDashboard,
 } from "lucide-react";
+import { type ComponentType, type JSX } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { BiLaugh, BiSolidUser } from "react-icons/bi";
 import { BsInfoCircle, BsQuestionCircle } from "react-icons/bs";
@@ -93,6 +94,9 @@ import { LuBrainCircuit } from "react-icons/lu";
 export type stackCardProps = {
   [key: string]: (size?: number) => JSX.Element;
 };
+
+// Shared shape for icon components (lucide-react + react-icons).
+export type IconType = ComponentType<{ className?: string; size?: number | string }>;
 
 const defaultIconSize: number = 50;
 

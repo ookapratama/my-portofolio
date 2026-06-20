@@ -11,11 +11,14 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguageStore } from "@/app/store/use-language";
 import { translations } from "@/config/translations";
+import { type StaticImageData } from "next/image";
+import { type ExperienceInterface } from "@/config/experience";
+import { type skillsInterface } from "@/config/skills";
 
 interface LandingContentProps {
-  ookaImg: any;
-  featuredExperiences: any[];
-  featuredSkills: any[];
+  ookaImg: StaticImageData;
+  featuredExperiences: ExperienceInterface[];
+  featuredSkills: skillsInterface[];
 }
 
 export function LandingContent({
@@ -51,7 +54,7 @@ export function LandingContent({
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl text-primary"
           >
-            Backend Developer
+            {t.hero.role}
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base italic">

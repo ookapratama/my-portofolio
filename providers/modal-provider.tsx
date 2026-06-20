@@ -1,23 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 import { CustomModal } from "@/components/modals/custom-modal";
+import { useIsHydrated } from "@/hooks/use-is-hydrated";
 
+// Renders only after hydration, keeping the modal client-only.
 export const ModalProvider = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  const isHydrated = useIsHydrated();
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
+  if (!isHydrated) {
     return null;
   }
 
-  return (
-    <>
-      <CustomModal />
-    </>
-  );
+  return <CustomModal />;
 };

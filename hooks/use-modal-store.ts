@@ -1,20 +1,17 @@
 import { create } from "zustand";
+import { type IconType } from "@/components/common/icons";
 
 interface ModalDataProps {
   title: string;
   description: string;
-  icon: any;
-  // link?: {
-  //     label: string;
-  //     link: string;
-  // }
+  icon: IconType;
 }
 
 interface ModalStoreProps {
   isOpen: boolean;
   title: string;
   description: string;
-  icon: any;
+  icon: IconType | null;
   onOpen: (data: ModalDataProps) => void;
   onClose: () => void;
 }
@@ -24,7 +21,7 @@ export const useModalStore = create<ModalStoreProps>((set) => ({
   title: "",
   description: "",
   icon: null,
-  onOpen: (data: any) =>
+  onOpen: (data: ModalDataProps) =>
     set({
       isOpen: true,
       title: data.title,

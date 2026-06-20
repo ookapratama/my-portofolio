@@ -1,9 +1,9 @@
-import { Icons } from "@/components/common/icons";
+import { Icons, type IconType } from "@/components/common/icons";
 
 interface SocialInterface {
   name: string;
   username: string;
-  icon: any;
+  icon: IconType;
   link: string;
 }
 

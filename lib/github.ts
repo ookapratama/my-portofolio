@@ -1,5 +1,9 @@
-import { GITHUB_ACCOUNTS, GithubResponse } from "@/config/constants";
+import { GITHUB_ACCOUNTS, CalendarResponse } from "@/config/constants";
 import axios from "axios";
+
+type GithubGraphQLResponse = {
+  data: { user: CalendarResponse | null };
+};
 
 const GITHUB_USER_ENDPOINT = "https://api.github.com/graphql";
 
@@ -32,7 +36,7 @@ export const fetchGithubData = async (
   username: string | undefined,
   token: string | undefined,
 ) => {
-  const response: GithubResponse = await axios.post(
+  const response = await axios.post<GithubGraphQLResponse>(
     GITHUB_USER_ENDPOINT,
     {
       query: GITHUB_USER_QUERY,
@@ -50,7 +54,9 @@ export const fetchGithubData = async (
   const status: number = response.status;
   const dataJson = response.data?.data;
 
-  return status > 400 ? { status, data: {} } : { status, data: dataJson.user };
+  return status >= 400
+    ? { status, data: {} }
+    : { status, data: dataJson.user };
 };
 
 export const getContribution = async (type: string) => {

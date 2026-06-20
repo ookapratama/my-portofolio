@@ -2,13 +2,14 @@
 
 import styled from "@emotion/styled";
 import type { ReactNode } from "react";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { BiCodeAlt as SkillsIcon } from "react-icons/bi";
 
 import InfiniteLoopSlider from "@/components/common/infinite-loop-slider";
 import SectionHeading from "../common/section-header";
 import SectionSubHeading from "../common/section-sub-header";
 import { StackIcons } from "../common/icons";
+import { useIsHydrated } from "@/hooks/use-is-hydrated";
 
 import { useLanguageStore } from "@/app/store/use-language";
 import { translations } from "@/config/translations";
@@ -23,26 +24,29 @@ const Tag = ({ icon, title }: { icon: ReactNode; title: string }) => (
 const Skills = () => {
   const { language } = useLanguageStore();
   const t = translations[language].about;
-  const [shuffledSkills, setShuffledSkills] = useState<
-    Array<[string, ReactNode]>
-  >([]);
+  const isHydrated = useIsHydrated();
 
-  useEffect(() => {
-    const skillsArray = Object.entries(StackIcons);
-    const shuffledArray = [...skillsArray].sort(() => Math.random() - 0.5);
-    setShuffledSkills(shuffledArray);
-  }, []);
+  // Stable order on the server and first client render (no hydration
+  // mismatch); shuffled for visual variety once hydrated.
+  const sliders = useMemo(() => {
+    const skillsArray = Object.entries(StackIcons) as Array<
+      [string, ReactNode]
+    >;
 
-  const sliders = Array.from({ length: 3 }, (_, index) => {
-    const sliderSkills = [...shuffledSkills].sort(() => Math.random() - 0.5);
-    return (
-      <InfiniteLoopSlider key={index} isReverse={index === 1}>
-        {sliderSkills.map(([title, icon], index) => (
-          <Tag key={index} icon={icon} title={title} />
-        ))}
-      </InfiniteLoopSlider>
-    );
-  });
+    return Array.from({ length: 3 }, (_, index) => {
+      const sliderSkills = isHydrated
+        ? [...skillsArray].sort(() => Math.random() - 0.5)
+        : skillsArray;
+
+      return (
+        <InfiniteLoopSlider key={index} isReverse={index === 1}>
+          {sliderSkills.map(([title, icon], i) => (
+            <Tag key={i} icon={icon} title={title} />
+          ))}
+        </InfiniteLoopSlider>
+      );
+    });
+  }, [isHydrated]);
 
   return (
     <div className="space-y-8 ">

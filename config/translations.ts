@@ -1,83 +1,102 @@
-export const translations = {
-  en: {
-    nav: {
-      home: "Home",
-      skills: "Skills",
-      experience: "Experience",
-      contact: "Contact",
-      about: "About",
-      dashboard: "Dashboard",
+import { type Language } from "@/app/store/use-language";
+
+// `en` is the canonical shape. `Translations` is derived from it, so the `id`
+// tree below must match it key-for-key — missing/extra keys are compile errors.
+const en = {
+  nav: {
+    home: "Home",
+    skills: "Skills",
+    experience: "Experience",
+    contact: "Contact",
+    about: "About",
+    dashboard: "Dashboard",
+  },
+  hero: {
+    greeting:
+      "Explore my code space, and let’s build something amazing together.",
+    role: "Backend Developer",
+    ctaGithub: "GitHub",
+    ctaDashboard: "Dashboard",
+    ctaContact: "Contact",
+  },
+  sections: {
+    skillsTitle: "Skills & Expertise",
+    skillsDesc: "My current focus in technology and development.",
+    expTitle: "Project Experience",
+    expDesc:
+      "My development journey — from building ideas to making an impact.",
+    viewAll: "View All",
+  },
+  experience: {
+    readMore: "Read more",
+    backToPortfolio: "Back to Portfolio",
+    techStack: "Tech Stack",
+    projectShowcase: "Project Showcase",
+    present: "Present",
+  },
+  contact: {
+    title: "Get in Touch",
+    desc: "Let's connect and explore collaborations.",
+    githubCard: {
+      title: "Interested in the code?",
+      desc: "This project is open source. Explore the code on GitHub.",
+      button: "Source Code",
     },
-    hero: {
-      greeting:
-        "Explore my code space, and let’s build something amazing together.",
-      ctaGithub: "GitHub",
-      ctaDashboard: "Dashboard",
-      ctaContact: "Contact",
-    },
-    sections: {
-      skillsTitle: "Skills & Expertise",
-      skillsDesc: "My current focus in technology and development.",
-      expTitle: "Project Experience",
-      expDesc:
-        "My development journey — from building ideas to making an impact.",
-      viewAll: "View All",
-    },
+  },
+  pages: {
     experience: {
-      readMore: "Read more",
-      backToPortfolio: "Back to Portfolio",
-      techStack: "Tech Stack",
-      projectShowcase: "Project Showcase",
-      present: "Present",
+      title: "Project Experience",
+      description: "Development journey — from ideas to making an impact.",
+    },
+    about: {
+      title: "About Me",
+      description:
+        "My journey in code: projects, experience, skills, and education.",
     },
     contact: {
       title: "Get in Touch",
-      desc: "Let's connect and explore collaborations.",
-      githubCard: {
-        title: "Interested in the code?",
-        desc: "This project is open source. Explore the code on GitHub.",
-        button: "Source Code",
-      },
+      description: "Let's connect and explore collaboration opportunities.",
     },
-    pages: {
-      experience: {
-        title: "Project Experience",
-        description: "Development journey — from ideas to making an impact.",
-      },
-      about: {
-        title: "About Me",
-        description:
-          "My journey in code: projects, experience, skills, and education.",
-      },
-      contact: {
-        title: "Get in Touch",
-        description: "Let's connect and explore collaboration opportunities.",
-      },
-      dashboard: {
-        title: "Developer Dashboard",
-        description:
-          "Real-time GitHub activity statistics and code contributions.",
-        contributions: "My Contributions",
-        contributionsDesc: "My contributions from last year on github.",
-      },
-    },
-    about: {
-      story: "My Story",
-      resume: "Resume",
-      skills: "Skills & Tools",
-      career: "Career Journey",
-      education: "Education",
-      organization: "Organizations",
-      certificate: "Certificates",
-      careerDesc: "Professional professional journey.",
-      educationDesc: "My educational journey.",
-      orgDesc: "My organizational experience.",
-      certDesc: "My professional certifications & credentials.",
-    },
-    footer: {
-      rights: "All rights reserved.",
+    dashboard: {
+      title: "Developer Dashboard",
+      description:
+        "Real-time GitHub activity statistics and code contributions.",
+      contributions: "My Contributions",
+      contributionsDesc: "My contributions from last year on github.",
     },
   },
+  dashboard: {
+    total: "Total",
+    thisWeek: "This Week",
+    bestDay: "Best Day",
+    average: "Average",
+    perDay: "/ day",
+    less: "Less",
+    more: "More",
+    contributionsOn: "contributions on",
+  },
+  about: {
+    story: "My Story",
+    resume: "Resume",
+    skills: "Skills & Tools",
+    career: "Career Journey",
+    education: "Education",
+    organization: "Organizations",
+    certificate: "Certificates",
+    careerDesc: "Professional journey.",
+    educationDesc: "My educational journey.",
+    orgDesc: "My organizational experience.",
+    certDesc: "My professional certifications & credentials.",
+  },
+  footer: {
+    rights: "All rights reserved.",
+  },
+};
+
+export type Translations = typeof en;
+
+export const translations: Record<Language, Translations> = {
+  en,
   id: {
     nav: {
       home: "Beranda",
@@ -90,6 +109,7 @@ export const translations = {
     hero: {
       greeting:
         "Jelajahi ruang kode saya, dan mari bangun sesuatu yang luar biasa bersama.",
+      role: "Backend Developer",
       ctaGithub: "GitHub",
       ctaDashboard: "Dashboard",
       ctaContact: "Kontak",
@@ -139,6 +159,16 @@ export const translations = {
         contributions: "Kontribusi Saya",
         contributionsDesc: "Kontribusi saya di GitHub selama setahun terakhir.",
       },
+    },
+    dashboard: {
+      total: "Total",
+      thisWeek: "Minggu Ini",
+      bestDay: "Hari Terbaik",
+      average: "Rata-rata",
+      perDay: "/ hari",
+      less: "Sedikit",
+      more: "Banyak",
+      contributionsOn: "kontribusi pada",
     },
     about: {
       story: "Cerita Saya",

@@ -1,11 +1,14 @@
-import { differenceInMonths, differenceInYears, format } from "date-fns";
+"use client";
+
+import { format } from "date-fns";
 import { BsBuildings as CompanyIcon } from "react-icons/bs";
 
-// import Card from '@/common/components/elements/Card';
-// import Image from '@/common/components/elements/Image';
 import type { CareerExperienceInterface as CareerProps } from "@/config/career";
 import { Card } from "../ui/card";
 import Image from "next/image";
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
+import { getCareerDuration } from "@/lib/utils";
 
 const CareerCard = ({
   position,
@@ -18,19 +21,12 @@ const CareerCard = ({
   type,
   locationType,
 }: CareerProps) => {
+  const { language } = useLanguageStore();
+  const t = translations[language].experience;
   const start_date = new Date(startDate);
   const end_date = endDate ? new Date(endDate) : new Date();
 
-  const durationYears = differenceInYears(end_date, start_date);
-  const durationMonths = differenceInMonths(end_date, start_date) % 12;
-
-  let durationText = "";
-  if (durationYears > 0) {
-    durationText += `${durationYears} Year${durationYears > 1 ? "s" : ""} `;
-  }
-  if (durationMonths > 0 || durationYears === 0) {
-    durationText += `${durationMonths} Month${durationMonths > 1 ? "s" : ""}`;
-  }
+  const durationText = getCareerDuration(startDate, endDate);
 
   return (
     <Card className="flex items-center gap-5 py-4 px-6 border border-neutral-300 dark:border-neutral-900">
@@ -65,7 +61,9 @@ const CareerCard = ({
           <div className="flex flex-col md:text-[12px]">
             <div className="flex gap-1">
               <span>{format(start_date, "MMM yyyy")}</span> -{" "}
-              <span>{endDate ? format(end_date, "MMM yyyy") : "Present"}</span>
+              <span>
+                {endDate ? format(end_date, "MMM yyyy") : t.present}
+              </span>
             </div>
             <div className="flex gap-1">
               <span className="text-neutral-500 dark:text-neutral-500">

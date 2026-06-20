@@ -10,9 +10,10 @@ import { Icons } from "@/components/common/icons";
 import { MobileNav } from "@/components/common/mobile-nav";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { type NavItem } from "@/config/routes";
 
 interface MainNavProps {
-  items?: any[];
+  items?: NavItem[];
   children?: React.ReactNode;
 }
 
@@ -45,6 +46,13 @@ export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment();
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   const pathname = usePathname();
+  const [prevPathname, setPrevPathname] = React.useState(pathname);
+
+  // Close the mobile menu on route change (adjust state during render).
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setShowMobileMenu(false);
+  }
 
   const t = translations[language].nav;
 
@@ -59,10 +67,6 @@ export function MainNav({ items, children }: MainNavProps) {
     else if (item.href === "/skills") title = t.skills;
     return { ...item, title };
   });
-
-  React.useEffect(() => {
-    setShowMobileMenu(false);
-  }, [pathname]);
 
   return (
     <div className="flex gap-6 md:gap-10">

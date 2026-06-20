@@ -1,6 +1,4 @@
 import axios, { AxiosResponse } from "axios";
 
-export const fetcher = (url: string) => 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-  axios.get(url).then((response: AxiosResponse) => response.data);
-
+export const fetcher = <T>(url: string): Promise<T> =>
+  axios.get<T>(url).then((response: AxiosResponse<T>) => response.data);

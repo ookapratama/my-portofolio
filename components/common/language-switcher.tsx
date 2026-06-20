@@ -2,18 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import { useLanguageStore } from "@/app/store/use-language";
-import { useEffect, useState } from "react";
+import { useIsHydrated } from "@/hooks/use-is-hydrated";
 
 export function LanguageSwitcher() {
   const { language, toggleLanguage } = useLanguageStore();
-  const [mounted, setMounted] = useState(false);
+  const isHydrated = useIsHydrated();
 
-  // Avoid hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
+  if (!isHydrated) return null;
 
   return (
     <Button

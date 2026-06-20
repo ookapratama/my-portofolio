@@ -1,3 +1,4 @@
+import { type StaticImageData } from "next/image";
 import { ValidCategory, ValidExpType, ValidSkills } from "./constants";
 
 interface PagesInfoInterface {
@@ -23,100 +24,12 @@ export interface ExperienceInterface {
   stackIcons: string[];
   startDate: Date;
   endDate: Date;
-  companyLogoImg: any;
+  companyLogoImg: string | StaticImageData;
   descriptionDetails: DescriptionDetailsInterface;
   pagesInfoArr: PagesInfoInterface[];
 }
 
 export const Experiences: ExperienceInterface[] = [
-  // {
-  //   id: "crm-automation-n8n",
-  //   companyName: "CRM Automation n8n",
-  //   type: "Projects",
-  //   category: ["Automation", "Workflow", "Backend"],
-  //   shortDescription:
-  //     "Automated CRM system built with n8n untuk lead scoring, assignment, dan follow-up processes.",
-  //   websiteLink: "https://github.com/ookapratama/crm-automation-n8n",
-  //   techStack: ["n8n", "PostgreSQL", "Docker", "Webhooks", "Google Sheets"],
-  //   stackIcons: ["n8n", "postgresql", "docker", "webhook", "googlesheets"],
-  //   startDate: new Date("2025-05-14"),
-  //   endDate: new Date(),
-  //   companyLogoImg: "/experience/portofolio/logo.webp",
-  //   pagesInfoArr: [
-  //     {
-  //       title: "Home Screen",
-  //       description: "",
-  //       imgArr: [
-  //         "/experience/portofolio/landing_1.webp",
-  //         "/experience/portofolio/landing_2.webp",
-  //         "/experience/portofolio/landing_3.webp",
-  //       ],
-  //     },
-  //   ],
-  //   descriptionDetails: {
-  //     paragraphs: [
-  //       "CRM Pipeline Automation dengan n8n untuk mengelola lead scoring, smart assignment, follow-up, dan pipeline reporting.",
-  //       "Proyek ini dibangun untuk mengurangi pekerjaan manual tim sales/marketing sekaligus meningkatkan respon time dan conversion rate.",
-  //     ],
-  //     bullets: [
-  //       "Automated lead scoring engine dengan rules-based calculation.",
-  //       "Smart lead assignment berdasarkan territory/expertise.",
-  //       "Scheduled follow-up automation untuk memastikan 100% compliance.",
-  //       "Pipeline reporting real-time menggunakan Google Sheets & dashboard.",
-  //       "Reduce lead response time dari 4 jam → 15 menit.",
-  //       "Increase conversion rate sebesar 25%.",
-  //       "Save ±10 jam per minggu dari pekerjaan manual.",
-  //     ],
-  //   },
-  // },
-
-  // {
-  //   id: "ml-experiments",
-  //   companyName: "Personal Portfolio",
-  //   type: "Projects",
-  //   category: ["Machine Learning", "Data Science", "Artificial Intelligence"],
-  //   shortDescription:
-  //     "A centralized repository of personal Machine Learning projects, showcasing skills in building, evaluating, and deploying data-driven models.",
-  //   // websiteLink: "https://github.com/ookapratama/ML-Experiments", // Replace with GitHub Pages link if available
-  //   githubLink: "https://github.com/ookapratama/ML-Experiments",
-  //   techStack: ["Python", "Pandas", "Scikit-learn", "NumPy", "Plotly"],
-  //   stackIcons: ["python", "pandas", "scikitlearn", "numpy", "plotly"],
-  //   startDate: new Date("2025-08-10"),
-  //   endDate: new Date("now"),
-  //   companyLogoImg: "/experience/ml-experiments/thumbnail.webp",
-  //   pagesInfoArr: [
-  //     {
-  //       title: "Waiter Tips Prediction",
-  //       description:
-  //         "A case study project to predict tips using Linear Regression model. This project emphasizes the importance of data quality.",
-  //       imgArr: [
-  //         "/experience/ml-experiments/tips-prediction/1.webp",
-  //         "/experience/ml-experiments/tips-prediction/2.webp",
-  //       ],
-  //     },
-  //     {
-  //       title: "Future Sales Prediction",
-  //       description:
-  //         "Predicting future sales based on advertising cost data. This project demonstrates the application of Linear Regression to business problems.",
-  //       imgArr: [
-  //         "/experience/ml-experiments/sales-prediction/1.webp",
-  //         "/experience/ml-experiments/sales-prediction/2.webp",
-  //       ],
-  //     },
-  //   ],
-  //   descriptionDetails: {
-  //     paragraphs: [
-  //       "This repository serves as a centralized portfolio of all Machine Learning and Data Science projects I have worked on. Its purpose is to demonstrate my understanding of ML concepts, from data preprocessing to model evaluation, as well as my ability to apply algorithms to solve practical problems.",
-  //     ],
-  //     bullets: [
-  //       "Implementing various Machine Learning algorithms such as Linear Regression, Classification, and Clustering.",
-  //       "Performing Exploratory Data Analysis (EDA) to gain insights from datasets.",
-  //       "Using industry-standard Python libraries such as Pandas, Scikit-learn, and NumPy.",
-  //       "Visualizing model results and data using Plotly for clear presentation.",
-  //       "Documenting each project in detail to explain methodology and findings.",
-  //     ],
-  //   },
-  // },
   {
     id: "laptop-price-prediction-v1",
     companyName: "Laptop Price Prediction",

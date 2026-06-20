@@ -5,12 +5,16 @@ import { animate, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 import { type CalendarProps as CalendarDataProps } from "@/config/constants";
+import { useLanguageStore } from "@/app/store/use-language";
+import { translations } from "@/config/translations";
 
 interface CalendarProps {
   data?: CalendarDataProps;
 }
 
 const Calendar = ({ data }: CalendarProps) => {
+  const { language } = useLanguageStore();
+  const t = translations[language].dashboard;
   const [selectContribution, setSelectContribution] = useState<{
     count: number | null;
     date: string | null;
@@ -165,7 +169,7 @@ const Calendar = ({ data }: CalendarProps) => {
 
       <div className="flex flex-wrap items-center justify-between gap-2 mt-2">
         <div className="flex items-center gap-2 text-sm">
-          <span className="dark:text-neutral-400">Less</span>
+          <span className="dark:text-neutral-400">{t.less}</span>
 
           <ul className="flex gap-1">
             <motion.li
@@ -196,7 +200,7 @@ const Calendar = ({ data }: CalendarProps) => {
               />
             ))}
           </ul>
-          <span className="dark:text-neutral-400">More</span>
+          <span className="dark:text-neutral-400">{t.more}</span>
         </div>
 
         <div
@@ -205,7 +209,7 @@ const Calendar = ({ data }: CalendarProps) => {
             "rounded bg-neutral-200 px-2 py-1 text-xs dark:bg-neutral-700 transition-opacity duration-200",
           )}
         >
-          {selectContribution?.count} contributions on{" "}
+          {selectContribution?.count} {t.contributionsOn}{" "}
           {selectContribution?.date}
         </div>
       </div>
