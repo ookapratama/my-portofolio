@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
+import { useLanguageStore } from "@/app/store/use-language";
 import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,23 +17,24 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { translations } from "@/config/translations";
 import { useModalStore } from "@/hooks/use-modal-store";
-
-const formSchema = z.object({
-  name: z.string().min(3, {
-    message: "Name must contain at least 3 characters.",
-  }),
-  email: z.string().email("Please enter a valid email."),
-  message: z.string().min(10, {
-    message: "Please write something more descriptive.",
-  }),
-  social: z.string().url().optional().or(z.literal("")),
-});
 
 export function ContactForm() {
   const storeModal = useModalStore();
+  const { language } = useLanguageStore();
+  const t = translations[language].contact.form;
 
-  // const [open, setOpen] = useState(false);
+  const formSchema = z.object({
+    name: z.string().min(3, { message: t.validation.nameMin }),
+    email: z.string().email(t.validation.emailInvalid),
+    message: z.string().min(10, { message: t.validation.messageMin }),
+    social: z
+      .string()
+      .url(t.validation.socialInvalid)
+      .optional()
+      .or(z.literal("")),
+  });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -44,7 +46,8 @@ export function ContactForm() {
     },
   });
 
-  // 2. Define a submit handler.
+  const isSubmitting = form.formState.isSubmitting;
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       const response = await fetch("/api/contact", {
@@ -55,18 +58,28 @@ export function ContactForm() {
         body: JSON.stringify(values),
       });
 
-      form.reset();
-
       if (response.status === 200) {
+        form.reset();
         storeModal.onOpen({
-          title: "Thankyou!",
-          description:
-            "Your message has been received! I appreciate your contact and will get back to you shortly.",
+          title: t.successTitle,
+          description: t.successDesc,
           icon: Icons.successAnimated,
         });
+        return;
       }
+
+      storeModal.onOpen({
+        title: t.errorTitle,
+        description: t.errorDesc,
+        icon: Icons.warning,
+      });
     } catch (err) {
-      console.log("Err!", err);
+      console.error("Contact form submission failed:", err);
+      storeModal.onOpen({
+        title: t.errorTitle,
+        description: t.errorDesc,
+        icon: Icons.warning,
+      });
     }
   }
 
@@ -81,13 +94,10 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>{t.name}</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your name" {...field} />
+                <Input placeholder={t.namePlaceholder} {...field} />
               </FormControl>
-              {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
               <FormMessage />
             </FormItem>
           )}
@@ -97,9 +107,9 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>{t.email}</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your email" {...field} />
+                <Input placeholder={t.emailPlaceholder} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -110,9 +120,9 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>{t.message}</FormLabel>
               <FormControl>
-                <Textarea placeholder="Enter your message" {...field} />
+                <Textarea placeholder={t.messagePlaceholder} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -123,18 +133,20 @@ export function ContactForm() {
           name="social"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Social (optional)</FormLabel>
+              <FormLabel>{t.social}</FormLabel>
               <FormControl>
-                <Input placeholder="Link for social account" {...field} />
+                <Input placeholder={t.socialPlaceholder} {...field} />
               </FormControl>
-              {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" disabled={isSubmitting}>
+          {isSubmitting && (
+            <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+          )}
+          {isSubmitting ? t.submitting : t.submit}
+        </Button>
       </form>
     </Form>
   );

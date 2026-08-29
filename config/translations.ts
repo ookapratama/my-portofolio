@@ -21,8 +21,8 @@ const en = {
     ctaContact: "Contact",
   },
   sections: {
-    skillsTitle: "Skills & Expertise",
-    skillsDesc: "My current focus in technology and development.",
+    skillsTitle: "Currently Learning",
+    skillsDesc: "Technologies and tools I'm actively focused on learning right now.",
     expTitle: "Project Experience",
     expDesc:
       "My development journey — from building ideas to making an impact.",
@@ -42,6 +42,30 @@ const en = {
       title: "Interested in the code?",
       desc: "This project is open source. Explore the code on GitHub.",
       button: "Source Code",
+    },
+    form: {
+      name: "Name",
+      namePlaceholder: "Enter your name",
+      email: "Email",
+      emailPlaceholder: "Enter your email",
+      message: "Message",
+      messagePlaceholder: "Enter your message",
+      social: "Social (optional)",
+      socialPlaceholder: "Link for social account",
+      submit: "Submit",
+      submitting: "Sending...",
+      successTitle: "Thank you!",
+      successDesc:
+        "Your message has been received! I appreciate your contact and will get back to you shortly.",
+      errorTitle: "Something went wrong",
+      errorDesc:
+        "We couldn't send your message. Please try again in a moment.",
+      validation: {
+        nameMin: "Name must contain at least 3 characters.",
+        emailInvalid: "Please enter a valid email.",
+        messageMin: "Please write something more descriptive.",
+        socialInvalid: "Please enter a valid URL.",
+      },
     },
   },
   pages: {
@@ -120,8 +144,8 @@ export const translations: Record<Language, Translations> = {
       ctaContact: "Kontak",
     },
     sections: {
-      skillsTitle: "Keahlian & Teknologi",
-      skillsDesc: "Fokus teknologi dan keahlian pengembangan saat ini.",
+      skillsTitle: "Sedang Dipelajari",
+      skillsDesc: "Teknologi dan tools yang sedang aktif saya pelajari dan fokuskan saat ini.",
       expTitle: "Pengalaman Proyek",
       expDesc:
         "Perjalanan pengembangan saya — dari ide hingga memberikan dampak nyata.",
@@ -141,6 +165,29 @@ export const translations: Record<Language, Translations> = {
         title: "Tertarik dengan kodenya?",
         desc: "Proyek ini bersifat open source. Jelajahi kodenya di GitHub.",
         button: "Source Code",
+      },
+      form: {
+        name: "Nama",
+        namePlaceholder: "Masukkan nama Anda",
+        email: "Email",
+        emailPlaceholder: "Masukkan email Anda",
+        message: "Pesan",
+        messagePlaceholder: "Masukkan pesan Anda",
+        social: "Sosial (opsional)",
+        socialPlaceholder: "Tautan akun sosial Anda",
+        submit: "Kirim",
+        submitting: "Mengirim...",
+        successTitle: "Terima kasih!",
+        successDesc:
+          "Pesan Anda telah diterima! Terima kasih telah menghubungi saya, saya akan segera membalasnya.",
+        errorTitle: "Terjadi kesalahan",
+        errorDesc: "Pesan Anda gagal terkirim. Silakan coba lagi sesaat lagi.",
+        validation: {
+          nameMin: "Nama harus terdiri dari minimal 3 karakter.",
+          emailInvalid: "Masukkan alamat email yang valid.",
+          messageMin: "Tuliskan pesan yang lebih deskriptif.",
+          socialInvalid: "Masukkan URL yang valid.",
+        },
       },
     },
     pages: {
