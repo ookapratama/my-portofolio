@@ -3,7 +3,7 @@ export const siteConfig = {
   authorName: "Ooka Pratama",
   username: "ookapratama",
   description:
-    "Ooka Pratama's Professional Portfolio - Backend Developer experienced in building Laravel systems, React Native (AR) mobile apps, and Machine Learning solutions. Focused on clean, efficient, and high-performance code architecture.",
+    "Ooka Pratama's Professional Portfolio - Developer experienced in building Laravel systems, React Native (AR) mobile apps, and Machine Learning solutions. Focused on clean, efficient, and high-performance code architecture.",
   url: "https://ooka.my.id",
   links: {
     instagram: "https://instagram.com/ookapratama_",
@@ -14,7 +14,7 @@ export const siteConfig = {
   logoIcon: "/logo.png",
   keywords: [
     "Ooka Pratama",
-    "Backend Developer",
+    "Developer",
     "Laravel Developer Indonesia",
     "Machine Learning Engineer",
     "React Native Developer",

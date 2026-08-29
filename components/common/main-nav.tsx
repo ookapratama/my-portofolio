@@ -3,18 +3,14 @@
 import { motion, Variants } from "framer-motion";
 import { Norican } from "next/font/google";
 import Link from "next/link";
-import { usePathname, useSelectedLayoutSegment } from "next/navigation";
-import * as React from "react";
+import { useSelectedLayoutSegment } from "next/navigation";
 
-import { Icons } from "@/components/common/icons";
-import { MobileNav } from "@/components/common/mobile-nav";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { type NavItem } from "@/config/routes";
 
 interface MainNavProps {
   items?: NavItem[];
-  children?: React.ReactNode;
 }
 
 const norican = Norican({
@@ -41,18 +37,9 @@ const navItemVariants: Variants = {
 import { useLanguageStore } from "@/app/store/use-language";
 import { translations } from "@/config/translations";
 
-export function MainNav({ items, children }: MainNavProps) {
+export function MainNav({ items }: MainNavProps) {
   const { language } = useLanguageStore();
   const segment = useSelectedLayoutSegment();
-  const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
-  const pathname = usePathname();
-  const [prevPathname, setPrevPathname] = React.useState(pathname);
-
-  // Close the mobile menu on route change (adjust state during render).
-  if (pathname !== prevPathname) {
-    setPrevPathname(pathname);
-    setShowMobileMenu(false);
-  }
 
   const t = translations[language].nav;
 
@@ -109,18 +96,6 @@ export function MainNav({ items, children }: MainNavProps) {
           ))}
         </nav>
       ) : null}
-      <motion.button
-        className="flex items-center space-x-2 md:hidden"
-        onClick={() => setShowMobileMenu(!showMobileMenu)}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        {showMobileMenu ? <Icons.close /> : <Icons.menu />}
-        <span className="font-bold">Menu</span>
-      </motion.button>
-      {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
-      )}
     </div>
   );
 }

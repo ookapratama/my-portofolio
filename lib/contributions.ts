@@ -29,3 +29,39 @@ export function getContributionStats(data?: CalendarProps): ContributionStats {
 
   return { total, thisWeek, best, average };
 }
+
+export interface StreakStats {
+  currentStreak: number;
+  longestStreak: number;
+}
+
+// Derives current/longest streak (consecutive days with contributions > 0)
+// from the GitHub contribution calendar. Days are walked in chronological
+// order (weeks, then days, as returned by the GraphQL calendar).
+export function getStreakStats(data?: CalendarProps): StreakStats {
+  const weeks = data?.weeks || [];
+  const days = weeks.flatMap((week) => week.contributionDays);
+
+  let longestStreak = 0;
+  let runningStreak = 0;
+
+  for (const day of days) {
+    if (day.contributionCount > 0) {
+      runningStreak += 1;
+      longestStreak = Math.max(longestStreak, runningStreak);
+    } else {
+      runningStreak = 0;
+    }
+  }
+
+  let currentStreak = 0;
+  for (let i = days.length - 1; i >= 0; i--) {
+    if (days[i].contributionCount > 0) {
+      currentStreak += 1;
+    } else {
+      break;
+    }
+  }
+
+  return { currentStreak, longestStreak };
+}

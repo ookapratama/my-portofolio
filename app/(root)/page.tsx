@@ -22,13 +22,13 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LandingContent } from "@/components/common/landing-content";
 
 export const metadata: Metadata = {
-  title: `Ooka Pratama | Backend Developer Portfolio`,
+  title: `Ooka Pratama | Developer Portfolio`,
   description: siteConfig.description,
   alternates: {
     canonical: siteConfig.url,
   },
   openGraph: {
-    title: "Ooka Pratama | Backend Developer",
+    title: "Ooka Pratama | Developer",
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: "Ooka Pratama Portfolio",
@@ -53,7 +53,7 @@ export default function IndexPage() {
     name: siteConfig.authorName,
     url: siteConfig.url,
     image: siteConfig.ogImage,
-    jobTitle: "Backend Developer",
+    jobTitle: "Developer",
     worksFor: {
       "@type": "Organization",
       name: "Freelance / Independent Developer",

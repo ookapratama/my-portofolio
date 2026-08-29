@@ -158,7 +158,7 @@ const totalYears = new Date().getFullYear() - 2021;
 export const ABOUT_CONTENT: Record<Language, string> = {
   en: `
 <p>
-  Hello! My name is Judhistira Ooka Pratama, a <b>Backend Developer</b> with a strong foundation in full-stack principles and a keen focus on <b>integrating Artificial Intelligence and Machine Learning</b>. I bring ${professionalYears} years of professional experience, and a total of ${totalYears} years in software development since 2021. My core expertise lies in <b>Python, TypeScript and PHP</b>, complemented by extensive knowledge in server-side solutions, database management, and exploring AI applications.
+  Hello! My name is Judhistira Ooka Pratama, a <b>Developer</b> with a strong foundation in full-stack principles and a keen focus on <b>integrating Artificial Intelligence and Machine Learning</b>. I bring ${professionalYears} years of professional experience, and a total of ${totalYears} years in software development since 2021. My core expertise lies in <b>Python, TypeScript and PHP</b>, complemented by extensive knowledge in server-side solutions, database management, and exploring AI applications.
 </p>
 <p>
   My career has been dedicated to delivering robust and scalable applications, with a consistent focus on optimizing performance and security. I excel at architecting server-side solutions, managing complex databases, and ensuring seamless data flow across systems.
@@ -169,7 +169,7 @@ export const ABOUT_CONTENT: Record<Language, string> = {
 `,
   id: `
 <p>
-  Halo! Nama saya Judhistira Ooka Pratama, seorang <b>Backend Developer</b> dengan fondasi kuat dalam prinsip full-stack dan fokus pada <b>integrasi Artificial Intelligence dan Machine Learning</b>. Saya memiliki ${professionalYears} tahun pengalaman profesional, dan total ${totalYears} tahun dalam pengembangan perangkat lunak sejak 2021. Keahlian utama saya pada <b>Python, TypeScript, dan PHP</b>, dilengkapi pengetahuan luas dalam solusi server-side, manajemen basis data, dan eksplorasi aplikasi AI.
+  Halo! Nama saya Judhistira Ooka Pratama, seorang <b>Developer</b> dengan fondasi kuat dalam prinsip full-stack dan fokus pada <b>integrasi Artificial Intelligence dan Machine Learning</b>. Saya memiliki ${professionalYears} tahun pengalaman profesional, dan total ${totalYears} tahun dalam pengembangan perangkat lunak sejak 2021. Keahlian utama saya pada <b>Python, TypeScript, dan PHP</b>, dilengkapi pengetahuan luas dalam solusi server-side, manajemen basis data, dan eksplorasi aplikasi AI.
 </p>
 <p>
   Karier saya didedikasikan untuk menghadirkan aplikasi yang andal dan skalabel, dengan fokus konsisten pada optimasi performa dan keamanan. Saya unggul dalam merancang solusi server-side, mengelola basis data yang kompleks, dan memastikan aliran data yang mulus antar sistem.

@@ -33,6 +33,11 @@ import {
   Zap,
   Instagram,
   LayoutDashboard,
+  Network,
+  Binary,
+  Home,
+  Layers,
+  MoreHorizontal,
 } from "lucide-react";
 import { type ComponentType, type JSX } from "react";
 import { AiFillStar } from "react-icons/ai";
@@ -207,6 +212,8 @@ export const StackDashboardIcons: stacksProps = {
   python: <SiPython size={iconSizeDashboard} />,
   n8n: <SiN8N size={iconSizeDashboard} className="text-red-400" />,
   data: <LuBrainCircuit size={iconSizeDashboard} />,
+  systemDesign: <Network size={iconSizeDashboard} />,
+  dataStructures: <Binary size={iconSizeDashboard} />,
   // database: <FaDatabase size={iconSizeDashboard} />,
   // sql: <TbSql size={iconSizeDashboard} />,
   // tensor: <SiTensorflow size={iconSizeDashboard} className="text-orange-500" />,
@@ -220,6 +227,9 @@ export const StackDashboardIcons: stacksProps = {
 export const Icons = {
   dashboard: LayoutDashboard,
   contact: Phone,
+  home: Home,
+  skills: Layers,
+  more: MoreHorizontal,
   gitRepoIcon: BookMarked,
   gitOrgBuilding: Building,
   gitBranch: IoIosGitBranch,

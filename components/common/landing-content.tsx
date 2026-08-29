@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
 import { Icons } from "@/components/common/icons";
+import { TerminalHero } from "@/components/common/terminal-hero";
 import ProjectCard from "@/components/experience/project-card";
 import SkillsCard from "@/components/skills/skills-card";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -31,15 +32,15 @@ export function LandingContent({
 
   return (
     <>
-      <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
+      <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 min-h-[calc(100dvh-5rem)] flex items-center">
+        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <Image
             src={ookaImg}
             height={100}
             width={100}
-            sizes="100vw"
-            className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary shadow-2xl"
-            alt="Ooka Pratama - Backend Developer Portfolio"
+            sizes="(min-width: 768px) 256px, 60vw"
+            className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] aspect-square object-cover border-8 border-primary shadow-2xl"
+            alt="Ooka Pratama - Developer Portfolio"
             priority
           />
           <AnimatedText
@@ -54,7 +55,7 @@ export function LandingContent({
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl text-primary"
           >
-            {t.hero.role}
+            <TerminalHero text={t.hero.role} />
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base italic">

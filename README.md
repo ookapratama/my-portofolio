@@ -1,6 +1,6 @@
 # Ooka Pratama — Developer Portfolio
 
-Personal portfolio of **Judhistira Ooka Pratama**, a Backend Developer. Built with the Next.js App Router, TypeScript, and Tailwind/shadcn/ui, with a bilingual (EN/ID) UI and a live GitHub contributions dashboard.
+Personal portfolio of **Judhistira Ooka Pratama**, a Developer. Built with the Next.js App Router, TypeScript, and Tailwind/shadcn/ui, with a bilingual (EN/ID) UI and a live GitHub contributions dashboard.
 
 ## Tech stack
 

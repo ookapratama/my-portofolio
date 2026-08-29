@@ -20,9 +20,9 @@ export const pagesConfig: PagesConfig = {
     description:
       "Welcome to my code space. Let's build something extraordinary.",
     metadata: {
-      title: "Backend Developer Portfolio",
+      title: "Developer Portfolio",
       description:
-        "Ooka Pratama's Professional Portfolio - Backend Developer experienced in Laravel and Machine Learning.",
+        "Ooka Pratama's Professional Portfolio - Developer experienced in Laravel and Machine Learning.",
     },
   },
   skills: {

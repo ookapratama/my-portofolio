@@ -10,6 +10,7 @@ import { SocialLinks } from "@/config/socials";
 
 import Link from "next/link";
 import Overview from "./overview";
+import Streaks from "./streaks";
 import { SkeletonCalendar, SkeletonCard } from "./skeleton/skeleton-card";
 import Calendar from "./calendar";
 
@@ -33,6 +34,10 @@ const Contributions = ({ endpoint, username }: ContributionsProps) => {
           <SkeletonCard />
           <SkeletonCard />
         </div>
+        <div className="grid grid-cols-2 gap-3">
+          <SkeletonCard />
+          <SkeletonCard />
+        </div>
         <SkeletonCalendar className="mt-5" />
       </>
     );
@@ -47,11 +52,16 @@ const Contributions = ({ endpoint, username }: ContributionsProps) => {
             <SkeletonCard />
             <SkeletonCard />
           </div>
+          <div className="grid grid-cols-2 gap-3">
+            <SkeletonCard />
+            <SkeletonCard />
+          </div>
           <SkeletonCalendar className="mt-5" />
         </>
       ) : (
         <div className="space-y-3">
           <Overview data={contributionCalendar} />
+          <Streaks data={contributionCalendar} />
           <Calendar data={contributionCalendar} />
         </div>
       )}

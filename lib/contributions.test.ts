@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { getContributionStats } from "./contributions";
+import { getContributionStats, getStreakStats } from "./contributions";
 import { type CalendarProps, type Contributions } from "@/config/constants";
 
 const day = (contributionCount: number): Contributions => ({
@@ -56,5 +56,47 @@ describe("getContributionStats", () => {
     expect(stats.best).toBe(0);
     expect(Number.isNaN(stats.average)).toBe(false);
     expect(stats.average).toBe(0);
+  });
+});
+
+describe("getStreakStats", () => {
+  it("should compute the current streak as the trailing run of active days", () => {
+    // week: [1,2,0,3,4] -> most recent 2 days (4,3) are the current streak,
+    // broken by the 0 before them.
+    const data = buildCalendar([[1, 2, 0, 3, 4]], 10);
+
+    const stats = getStreakStats(data);
+
+    expect(stats.currentStreak).toBe(2);
+  });
+
+  it("should compute the longest streak as the best run anywhere, even mid-history", () => {
+    // week 1: [1,1,1,0] -> a 3-day run in the middle of history
+    // week 2: [1,0]     -> current trailing run is only 0 (broken by the 0)
+    const data = buildCalendar(
+      [
+        [1, 1, 1, 0],
+        [1, 0],
+      ],
+      4,
+    );
+
+    const stats = getStreakStats(data);
+
+    expect(stats.longestStreak).toBe(3);
+    expect(stats.currentStreak).toBe(0);
+  });
+
+  it("should return zeros for empty or undefined data", () => {
+    expect(getStreakStats(undefined)).toEqual({
+      currentStreak: 0,
+      longestStreak: 0,
+    });
+
+    const empty = buildCalendar([], 0);
+    expect(getStreakStats(empty)).toEqual({
+      currentStreak: 0,
+      longestStreak: 0,
+    });
   });
 });

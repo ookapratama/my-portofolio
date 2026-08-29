@@ -18,18 +18,18 @@ export const skillsUnsorted: skillsInterface[] = [
     icon: StackDashboardIcons.python,
   },
   {
-    name: "n8n",
+    name: "System Design",
     description:
-      "Experienced with n8n for building custom workflows and integrations. Capable of automating complex data movement and connecting various APIs/services without extensive coding.",
+      "Experienced in designing scalable backend architectures — service boundaries, data flow, and API contracts — balancing performance, maintainability, and reliability.",
     rating: 5,
-    icon: StackDashboardIcons.n8n,
+    icon: StackDashboardIcons.systemDesign,
   },
   {
-    name: "Data Science",
+    name: "Data Structures",
     description:
-      "Developing strong capabilities in the ML lifecycle, from EDA and feature engineering to model building and deployment.",
+      "Solid foundation in data structures and algorithms, applied to write efficient, correct, and maintainable backend code.",
     rating: 5,
-    icon: StackDashboardIcons.data,
+    icon: StackDashboardIcons.dataStructures,
   },
 ];
 

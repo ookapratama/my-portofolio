@@ -10,11 +10,12 @@ const en = {
     contact: "Contact",
     about: "About",
     dashboard: "Dashboard",
+    more: "More",
   },
   hero: {
     greeting:
       "Explore my code space, and let’s build something amazing together.",
-    role: "Backend Developer",
+    role: "Developer",
     ctaGithub: "GitHub",
     ctaDashboard: "Dashboard",
     ctaContact: "Contact",
@@ -74,6 +75,9 @@ const en = {
     less: "Less",
     more: "More",
     contributionsOn: "contributions on",
+    currentStreak: "Current Streak",
+    longestStreak: "Longest Streak",
+    days: "days",
   },
   about: {
     story: "My Story",
@@ -105,11 +109,12 @@ export const translations: Record<Language, Translations> = {
       contact: "Kontak",
       about: "Tentang",
       dashboard: "Dashboard",
+      more: "Lainnya",
     },
     hero: {
       greeting:
         "Jelajahi ruang kode saya, dan mari bangun sesuatu yang luar biasa bersama.",
-      role: "Backend Developer",
+      role: "Developer",
       ctaGithub: "GitHub",
       ctaDashboard: "Dashboard",
       ctaContact: "Kontak",
@@ -169,6 +174,9 @@ export const translations: Record<Language, Translations> = {
       less: "Sedikit",
       more: "Banyak",
       contributionsOn: "kontribusi pada",
+      currentStreak: "Streak Saat Ini",
+      longestStreak: "Streak Terpanjang",
+      days: "hari",
     },
     about: {
       story: "Cerita Saya",
