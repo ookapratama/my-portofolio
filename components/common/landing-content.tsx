@@ -55,7 +55,9 @@ export function LandingContent({
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl text-primary"
           >
-            <TerminalHero text={t.hero.role} />
+            {/* startDelayMs matches this AnimatedText's delay (0.4s) so typing
+                only starts once the line is actually visible. */}
+            <TerminalHero text={t.hero.role} startDelayMs={400} />
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base italic">

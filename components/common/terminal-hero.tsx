@@ -5,6 +5,9 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 
 interface TerminalHeroProps {
   text: string;
+  /** Delay before typing starts, in ms. Sync this with any wrapping fade-in
+   * animation's delay — otherwise typing finishes before it's even visible. */
+  startDelayMs?: number;
 }
 
 const TYPE_SPEED_MS = 55;
@@ -27,7 +30,7 @@ function getReducedMotionServerSnapshot() {
   return false;
 }
 
-export function TerminalHero({ text }: TerminalHeroProps) {
+export function TerminalHero({ text, startDelayMs = 0 }: TerminalHeroProps) {
   const reducedMotion = useSyncExternalStore(
     subscribeToReducedMotion,
     getReducedMotionSnapshot,
@@ -36,17 +39,31 @@ export function TerminalHero({ text }: TerminalHeroProps) {
   const [typedText, setTypedText] = useState("");
 
   useEffect(() => {
+    if (process.env.NODE_ENV !== "production") {
+      console.debug("[TerminalHero] prefers-reduced-motion:", reducedMotion);
+    }
+  }, [reducedMotion]);
+
+  useEffect(() => {
     if (reducedMotion) return;
 
     let i = 0;
-    const id = setInterval(() => {
-      i += 1;
-      setTypedText(text.slice(0, i));
-      if (i >= text.length) clearInterval(id);
-    }, TYPE_SPEED_MS);
+    let intervalId: ReturnType<typeof setInterval> | undefined;
 
-    return () => clearInterval(id);
-  }, [text, reducedMotion]);
+    const timeoutId = setTimeout(() => {
+      setTypedText("");
+      intervalId = setInterval(() => {
+        i += 1;
+        setTypedText(text.slice(0, i));
+        if (i >= text.length && intervalId) clearInterval(intervalId);
+      }, TYPE_SPEED_MS);
+    }, startDelayMs);
+
+    return () => {
+      clearTimeout(timeoutId);
+      if (intervalId) clearInterval(intervalId);
+    };
+  }, [text, reducedMotion, startDelayMs]);
 
   const displayed = reducedMotion ? text : typedText;
 
