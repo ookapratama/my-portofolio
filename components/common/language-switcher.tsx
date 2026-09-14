@@ -18,7 +18,7 @@ export function LanguageSwitcher() {
       className="w-10 h-10 p-0 font-bold uppercase"
       aria-label="Toggle language"
     >
-      {language === "en" ? "ID" : "EN"}
+      {language.toUpperCase()}
     </Button>
   );
 }
