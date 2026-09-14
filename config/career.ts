@@ -25,6 +25,16 @@ export const careerExperiences: CareerExperienceInterface[] = [
     type: 'Freelance'
   },
   {
+    id: "caturPutraHarmonis",
+    position: "IT Software (Web Developer & Help Desk)",
+    company: "PT Catur Putra Harmonis",
+    location: "Makassar, Sulawesi Selatan",
+    startDate: '2026-01',
+    endDate: "2026-03",
+    locationType:'Onsite',
+    type: 'Fulltime'
+  },
+  {
     id: "siddiSolution",
     position: "Fullstack Developer and Lecturer",
     company: "CV. Siddi Solution Technology",
