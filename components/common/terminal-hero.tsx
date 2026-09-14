@@ -39,14 +39,6 @@ export function TerminalHero({ text, startDelayMs = 0 }: TerminalHeroProps) {
   const [typedText, setTypedText] = useState("");
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== "production") {
-      console.debug("[TerminalHero] prefers-reduced-motion:", reducedMotion);
-    }
-  }, [reducedMotion]);
-
-  useEffect(() => {
-    if (reducedMotion) return;
-
     let i = 0;
     let intervalId: ReturnType<typeof setInterval> | undefined;
 
@@ -63,9 +55,7 @@ export function TerminalHero({ text, startDelayMs = 0 }: TerminalHeroProps) {
       clearTimeout(timeoutId);
       if (intervalId) clearInterval(intervalId);
     };
-  }, [text, reducedMotion, startDelayMs]);
-
-  const displayed = reducedMotion ? text : typedText;
+  }, [text, startDelayMs]);
 
   return (
     <span className="inline-flex flex-col items-center gap-1 font-mono">
@@ -75,7 +65,7 @@ export function TerminalHero({ text, startDelayMs = 0 }: TerminalHeroProps) {
       <span>
         <span className="sr-only">{text}</span>
         <span aria-hidden="true">
-          {displayed}
+          {typedText}
           <motion.span
             aria-hidden="true"
             className="ml-0.5 inline-block h-[0.9em] w-[0.5ch] translate-y-[0.1em] bg-current"
