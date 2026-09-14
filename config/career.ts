@@ -31,6 +31,7 @@ export const careerExperiences: CareerExperienceInterface[] = [
     location: "Makassar, Sulawesi Selatan",
     startDate: '2026-01',
     endDate: "2026-03",
+    logo: "/career/catur.png",
     locationType:'Onsite',
     type: 'Fulltime'
   },
