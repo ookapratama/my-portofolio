@@ -49,6 +49,7 @@ const CareerCard = ({
             <a
               href={companyUrl || "#"}
               target="_blank"
+              rel="noopener noreferrer"
               data-umami-event={`Click Career Company Name: ${company}`}
             >
               <span className="underline cursor-pointer hover:text-dark hover:dark:text-white">

@@ -31,6 +31,7 @@ const OrganizationCard = ({
         <a
           href={link || '#'}
           target="_blank"
+          rel="noopener noreferrer"
           data-umami-event={`Click Organization: ${name}`}
         >
           <h6>{name}</h6>

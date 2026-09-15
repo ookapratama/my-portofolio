@@ -32,6 +32,7 @@ const CertificateCard = ({
         <a
           href={link || '#'}
           target="_blank"
+          rel="noopener noreferrer"
           data-umami-event={`Click Certificate: ${name}`}
         >
           <h6>{name}</h6>

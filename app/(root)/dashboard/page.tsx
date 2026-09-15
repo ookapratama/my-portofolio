@@ -25,6 +25,7 @@ const DashboardPage = () => {
         <Link
           href={SocialLinks[0].link}
           target="_blank"
+          rel="noopener noreferrer"
           passHref
           className="text-sm font-code text-neutral-400 dark:text-neutral-600 hover:text-neutral-700 hover:dark:text-neutral-400"
         >

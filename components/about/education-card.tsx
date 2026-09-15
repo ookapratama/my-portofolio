@@ -31,6 +31,7 @@ const EducationCard = ({
         <a
           href={link || '#'}
           target="_blank"
+          rel="noopener noreferrer"
           data-umami-event={`Click Education School: ${school}`}
         >
           <h6>{school}</h6>

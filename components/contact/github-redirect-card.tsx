@@ -41,6 +41,7 @@ export default function GithubRedirectCard() {
         <Link
           href={"https://github.com/ookapratama/my-portofolio"}
           target="_blank"
+          rel="noopener noreferrer"
           className={cn(
             buttonVariants({ variant: "outline" }),
             "w-full bg-transparent border-2 transition-all duration-300 py-6",

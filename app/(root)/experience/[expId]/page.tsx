@@ -65,14 +65,22 @@ export default function Experience({ params }: ExperiencePageProps) {
           <div className="flex items-center">
             {exp.githubLink && (
               <CustomTooltip text="Source Code">
-                <Link href={exp.githubLink} target="_blank">
+                <Link
+                  href={exp.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icons.gitHub className="w-6 ml-4 text-muted-foreground hover:text-primary transition-colors" />
                 </Link>
               </CustomTooltip>
             )}
             {exp.websiteLink && (
               <CustomTooltip text="Live Project">
-                <Link href={exp.websiteLink} target="_blank">
+                <Link
+                  href={exp.websiteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icons.externalLink className="w-6 ml-4 text-muted-foreground hover:text-primary transition-colors" />
                 </Link>
               </CustomTooltip>

@@ -15,6 +15,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             <Link
               href={item.link}
               target="_blank"
+              rel="noopener noreferrer"
               className={cn(
                 buttonVariants({
                   variant: "ghost",

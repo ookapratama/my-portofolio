@@ -71,6 +71,7 @@ export function LandingContent({
               <Link
                 href={"https://github.com/ookapratama"}
                 target="_blank"
+                rel="noopener noreferrer"
                 className={cn(buttonVariants({ size: "lg" }))}
               >
                 <Icons.gitHub className="w-4 h-4 mr-2" /> {t.hero.ctaGithub}
