@@ -4,7 +4,7 @@ Personal portfolio of **Judhistira Ooka Pratama**, a Developer. Built with the N
 
 ## Tech stack
 
-- **Framework:** Next.js 14 (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS + shadcn/ui (Radix primitives)
 - **Animation:** Framer Motion
@@ -24,9 +24,11 @@ pnpm dev      # http://localhost:3000
 Other scripts:
 
 ```bash
-pnpm build    # production build
-pnpm start    # serve the production build
-pnpm lint     # next lint
+pnpm build       # production build
+pnpm start       # serve the production build
+pnpm lint        # next lint
+pnpm test        # run the vitest suite once
+pnpm test:watch  # vitest in watch mode
 ```
 
 ## Environment variables
@@ -62,6 +64,19 @@ All portfolio content is data-driven from `config/` — edit these, not the comp
 - `config/constants.ts` — shared union types (`ValidSkills`, `ValidCategory`, …) and the About bio
 
 New skills/categories must be added to the union types in `config/constants.ts`, or the build will reject the config entry.
+
+## Testing
+
+Unit tests run on [Vitest](https://vitest.dev/), co-located with the code they cover as `*.test.ts`:
+
+```bash
+pnpm test        # run once
+pnpm test:watch  # watch mode
+```
+
+## CI
+
+Every push and pull request to `main` runs [`.github/workflows/ci.yml`](.github/workflows/ci.yml): install → `pnpm lint` → `pnpm test` → `pnpm build`.
 
 ## License
 
