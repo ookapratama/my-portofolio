@@ -129,9 +129,20 @@ const Calendar = ({ data }: CalendarProps) => {
                 const getRandomDelayAnimate =
                   Math.random() * week.contributionDays.length * 0.15;
 
+                const handleSelect = () =>
+                  setSelectContribution({
+                    count: contribution.contributionCount,
+                    date: contribution.date,
+                  });
+                const handleDeselect = () =>
+                  setSelectContribution({ count: null, date: null });
+
                 return (
                   <motion.span
                     key={contribution.date}
+                    tabIndex={0}
+                    role="img"
+                    aria-label={`${contribution.contributionCount} ${t.contributionsOn} ${contribution.date}`}
                     initial="initial"
                     animate="animate"
                     variants={{
@@ -142,7 +153,7 @@ const Calendar = ({ data }: CalendarProps) => {
                         transition: { delay: getRandomDelayAnimate },
                       },
                     }}
-                    className="block rounded-sm bg-neutral-300 dark:bg-neutral-800 hover:ring-1 hover:ring-blue-400"
+                    className="block rounded-sm bg-neutral-300 dark:bg-neutral-800 hover:ring-1 hover:ring-blue-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-400"
                     style={{
                       width: `${dimensions.cellSize}px`,
                       height: `${dimensions.cellSize}px`,
@@ -150,15 +161,10 @@ const Calendar = ({ data }: CalendarProps) => {
                       marginBottom: `${Math.max(3, dimensions.gap / 2)}px`,
                       backgroundColor: bgColor || undefined,
                     }}
-                    onMouseEnter={() =>
-                      setSelectContribution({
-                        count: contribution.contributionCount,
-                        date: contribution.date,
-                      })
-                    }
-                    onMouseLeave={() =>
-                      setSelectContribution({ count: null, date: null })
-                    }
+                    onMouseEnter={handleSelect}
+                    onMouseLeave={handleDeselect}
+                    onFocus={handleSelect}
+                    onBlur={handleDeselect}
                   />
                 );
               })}
