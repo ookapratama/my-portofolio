@@ -1,8 +1,5 @@
-"use client";
-
-import { useLanguageStore } from "@/app/store/use-language";
-import { translations } from "@/config/translations";
 import PageContainer from "@/components/common/page-container";
+import { PageText } from "@/components/common/page-text";
 import ProjectCard from "@/components/experience/project-card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Experiences } from "@/config/experience";
@@ -25,11 +22,11 @@ const renderContent = (tabVal: string) => {
 };
 
 export default function ExperiencePage() {
-  const { language } = useLanguageStore();
-  const t = translations[language].pages.experience;
-
   return (
-    <PageContainer title={t.title} description={t.description}>
+    <PageContainer
+      title={<PageText page="experience" field="title" />}
+      description={<PageText page="experience" field="description" />}
+    >
       <Tabs defaultValue="all" className="w-full">
         <TabsContent value="all" className="w-full">
           {renderContent("all")}

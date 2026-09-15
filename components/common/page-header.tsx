@@ -1,8 +1,9 @@
+import type React from "react";
 import { Separator } from "../ui/separator";
 
 interface PageHeaderProps {
-  title: string;
-  description: string;
+  title: React.ReactNode;
+  description: React.ReactNode;
 }
 
 export default function PageHeader({ title, description }: PageHeaderProps) {

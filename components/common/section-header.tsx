@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 interface SectionHeadingProps {
-  title: string;
+  title: ReactNode;
   className?: string;
   icon?: ReactNode;
 }

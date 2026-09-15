@@ -1,9 +1,6 @@
-"use client";
-
-import { useLanguageStore } from "@/app/store/use-language";
-import { translations } from "@/config/translations";
 import { StackIcons } from "@/components/common/icons";
 import PageContainer from "@/components/common/page-container";
+import { PageText } from "@/components/common/page-text";
 import SectionHeading from "@/components/common/section-header";
 import SectionSubHeading from "@/components/common/section-sub-header";
 import Contributions from "@/components/dashboard/contributions";
@@ -12,14 +9,19 @@ import { SocialLinks } from "@/config/socials";
 import Link from "next/link";
 
 const DashboardPage = () => {
-  const { language } = useLanguageStore();
-  const t = translations[language].pages.dashboard;
-
   return (
-    <PageContainer title={t.title} description={t.description}>
-      <SectionHeading title={t.contributions} icon={StackIcons.github} />
+    <PageContainer
+      title={<PageText page="dashboard" field="title" />}
+      description={<PageText page="dashboard" field="description" />}
+    >
+      <SectionHeading
+        title={<PageText page="dashboard" field="contributions" />}
+        icon={StackIcons.github}
+      />
       <SectionSubHeading className="mt-2">
-        <p className="dark:text-neutral-400">{t.contributionsDesc}</p>
+        <p className="dark:text-neutral-400">
+          <PageText page="dashboard" field="contributionsDesc" />
+        </p>
         <Link
           href={SocialLinks[0].link}
           target="_blank"

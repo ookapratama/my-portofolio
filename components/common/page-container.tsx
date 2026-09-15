@@ -3,8 +3,8 @@ import { ClientPageWrapper } from "./client-page-wrapper";
 import PageHeader from "./page-header";
 
 interface PageContainerProps {
-  title: string;
-  description: string;
+  title: React.ReactNode;
+  description: React.ReactNode;
   children: React.ReactNode;
 }
 
