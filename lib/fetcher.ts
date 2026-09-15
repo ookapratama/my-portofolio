@@ -1,4 +1,9 @@
-import axios, { AxiosResponse } from "axios";
+export const fetcher = async <T>(url: string): Promise<T> => {
+  const res = await fetch(url);
 
-export const fetcher = <T>(url: string): Promise<T> =>
-  axios.get<T>(url).then((response: AxiosResponse<T>) => response.data);
+  if (!res.ok) {
+    throw new Error(`Request failed with status ${res.status}`);
+  }
+
+  return res.json() as Promise<T>;
+};

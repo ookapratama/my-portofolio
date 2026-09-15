@@ -1,5 +1,4 @@
 import { GITHUB_ACCOUNTS, CalendarResponse } from "@/config/constants";
-import axios from "axios";
 
 type GithubGraphQLResponse = {
   data: { user: CalendarResponse | null };
@@ -36,23 +35,25 @@ export const fetchGithubData = async (
   username: string | undefined,
   token: string | undefined,
 ) => {
-  const response = await axios.post<GithubGraphQLResponse>(
-    GITHUB_USER_ENDPOINT,
-    {
+  const response = await fetch(GITHUB_USER_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `bearer ${token}`,
+    },
+    body: JSON.stringify({
       query: GITHUB_USER_QUERY,
       variables: {
         username: username,
       },
-    },
-    {
-      headers: {
-        Authorization: `bearer ${token}`,
-      },
-    },
-  );
+    }),
+  });
 
   const status: number = response.status;
-  const dataJson = response.data?.data;
+  const responseJson: GithubGraphQLResponse | undefined = await response
+    .json()
+    .catch(() => undefined);
+  const dataJson = responseJson?.data;
 
   return status >= 400
     ? { status, data: {} }

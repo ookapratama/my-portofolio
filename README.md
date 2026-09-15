@@ -9,7 +9,7 @@ Personal portfolio of **Judhistira Ooka Pratama**, a Developer. Built with the N
 - **Styling:** Tailwind CSS + shadcn/ui (Radix primitives)
 - **Animation:** Framer Motion
 - **State:** Zustand (language, modal)
-- **Data fetching:** SWR + axios
+- **Data fetching:** SWR + fetch
 - **Deployment:** Vercel
 
 ## Getting started

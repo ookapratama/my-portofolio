@@ -1,13 +1,13 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import axios from "axios";
 
 import { fetchGithubData } from "./github";
 
-vi.mock("axios");
+const mockFetch = vi.fn();
+vi.stubGlobal("fetch", mockFetch);
 
 describe("fetchGithubData", () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    mockFetch.mockReset();
   });
 
   it("should return the user calendar when the GraphQL response is well-formed", async () => {
@@ -16,9 +16,9 @@ describe("fetchGithubData", () => {
         contributionCalendar: { totalContributions: 5 },
       },
     };
-    vi.mocked(axios.post).mockResolvedValue({
+    mockFetch.mockResolvedValue({
       status: 200,
-      data: { data: { user } },
+      json: () => Promise.resolve({ data: { user } }),
     });
 
     const result = await fetchGithubData("someuser", "token");
@@ -28,8 +28,11 @@ describe("fetchGithubData", () => {
 
   it("should return empty data instead of throwing when the GraphQL response has no data.user", async () => {
     // Simulates a GraphQL error response shape (e.g. { errors: [...] })
-    // where response.data has no `data` key at all.
-    vi.mocked(axios.post).mockResolvedValue({ status: 200, data: {} });
+    // where the parsed body has no `data` key at all.
+    mockFetch.mockResolvedValue({
+      status: 200,
+      json: () => Promise.resolve({}),
+    });
 
     const result = await fetchGithubData("someuser", "token");
 
@@ -37,7 +40,10 @@ describe("fetchGithubData", () => {
   });
 
   it("should return empty data for a >=400 status", async () => {
-    vi.mocked(axios.post).mockResolvedValue({ status: 400, data: undefined });
+    mockFetch.mockResolvedValue({
+      status: 400,
+      json: () => Promise.resolve(undefined),
+    });
 
     const result = await fetchGithubData("someuser", "token");
 

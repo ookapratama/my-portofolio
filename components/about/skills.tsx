@@ -1,6 +1,5 @@
 "use client";
 
-import styled from "@emotion/styled";
 import type { ReactNode } from "react";
 import { useMemo } from "react";
 import { BiCodeAlt as SkillsIcon } from "react-icons/bi";
@@ -63,7 +62,7 @@ const Skills = () => {
       <div className="flex w-full">
         <div className="relative flex flex-col gap-y-4 justify-start py-2 w-full overflow-hidden">
           {sliders}
-          <StyledFade className="hidden dark:flex fade" />
+          <div className="hidden dark:flex absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,#030303,transparent_20%,transparent_80%,#030303)]" />
         </div>
       </div>
     </div>
@@ -71,16 +70,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-const StyledFade = styled.div`
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    #030303,
-    transparent 20%,
-    transparent 80%,
-    #030303
-  );
-  position: absolute;
-  inset: 0;
-`;
