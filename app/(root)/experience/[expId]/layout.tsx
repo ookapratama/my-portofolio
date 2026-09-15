@@ -29,6 +29,9 @@ export async function generateMetadata({
   return {
     title,
     description: exp.shortDescription,
+    alternates: {
+      canonical: `${siteConfig.url}/experience/${exp.id}`,
+    },
     openGraph: {
       title,
       description: exp.shortDescription,
