@@ -1,6 +1,4 @@
-import { title } from "process";
 import { ValidPages } from "./constants";
-import { metadata } from "@/app/layout";
 
 type PagesConfig = {
   [key in ValidPages]: {

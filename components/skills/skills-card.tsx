@@ -1,4 +1,3 @@
-import Rating from "@/components/skills/rating";
 import { skills, skillsInterface } from "@/config/skills";
 
 interface SkillsCardProps {
@@ -19,7 +18,6 @@ export default function SkillsCard({ skills }: SkillsCardProps) {
               <p className="text-sm text-muted-foreground">
                 {skill.description}
               </p>
-              {/* <Rating stars={skill.rating} /> */}
             </div>
           </div>
         </div>
