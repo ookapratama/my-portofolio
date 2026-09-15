@@ -13,7 +13,7 @@ export const EDUCATION: EducationProps[] = [
   {
     school: 'Dipa Makassar University',
     major: 'Informatics Engineering, (S.Kom)',
-    logo: '/education/undipa.png',
+    logo: '/education/undipa.webp',
     location: 'Makassar',
     degree: "Bachelor's degree",
     start_year: 2020,
@@ -23,7 +23,7 @@ export const EDUCATION: EducationProps[] = [
   {
     school: 'SMKN 2 Makassar',
     major: 'Network and Computer Engineering (TKJ)',
-    logo: '/education/smk2.png',
+    logo: '/education/smk2.webp',
     location: 'Makassar',
     degree: "Vocational High School Diploma",
     start_year: 2017,

@@ -78,7 +78,7 @@ export const metadata = {
     shortcut: "/logo.png",
     apple: "/logo.png",
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+  manifest: "/manifest.webmanifest",
   alternates: {
     canonical: siteConfig.url,
   },
