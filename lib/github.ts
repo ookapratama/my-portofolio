@@ -56,7 +56,7 @@ export const fetchGithubData = async (
 
   return status >= 400
     ? { status, data: {} }
-    : { status, data: dataJson.user };
+    : { status, data: dataJson?.user ?? {} };
 };
 
 export const getContribution = async (type: string) => {

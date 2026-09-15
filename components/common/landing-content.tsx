@@ -36,8 +36,8 @@ export function LandingContent({
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <Image
             src={ookaImg}
-            height={100}
-            width={100}
+            height={256}
+            width={256}
             sizes="(min-width: 768px) 256px, 60vw"
             className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] aspect-square object-cover border-8 border-primary shadow-2xl"
             alt="Ooka Pratama - Developer Portfolio"

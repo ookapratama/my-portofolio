@@ -9,7 +9,7 @@ export const siteConfig = {
     instagram: "https://instagram.com/ookapratama_",
     github: "https://github.com/ookapratama",
   },
-  ogImage: "https://ooka.my.id/ooka1.webp",
+  ogImage: "https://ooka.my.id/og-image.jpg",
   iconIco: "/favicon.ico",
   logoIcon: "/logo.png",
   keywords: [
